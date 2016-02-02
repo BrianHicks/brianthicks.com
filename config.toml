@@ -1,3 +1,45 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "https://www.brianthicks.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Brian Hicks"
+theme = "type"
+
+# Add your tracking code to enable Google Analytics
+googleAnalytics = ""
+
+# Posts per page
+paginate = 10
+
+[params]
+	author = "Brian Hicks"
+	description = "Life is good in St. Louis, MO"
+	gravatar = "11d7c672ac1fa2324db03848328b817c"
+
+	headerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Remove all header text in **config.toml** to disable this feature."
+	# To add a header background to the main site, save your image under static/img/.
+	# If now image path is provided, a orange background will be shown instead.
+	headerImage = ""
+	copyright = "Released under the MIT license<br>Powered by [Hugo](//gohugo.io/) with the [Type Theme](//github.com/digitalcraftsman/hugo-type-theme)"
+
+
+	[params.social]
+	# Insert your accout name and the icon will be shown in the right menu
+		rss = true
+		email = "brian@brianthicks.com"
+		behance = ""
+		bitbucket  =""
+		dribbble = ""
+		facebook = ""
+		flickr = ""
+		github = "BrianHicks"
+		googleplus = ""
+		instagram = ""
+		linkedin = ""
+		pinterest = ""
+		reddit = ""
+		soundcloud = ""
+		stackexchange = ""
+		steam = ""
+		tumblr = ""
+		twitter = "brianhicks"
+		wordpress = ""
+		youtube = ""
