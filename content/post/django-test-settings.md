@@ -1,9 +1,6 @@
 ---
 title: "Django Test Settings"
 date: "2012-03-19T00:00:00-06:00"
-featureimage: ""
-menu: ""
-tags: []
 
 ---
 
