@@ -8,7 +8,7 @@ googleAnalytics: ""
 paginate: 5
 
 permalinks:
-  post: "/:year/:month/:day/:slug"
+  post: "/post/:year/:month/:day/:slug"
 
 params:
   author: "Brian Hicks"
