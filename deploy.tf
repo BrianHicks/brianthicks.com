@@ -5,6 +5,7 @@ variable "cloudflare_domain" {}
 variable "letsencrypt_email" {}
 variable "docker_image" {}
 variable "git_remote" {}
+variable "hook_secret" {}
 
 provider "digitalocean" {
   token = "${var.do_token}"
@@ -58,8 +59,8 @@ resource "cloudflare_record" "www" {
 # docker stuff
 resource "null_resource" "blog-image" {
   triggers {
-    docker = "${base64encode(file("Dockerfile"))}"
-    caddy = "${base64encode(file("Caddyfile"))}"
+    docker = "${sha1(file("Dockerfile"))}"
+    caddy = "${sha1(file("Caddyfile"))}"
   }
 
   provisioner "local-exec" {
@@ -76,11 +77,12 @@ resource "null_resource" "blog-docker" {
 
   triggers {
     host = "${digitalocean_droplet.blog.ipv4_address}"
-    docker = "${base64encode(file("Dockerfile"))}"
-    caddy = "${base64encode(file("Caddyfile"))}"
+    docker = "${sha1(file("Dockerfile"))}"
+    caddy = "${sha1(file("Caddyfile"))}"
     domain = "${var.cloudflare_domain}"
     repo = "${var.git_remote}"
     tls = "${var.letsencrypt_email}"
+    secret = "${var.hook_secret}"
   }
 
   connection {
@@ -94,7 +96,7 @@ resource "null_resource" "blog-docker" {
     inline = [
       "docker pull ${var.docker_image}",
       "docker rm -f blog || true",
-      "docker run -d --name blog -p 80:80 -p 443:443 -e DOMAIN=www.${var.cloudflare_domain} -e REPO=${var.git_remote} -e TLS=${var.letsencrypt_email} ${var.docker_image}"
+      "docker run -d --name blog -p 80:80 -p 443:443 -e DOMAIN=www.${var.cloudflare_domain} -e REPO=${var.git_remote} -e TLS=${var.letsencrypt_email} -e HOOK_SECRET=${var.hook_secret} ${var.docker_image}"
     ]
   }
 }

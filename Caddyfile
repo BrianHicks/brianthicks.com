@@ -4,6 +4,7 @@
 
   git {$REPO} {
     path ../
+    hook "/update-hook" {$HOOK_SECRET}
     then git submodule update --init --recursive
     then hugo
   }
