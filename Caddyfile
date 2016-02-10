@@ -1,0 +1,10 @@
+{$DOMAIN} {
+  root source/public
+  tls {$TLS}
+
+  git {$REPO} {
+    path ../
+    then git submodule update --init --recursive
+    then hugo
+  }
+}
