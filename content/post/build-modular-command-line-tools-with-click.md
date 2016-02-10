@@ -1,5 +1,5 @@
 ---
-title: "Build Module Command-Line Tools with Click"
+title: "Build Modular Command-Line Tools with Click"
 date: "2014-11-03T06:25:00-06:00"
 
 ---

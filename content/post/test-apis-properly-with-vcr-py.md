@@ -1,5 +1,6 @@
 ---
-title: Tests APIs Properly with vcr.py
+title: Test APIs Properly with vcr.py
+slug: test-apis-properly-with-vcr-py
 date: "2014-12-01T14:50:00-06:00"
 
 ---

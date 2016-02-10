@@ -1,5 +1,6 @@
 ---
-title: "I'm sick. I'm shpping tomorrow anyway."
+title: "I'm sick. I'm shipping tomorrow anyway."
+slug: im-sick-im-shipping-tomorrow-anyway
 date: "2015-01-05T14:42:00-06:00"
 
 ---
