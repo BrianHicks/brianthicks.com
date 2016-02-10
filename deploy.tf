@@ -96,7 +96,7 @@ resource "null_resource" "blog-docker" {
     inline = [
       "docker pull ${var.docker_image}",
       "docker rm -f blog || true",
-      "docker run -d --name blog -p 80:80 -p 443:443 -e DOMAIN=www.${var.cloudflare_domain} -e REPO=${var.git_remote} -e TLS=${var.letsencrypt_email} -e HOOK_SECRET=${var.hook_secret} ${var.docker_image}"
+      "docker run -d --name blog -p 80:80 -p 443:443 -v /var/lib/caddy:/root/.caddy -e DOMAIN=www.${var.cloudflare_domain} -e REPO=${var.git_remote} -e TLS=${var.letsencrypt_email} -e HOOK_SECRET=${var.hook_secret} ${var.docker_image}"
     ]
   }
 }
