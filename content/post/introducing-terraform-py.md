@@ -1,5 +1,6 @@
 ---
 title: "Introducing terraform.py"
+slug: "introducing-terraform-py"
 date: "2015-06-04T10:08:00-06:00"
 
 ---
