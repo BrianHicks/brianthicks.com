@@ -32,5 +32,11 @@
     /2015/01/05/im-sick-im-shipping-tomorrow-anyway/ /post/{path}
     /2015/04/15/automate-your-python-environment-with-pyenv/ /post/{path}
     /2015/06/04/introducing-terraform-py/ /post/{path}
+
+    # RSS stuff
+    /rss/                    /index.xml
+    /atom.xml                /index.xml
+    /feed/index.atom         /index.xml
+    /author/brian-hicks/rss/ /index.xml
   }
 }
