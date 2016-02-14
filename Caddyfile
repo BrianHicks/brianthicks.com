@@ -12,8 +12,8 @@
     then hugo
   }
 
-  # redirect old URLs
   redir 301 {
+    # redirect old URLs
     /2012/03/19/dict-syntax/ /post/{path}
     /2012/03/19/django-test-settings/ /post/{path}
     /2012/03/19/javascript-dates/ /post/{path}
@@ -32,6 +32,9 @@
     /2015/01/05/im-sick-im-shipping-tomorrow-anyway/ /post/{path}
     /2015/04/15/automate-your-python-environment-with-pyenv/ /post/{path}
     /2015/06/04/introducing-terraform-py/ /post/{path}
+
+    # reeeeally old URL
+    /development/2014/03/20/stl-python-class-complete/ /post/2014/03/20/stl-python-class-complete/
 
     # RSS stuff
     /rss/                    /index.xml
