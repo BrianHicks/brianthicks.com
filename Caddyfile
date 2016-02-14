@@ -1,4 +1,4 @@
-{$DOMAIN}:80 {
+{$DOMAIN} {
   root source/public
   tls {$TLS}
   gzip
