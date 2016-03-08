@@ -22,28 +22,36 @@ resource "digitalocean_ssh_key" "blog" {
 }
 
 resource "digitalocean_droplet" "blog" {
-  image = "ubuntu-14-04-x64"
+  image = "debian-8-x64"
   name = "blog"
   region = "nyc3"
   size = "512mb"
 
   ssh_keys = ["${digitalocean_ssh_key.blog.id}"]
+}
+
+resource "null_resource" "blog-provision" {
+  depends_on = ["digitalocean_droplet.blog"]
+
+  triggers {
+    host = "${digitalocean_droplet.blog.ipv4_address}"
+  }
 
   connection {
     type = "ssh"
     user = "root"
+    host = "${digitalocean_droplet.blog.ipv4_address}"
     private_key = "${file("~/.ssh/id_rsa.blog")}"
   }
 
   provisioner "remote-exec" {
     inline = [
       "apt-get update",
-      "apt-get install -y apt-transport-https ca-certificates",
-      "apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D",
-      "echo deb https://apt.dockerproject.org/repo ubuntu-trusty main > /etc/apt/sources.list.d/docker.list",
-      "apt-get update",
-      "apt-get install -y linux-image-extra-$(uname -r) docker-engine",
-      "service docker start || true"
+      "apt-get upgrade -y",
+      "apt-get install -y curl",
+      "curl https://get.docker.com/ | sh -",
+      "systemctl enable docker",
+      "systemctl start docker || true"
     ]
   }
 }
@@ -72,8 +80,20 @@ resource "null_resource" "blog-image" {
   }
 }
 
+resource "template_file" "blog-service" {
+  template = "blog.service"
+
+  vars {
+    domain = "${var.cloudflare_domain}"
+    repo = "${var.git_remote}"
+    tls = "${var.letsencrypt_email}"
+    hook_secret = "${var.hook_secret}"
+    docker_image = "${var.docker_image}"
+  }
+}
+
 resource "null_resource" "blog-docker" {
-  depends_on = ["null_resource.blog-image"]
+  depends_on = ["null_resource.blog-image", "template_file.blog-service"]
 
   triggers {
     host = "${digitalocean_droplet.blog.ipv4_address}"
@@ -83,6 +103,7 @@ resource "null_resource" "blog-docker" {
     repo = "${var.git_remote}"
     tls = "${var.letsencrypt_email}"
     secret = "${var.hook_secret}"
+    service = "${sha1(template_file.blog-service.rendered)}"
   }
 
   connection {
@@ -94,9 +115,10 @@ resource "null_resource" "blog-docker" {
 
   provisioner "remote-exec" {
     inline = [
-      "docker pull ${var.docker_image}",
-      "docker rm -f blog || true",
-      "docker run -d --name blog -p 80:80 -p 443:443 -v /var/lib/caddy:/root/.caddy -e DOMAIN=www.${var.cloudflare_domain} -e REPO=${var.git_remote} -e TLS=${var.letsencrypt_email} -e HOOK_SECRET=${var.hook_secret} ${var.docker_image}"
+      "echo ${base64encode(template_file.blog-service.rendered)} | base64 -d > /etc/systemd/system/blog.service",
+      "systemctl daemon-reload",
+      "systemctl enable blog",
+      "systemctl restart blog"
     ]
   }
 }

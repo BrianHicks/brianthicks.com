@@ -1,0 +1,13 @@
+[Unit]
+After=docker.service
+Wants=docker.service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStartPre=-/usr/bin/docker pull ${docker_image}
+ExecStartPre=-/usr/bin/docker rm -f blog
+ExecStart=/usr/bin/docker run --rm --name blog -p 80:80 -p 443:443 -v /var/lib/caddy:/root/.caddy -e DOMAIN=www.${domain} -e REPO=${repo} -e TLS=${tls} -e HOOK_SECRET=${hook_secret} ${docker_image}
+
+[Install]
+WantedBy=multi-user.target
