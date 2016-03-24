@@ -107,6 +107,16 @@ think of two explanations for this:
 Note the response "rails sprockets :(". I couldn't bear to take that poor
 person's sad face out of the data when scrubbed it!
 
+**EDIT**:
+[Richard Feldman](https://twitter.com/rtfeldman/status/712323668215353344)
+observes that:
+
+> Also consider that "grunt + gulp + webpack == buildToolTotal"
+
+Good point, and thanks for the catch! Webpack, gulp, brunch, grunt, gulp, and
+broccoli taken together account for 293 responses, which would put those types
+of build systems in aggregate in second place.
+
 ## What has been the biggest pain point for you in your use of Elm?
 
 {{< figure src="/images/state-of-elm-2016/pain.png" >}}
@@ -131,6 +141,10 @@ most visible in Javascript (Coffeescript vs Typescript, for example).
 
 There are quite a few missing languages here, as well. PHP doesn't even show up,
 for example. People just didn't write them in.
+
+**EDIT**: As
+[Amitai Burstein](https://twitter.com/amitaibu/status/713119982968827905) points
+out: Drupal is, in fact, a PHP framework. Thanks for the correction!
 
 ## Where are you located?
 
