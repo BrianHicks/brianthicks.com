@@ -81,7 +81,7 @@ resource "null_resource" "blog-image" {
 }
 
 resource "template_file" "blog-service" {
-  template = "blog.service"
+  template = "${file(\"blog.service\")}"
 
   vars {
     domain = "${var.cloudflare_domain}"
