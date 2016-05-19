@@ -22,7 +22,7 @@
     /2013/09/13/temptation-of-pypy/ /post/{path}
     /2014/03/20/stl-python-class-complete/ /post/{path}
     /2014/10/16/speed-up-pip-install-with-wheel/ /post/{path}
-    /2014/10/29/announcing-setattr-your-python-toolbox/ /post/{path}
+    /2014/10/29/setattr-your-python-toolbox/ /post/{path}
     /2014/10/30/growing/ /post/{path}
     /2014/11/03/build-modular-command-line-tools-with-click/ /post/{path}
     /2014/11/10/speedy-sets/ /post/{path}
@@ -30,7 +30,7 @@
     /2014/12/08/setattr-season-1/ /post/{path}
     /2014/12/28/so-hows-setattr-going/ /post/{path}
     /2015/01/05/im-sick-im-shipping-tomorrow-anyway/ /post/{path}
-    /2015/04/15/automate-your-python-environment-with-pyenv/ /post/{path}
+    /2015/04/10/pyenv-your-python-environment-automated/ /post/{path}
     /2015/06/04/introducing-terraform-py/ /post/{path}
 
     # reeeeally old URL
