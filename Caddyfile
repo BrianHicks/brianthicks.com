@@ -9,7 +9,7 @@
     hook "/update-hook" {$HOOK_SECRET}
     then rm -rf public
     then git submodule update --init --recursive
-    then hugo
+    then make public
   }
 
   redir 301 {
