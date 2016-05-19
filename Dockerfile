@@ -1,6 +1,6 @@
 FROM abiosoft/caddy
 
-RUN apk add --update perl
+RUN apk add --update perl make
 
 RUN curl -L https://github.com/spf13/hugo/releases/download/v0.15/hugo_0.15_linux_amd64.tar.gz > hugo.tar.gz && \
     tar -xzvf hugo.tar.gz && \
