@@ -1,5 +1,5 @@
 ---
-date: "2016-06-22T15:24:53-05:00"
+date: "2016-06-23T16:48:54-05:00"
 title: "Candy and Allowances: Parent-Child Communication in Elm"
 tags: ["elm"]
 
