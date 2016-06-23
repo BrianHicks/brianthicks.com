@@ -18,3 +18,5 @@ And the slides:
 <script async class="speakerdeck-embed" data-id="30ae9492eb0d48549c7b8717fe2e9a63" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
 And thanks, Josh, for putting this all together!
+
+{{<elmSignup>}}
