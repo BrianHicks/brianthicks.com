@@ -187,3 +187,5 @@ Thank you to Richard Feldman and Evan Czaplicki for their feedback on these
 questions. Thanks to the State of Clojure survey team for the inspiration (and
 questions). Finally, thank you to everyone who took the survey and shared it
 within their network of Elm-loving friends and colleagues. Y'all are awesome.
+
+{{<elmSignup>}}
