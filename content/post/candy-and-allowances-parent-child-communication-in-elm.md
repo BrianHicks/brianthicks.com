@@ -251,7 +251,7 @@ as giving the child the money to cover their candy shopping spree.
 Now whenever the child gets a `Candy` message and doesn't have any money it asks
 the parent for a little extra. This is the communication from the child to the
 parent, so now we have two-way communication. The best part is that neither side
-knows too much about the other's state. Since they communicate over well-defined
+knows too much about the others state. Since they communicate over well-defined
 messages, as long as the `update` functions handle all the cases (which the
 compiler will ensure) we can't end up in an inconsistent state. Plus, we can add
 new parents to these child components in a safe way. Separation of concerns is
@@ -259,28 +259,28 @@ great!
 
 ## Done!
 
-I omitted a few parts from this post to keep it conscise, but you can grab the
+I omitted a few parts from this post to keep it concise, but you can grab the
 final version of the code at
 [BrianHicks/candy-and-allowances](https://github.com/BrianHicks/candy-and-allowances)
-on Github. That includes my final implementation of child-to-parent
+on GitHub. That includes my final implementation of child-to-parent
 communication, as well as the view functions.
 
 To sum up:
 
 - You can communicate to child components by calling their `update` function
   with the `Msg`s that they define. This is probably possible in your
-  application *right now* if you're follwoing the Elm Architecture.
+  application *right now* if you're following the Elm Architecture.
 
 - Some small changes to the child component's `update` function let you set up a
   feedback loop back to the parent. A real life version of this might look like
-  updating the parent's view from a scrollbar: messsages would indicate the
+  updating the parent's view from a scroll bar: messages would indicate the
   percent scrolled, and the parent could update its offset accordingly.
   
   This pattern should scale up just fine, as well. If you need more messages,
   make another union type for them (called, for example, `MsgOut` and using a
   similar way.) That said, if a child component has a huge number of events the
   parent needs to handle, it may be a sign that you either need to split
-  functionality out to mulitple children or make the child part of the parent to
+  functionality out to multiple children or make the child part of the parent to
   begin with. A minimal interface here will make your child components much
   easier to reuse.
   
