@@ -287,4 +287,8 @@ To sum up:
 Now you'll know what tools to reach for the next time you need to solve this
 problem!
 
+**update**: [part II, covering child to child communication]({{< ref
+"candy-and-allowances-part-two-child-child-communication-in-elm.md" >}}) is now
+available.
+
 {{<elmSignup>}}
