@@ -1,6 +1,5 @@
 ---
-draft: true
-date: "2016-07-05T10:00:00-05:00"
+date: "2016-07-05T08:00:00-05:00"
 title: "Duplicate, Message, or Update? Contexts in Elm Components"
 tags: ["elm"]
 
