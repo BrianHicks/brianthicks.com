@@ -62,6 +62,7 @@ resource "cloudflare_record" "www" {
   value = "${digitalocean_droplet.blog.ipv4_address}"
   type = "A"
   ttl = 1
+  proxied = true
 }
 
 # docker stuff
