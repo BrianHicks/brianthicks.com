@@ -79,7 +79,28 @@ And if we look at [the source](https://github.com/elm-lang/core/blob/4.0.3/src/P
   (model, batch commands)
 ```
 
-## When to Use It
+## Creating Your Own Infix Functions
+
+Given the above, when and why should you create your own infix functions?
+Think of it like wasabi in cooking: a little bit goes a long way.
+Unless you have an operation that you need to do over and over and over, consider using a prefix function instead.
+In fact, the [Elm package design guidelines](http://package.elm-lang.org/help/design-guidelines#avoid-infix-operators) recommend not introducing new operators unless absolutely necessary. 
+And if you do, please be explicit about importing them, since they're hard to search for.
+That is, do this:
+
+```elm
+import MyCoolModule exposing ((<*>))
+```
+
+Instead of this:
+
+```elm
+import MyCoolModule exposing (..)
+```
+
+That way it's easy to see at a glance where a given operator is coming from.
+
+## When to Use `!`
 
 All that said, when should one use `!`?
 Short answer: in all your `update` functions!
@@ -93,8 +114,5 @@ So if you don't like it, just don't use it.
 
 You now know when and how to use `!`. 
 The bigger win here, though, is that you now know how infix functions work!
-Use these in moderation.
-They're powerful, and like salt in cooking, a little goes a long way.
-That said, the [Elm package design guidelines](http://package.elm-lang.org/help/design-guidelines#avoid-infix-operators) recommend not introducing new operators unless absolutely necessary.
 
 {{< elmSignup >}}
