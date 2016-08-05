@@ -103,7 +103,7 @@ The docs refer to `<|` as the "backward function application" operator, and `|>`
 These names are correct, but they're a mouthful!
 Because of this, I usually refer to them as "backward application" and "forward application" or "pipe" operators.
 
-## Finished
+## Done!
 
 Now you now how to get rid of all those extra parentheses around your function calls.
 You also know how to create pipelines to process your values and clean up your code.
