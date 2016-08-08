@@ -2,6 +2,7 @@
 date: "2016-08-08T09:00:00-05:00"
 tags: ["elm"]
 title: "Values, Pipes, and Arrows"
+featureimage: "/images/pipes-by-dennis-hill.jpg"
 
 ---
 
