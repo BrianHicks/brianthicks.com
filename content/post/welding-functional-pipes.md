@@ -3,7 +3,6 @@ date: "2016-08-15T09:00:00-05:00"
 tags: ["elm"]
 title: "Welding Functional Pipes"
 featureimage: "/images/welding-by-rob-lambert.jpeg"
-draft: true
 
 ---
 
