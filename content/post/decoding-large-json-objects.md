@@ -104,10 +104,10 @@ But if you find yourself stuck needing an object with more than 8 fields:
 
 We have to make a pitstop here to look at incremental decoding.
 When you define a record, you also get a record constructor for free!
-It will have the the same thing as the type, so in our `User` example above: `User : String -> Int -> String`.
+It will have the the same thing as the type, so in our `User` example above: `User : String -> Int -> String -> User`.
 
 Remember [our discussion on currying]({{< ref "welding-functional-pipes.md" >}}#currying)?
-We know from there that if we call `User` with just a `String`, we'll have `Int -> String` left over.
+We know from there that if we call `User` with just a `String`, we'll have `Int -> String -> User` left over.
 We can use that to our advantage to make a pipeline using `apply` from `Json.Decode.Extra`!
 In this example, we'll use `(|:)`, which is the infix version of `apply`.
 
@@ -177,3 +177,9 @@ To summarize our summary, you can:
 3. Use `Json.Decode.Pipeline` to make a readable decoding pipeline to make future maintenance easier.
 
 {{< elmSignup >}}
+
+---
+
+Edit August 23, 2016: Corrected the type signatures of the `User` constructor.
+It didn't have `User` as the return value.
+Thanks to Martin Janiczek for the catch!
