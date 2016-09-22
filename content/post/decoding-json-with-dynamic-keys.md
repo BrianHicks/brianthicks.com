@@ -115,9 +115,9 @@ I've added a cake into our JSON. Now it looks like:
 
 If we run this through our decoder from earlier, we get an error! We'll need to
 create a decoder for cakes (which I'm going to gloss but you can see them in
-!!!the GitHub repo for this post!!!.) We'll just jump straight to the good bit:
-we need to handle either a cake or a pie. That sounds like a job for a union
-type!
+[the GitHub repo for this post](https://github.com/BrianHicks/elm-json-dynamic-keys).)
+We'll just jump straight to the good bit: we need to handle either a cake or a
+pie. That sounds like a job for a union type!
 
 ```elm
 type BakedGood
