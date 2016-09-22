@@ -1,5 +1,5 @@
 ---
-date: "2016-09-22T15:34:48-05:00"
+date: "2016-09-26T09:00:00-05:00"
 title: "Two Talking Maybes is Two Too Many"
 tags: ["elm"]
 featureimage: "/images/crater-or-volcano-by-nasa.jpeg"
