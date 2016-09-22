@@ -67,14 +67,16 @@ state.
 So how can we take this and apply it generally? There's so much in this talk,
 but one big thing I'm taking away is that if we have two `Maybe` types that
 interact there's something smelly going on. We've talked about this kind of
-thing before when we were deduplicating scientists: any time you share state
-between two fields, you need to make it very difficult for those fields to get
-out of sync. In this case, I'd like to propose this code smell in a new way:
+thing before when we were <a href="{{< ref
+"duplicating-scientists-in-elm-stop-sharing-state.md" >}}">deduplicating
+scientists</a>: any time you share state between two fields, you need to make it
+difficult for those fields to get out of sync. In this case, I'd like to propose
+this code smell in a new way:
 
 > Two Talking `Maybe`s is Two Too Many
 
 In other words, when you have two `Maybe`s interacting, find out how you can get
-rid of that interaction as quickly as you can. I'm going back and looking at my
+rid of that interaction as soon as you can. I'm going back and looking at my
 code to figure out if there are any places where I can do exactly that; you
 should too!
 
