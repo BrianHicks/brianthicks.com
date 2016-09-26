@@ -1,9 +1,8 @@
----
+--
 date: "2016-09-26T09:00:00-05:00"
-title: "Two Talking Maybes is Two Too Many"
+title: "Two Talking Maybes is Maybe Too Many"
 tags: ["elm"]
 featureimage: "/images/crater-or-volcano-by-nasa.jpeg"
-draft: true
 
 ---
 
@@ -73,7 +72,7 @@ scientists</a>: any time you share state between two fields, you need to make it
 difficult for those fields to get out of sync. In this case, I'd like to propose
 this code smell in a new way:
 
-> Two Talking `Maybe`s is Two Too Many
+> Two Talking `Maybe`s is Maybe Too Many
 
 In other words, when you have two `Maybe`s interacting, find out how you can get
 rid of that interaction as soon as you can. I'm going back and looking at my
