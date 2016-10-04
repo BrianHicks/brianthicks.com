@@ -102,7 +102,10 @@ to make sure we handle our errors. This pattern helps make sure your application
 never gets in an undefined state,
 like
 [Richard Feldman recommended in his elm-conf talk]({{< ref "two-talking-maybes-is-maybe-too-many.md" >}}).
-[Check out the GitHub Project](TODO) for more details how we're defining these.
+[Check out the GitHub Project](https://github.com/brianhicks/elm-debugging-json)
+or for more details how we're defining
+these.
+[There's also a live demo!](https://brianhicks.github.io/elm-debugging-json/)
 But now we can define our JSON decoder!
 
 ```elm
