@@ -2,8 +2,7 @@
 date: "2016-10-03T09:00:00-05:00"
 title: "Decoding JSON With Dynamic Keys"
 tags: ["elm"]
-featureimage: "TODO"
-draft: true
+featureimage: "/images/wood-type-by-fabien-barral.jpeg"
 
 ---
 
@@ -88,8 +87,8 @@ Hooray! We've decoded our value, next problem please!
 
 ## Free-For-All!
 
-So what if our keys and values don't correlate in any way? What if… someone sent
-a cake in our JSON? Chaos! But we still need to handle it.
+So what if our keys and values don't correlate in any way? What if&hellip;
+someone sent a cake in our JSON? Chaos! But we still need to handle it.
 
 I've added a cake into our JSON. Now it looks like:
 
