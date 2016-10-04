@@ -38,7 +38,7 @@ from
 [Typicode's JSON Placeholder API](https://groups.google.com/forum/#!searchin/elm-discuss/JSON%7Csort:relevance/elm-discuss/2ViXhO5R2b4/N6eQx3R-BAAJ).
 We're going to decode part of a user (`/users/{id}`) into the following model:
 
-```
+```elm
 type alias User =
     { id : Int
     , name : String
