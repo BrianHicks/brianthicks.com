@@ -133,7 +133,7 @@ works!
 Now that our decoder works (hooray!) we can just swap out our fake `loadUser`
 function for a real one. Mine ended up looking like this:
 
-```
+```elm
 loadUser : Int -> Cmd Msg
 loadUser i =
     let
