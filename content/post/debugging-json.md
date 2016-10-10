@@ -3,7 +3,6 @@ date: "2016-10-10T09:00:00-05:00"
 title: "Debugging JSON"
 tags: ["elm"]
 featureimage: "/images/vw-beetle-by-scott-umstattd.jpeg"
-draft: true
 
 ---
 
