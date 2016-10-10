@@ -29,7 +29,7 @@ of decoupling! If you don't know how your server is going to act, it makes sense
 to take care of the responses you can expect before you tune your requests. That
 way, when you're working with HTTP you don't have to worry about unknown
 responses.
-#
+
 ## Our Goal
 
 We're going to show this off by deserializing some data
@@ -94,8 +94,7 @@ loadUser _ =
 ```
 
 `LoadingFailed` and `UserLoaded` handle a failed and a successful result,
-respectively. We're
-using
+respectively. We're using something similar to
 [Kris Jenkins' RemoteData pattern](http://blog.jenkster.com/2016/06/how-elm-slays-a-ui-antipattern.html) here
 to make sure we handle our errors. This pattern helps make sure your application
 never gets in an undefined state,
