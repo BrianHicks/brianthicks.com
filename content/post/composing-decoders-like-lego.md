@@ -37,14 +37,14 @@ The docs say it best:
 
 Let's examine that claim.
 
-## Decoding a List of Strings
+## Decoding a List of Integers
 
-Say we have a single string.
+Say we have a single integer.
 Not the most complex data type in the world, but we still need to parse it.
-Elm provides us a `string` decoder to begin with, so we can do the following:
+Elm provides us a `int` decoder to begin with, so we can do the following:
 
 ```elm
-Decode.decodeString Decode.string "\"test\"" == Ok "test"
+Decode.decodeString Decode.int "1" == Ok 1
 ```
 
 `Decode.decodeString` just takes a decoder and a string to get back a `Result`.
@@ -53,7 +53,7 @@ This is trivial, as it should be.
 But, like LEGO we can snap them together:
 
 ```elm
-Decode.decodeString (Decode.list Decode.string) "[\"test\"]" == Ok ["test"]
+Decode.decodeString (Decode.list Decode.int) "[1]" == Ok [1]
 ```
 
 `Decode.list` takes another `Decode.Decoder` and returns something that will decode a list of those values.
