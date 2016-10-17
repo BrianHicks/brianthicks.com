@@ -3,13 +3,11 @@ date: "2016-10-17T09:00:00-05:00"
 title: "Composing Decoders like LEGO"
 tags: ["elm"]
 featureimage: "/images/lego-world-2013-by-brickset.jpg"
-draft: true
 
 ---
 
-First-time Elm users have a hard time learning how to compose decoders. People
-tend to get stuck on what they all mean, but it's not too hard: just think of
-them like LEGO.
+First-time Elm users have a hard time learning how to compose decoders.
+People tend to get stuck on what they all mean, but it's not too hard: just think of them like LEGO.
 
 <!--more-->
 
@@ -30,7 +28,7 @@ Pretty impressive!
 
 Elm's decoders are like that. 
 It sounds like a ridiculous claim to make, but they are.
-A decoder exposes a standard interface can snap together in any way you can think up.
+A decoder exposes a standard interface that can snap together in any way you can think up.
 The docs say it best:
 
 > Represents a way of decoding JSON values.
