@@ -11,8 +11,14 @@
     {{ "<!-- twitter -->" | safeHTML }}
     <meta name="twitter:title" content="{{.Title}}">
     {{with .Params.summary}}<meta name="twitter:card" content="{{.}}">{{end}}
-    {{with .Site.Params.social.twitter}}<meta name="twitter:creator" content="@{{.}}">{{end}}
-    {{with .Params.thumbnail}}<meta itemprop="twitter:image:src" content="{{.}}">{{end}}
+    {{with .Site.Params.social.twitter}}<meta name="twitter:site" content="@{{.}}">{{end}}
+    {{with .Params.thumbnail -}}
+    <meta itemprop="twitter:card" content="summary_large_image">
+    <meta itemprop="twitter:image" content="{{.}}">
+    {{else -}}
+    <meta itemprop="twitter:card" content="summary">
+    <meta itemprop="twitter:image" content="https://www.gravatar.com/avatar/{{.Site.Params.gravatar}}?s=250&d=identicon">
+    {{end}}
     {{with .Params.description}}<meta itemprop="twitter:description" content="{{.}}">{{end}}
 
     {{ "<!-- open graph -->" | safeHTML }}
