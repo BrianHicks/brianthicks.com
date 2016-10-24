@@ -12,13 +12,13 @@
     <meta name="twitter:title" content="{{.Title}}">
     {{with .Site.Params.social.twitter}}<meta name="twitter:site" content="@{{.}}">{{end}}
     {{with .Params.thumbnail -}}
-    <meta itemprop="twitter:card" content="summary_large_image">
-    <meta itemprop="twitter:image" content="{{.}}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{.}}">
     {{else -}}
-    <meta itemprop="twitter:card" content="summary">
-    <meta itemprop="twitter:image" content="https://www.gravatar.com/avatar/{{.Site.Params.gravatar}}?s=250&d=identicon">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://www.gravatar.com/avatar/{{.Site.Params.gravatar}}?s=250&d=identicon">
     {{end}}
-    {{with .Params.description}}<meta itemprop="twitter:description" content="{{.}}">{{end}}
+    {{with .Params.description}}<meta name="twitter:description" content="{{.}}">{{end}}
 
     {{ "<!-- open graph -->" | safeHTML }}
     <meta itemprop="article:author" content="{{.Site.Params.author}}">
