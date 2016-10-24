@@ -10,7 +10,6 @@
 
     {{ "<!-- twitter -->" | safeHTML }}
     <meta name="twitter:title" content="{{.Title}}">
-    {{with .Params.summary}}<meta name="twitter:card" content="{{.}}">{{end}}
     {{with .Site.Params.social.twitter}}<meta name="twitter:site" content="@{{.}}">{{end}}
     {{with .Params.thumbnail -}}
     <meta itemprop="twitter:card" content="summary_large_image">
