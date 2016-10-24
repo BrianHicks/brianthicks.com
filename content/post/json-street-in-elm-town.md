@@ -5,6 +5,7 @@ tags: ["elm"]
 featureimage: "/images/street-by-jesse-vermeulen.jpeg"
 thumbnail: "/images/street-by-jesse-vermeulen-with-title.jpeg"
 section: "Technology"
+summary: "@splodingsocks and I walked through the Elm Json.Decode documentation on the latest episode of the @elmtownpodcast."
 
 ---
 
