@@ -6,12 +6,12 @@
     {{ "<!-- schema.org -->" | safeHTML }}
     <meta itemprop="name" content="{{.Site.Params.author}}">
     <meta itemprop="description" content="{{if eq `` .Site.Params.description}}{{.Params.description}}{{else}}{{.Site.Params.description}}{{end}}">
-    {{with .Params.thumbnail}}<meta itemprop="image" content="{{. | absURL}}">{{end}}
+    {{with (or .Params.thumbnail .Params.featureimage)}}<meta itemprop="image" content="{{. | absURL}}">{{end}}
 
     {{ "<!-- twitter -->" | safeHTML }}
     <meta name="twitter:title" content="{{.Title}}">
     {{with .Site.Params.social.twitter}}<meta name="twitter:site" content="@{{.}}">{{end}}
-    {{with .Params.thumbnail -}}
+    {{with (or .Params.thumbnail .Params.featureimage) -}}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="{{. | absURL}}">
     {{else -}}
@@ -26,7 +26,7 @@
     {{with .Params.tags}}<meta itemprop="tag" content="{{delimit . `, `}}">{{end}}
     {{with .Params.section}}<meta itemprop="article:section" content="{{.}}">{{end}}
 
-    {{with .Params.thumbnail}}<meta itemprop="og:image" content="{{. | absURL}}">{{end}}
+    {{with (or .Params.thumbnail .Params.featureimage)}}<meta itemprop="og:image" content="{{. | absURL}}">{{end}}
     {{with .Permalink}}<meta itemprop="og:url" content="{{.}}">{{end}}
     {{with .Title}}<meta itemprop="og:title" content="{{.}}">{{end}}
     {{with .Params.description}}<meta itemprop="og:description" content="{{.}}">{{end}}
