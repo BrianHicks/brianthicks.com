@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="https://www.gravatar.com/avatar/{{.Site.Params.gravatar}}?s=250&d=identicon">
     {{end}}
-    {{with .Params.description}}<meta name="twitter:description" content="{{.}}">{{end}}
+    <meta name="twitter:description" content="{{.Summary}}">
 
     {{ "<!-- open graph -->" | safeHTML }}
     <meta itemprop="article:author" content="{{.Site.Params.author}}">
