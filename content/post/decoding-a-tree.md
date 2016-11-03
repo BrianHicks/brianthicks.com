@@ -6,9 +6,9 @@ draft: true
 ---
 
 You know how you stay up late trying to figure out why your recursive types just. won't. decode?
-Wouldn't it be nice if there was some way&mdash;any way&mdash;to make your tree decode correctly?
-Well with `Json.Decode.Extra.lazy`, you can!
-Let's see how.
+I've done it too.
+Wouldn't it be nice if it would, you know, just work how you wanted it to?
+Fortunately, `Json.Decode.Extra.lazy` exists, so it you can get it to work right away!
 
 <!--more-->
 
