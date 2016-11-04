@@ -5,6 +5,7 @@ tags: ["elm"]
 featureimage: "/images/windows-by-samuel-zeller.jpeg"
 thumbnail: "/images/windows-by-samuel-zeller-with-title.png"
 section: "Technology"
+draft: true
 
 ---
 
