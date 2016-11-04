@@ -1,0 +1,19 @@
+digraph {
+  one[label="1", shape=circle];
+  two[label="2", shape=circle];
+  three[label="3", shape=circle];
+
+  emptyOneLeft[label="", shape=circle];
+  emptyOneRight[label="", shape=circle];
+  emptyThreeLeft[label="", shape=circle];
+  emptyThreeRight[label="", shape=circle];
+
+  two -> one;
+  two -> three;
+
+  one -> emptyOneLeft;
+  one -> emptyOneRight;
+
+  three -> emptyThreeLeft;
+  three -> emptyThreeRight;
+}

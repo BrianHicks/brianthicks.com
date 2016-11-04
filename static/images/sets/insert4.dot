@@ -1,0 +1,14 @@
+digraph {
+  one[label="1", shape=circle];
+  zero[label="0", shape=circle, color=blue];
+
+  emptyOneRight[label="", shape=circle];
+  emptyZeroLeft[label="", shape=circle, color=blue];
+  emptyZeroRight[label="", shape=circle, color=blue];
+
+  one -> emptyOneRight;
+  one -> zero;
+
+  zero -> emptyZeroLeft[color=blue];
+  zero -> emptyZeroRight[color=blue];
+}

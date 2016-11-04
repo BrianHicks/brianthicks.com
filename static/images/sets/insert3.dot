@@ -1,0 +1,14 @@
+digraph {
+  one[label="1", shape=circle];
+  zero[label="0", shape=circle, color=blue];
+
+  emptyOneLeft[label="", shape=circle];
+  emptyOneRight[label="", shape=circle];
+  {rank=same; zero, emptyOneLeft, emptyOneRight}
+
+  one -> emptyOneLeft;
+  one -> emptyOneRight;
+
+  zero -> emptyOneLeft;
+  emptyOneLeft -> emptyOneRight[style=invis];
+}
