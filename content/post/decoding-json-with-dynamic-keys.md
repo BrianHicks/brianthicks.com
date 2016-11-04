@@ -174,4 +174,4 @@ value.
 But, if you have the choice, design your JSON return values so that you don't
 have to do these workarounds.
 
-{{< elmSignup >}}
+{{< elmJsonSignup >}}

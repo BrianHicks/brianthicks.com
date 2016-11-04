@@ -126,4 +126,4 @@ another for `Rectangle`? Consider the following JSON:
 But with `andThen`, mixed types in JSON become pretty easy to handle. It's just
 `Decode.list circle` and you're done. Composable functions win big here!
 
-{{<elmSignup>}}
+{{<elmJsonSignup>}}
