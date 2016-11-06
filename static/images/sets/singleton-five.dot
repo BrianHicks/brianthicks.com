@@ -1,0 +1,9 @@
+digraph {
+  five[label="5", shape=circle];
+
+  emptyFiveLeft[label="", shape=circle];
+  emptyFiveRight[label="", shape=circle];
+
+  five -> emptyFiveLeft;
+  five -> emptyFiveRight;
+}

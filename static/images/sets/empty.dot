@@ -1,0 +1,3 @@
+digraph {
+  empty[label="", shape=circle];
+}
