@@ -1,7 +1,6 @@
 ---
 date: "2016-11-07T09:00:00-06:00"
 title: "Happy Little Trees: Decoding Recursive Data Structures in Elm"
-draft: true
 featureimage: "/images/tree-by-victor-zambrano.jpeg"
 thumbnail: "/images/tree-by-victor-zambrano-with-title.png"
 section: "Technology"
