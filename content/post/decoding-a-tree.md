@@ -24,7 +24,7 @@ Here's how it looks in Elm:
 
 ```elm
 type BST comparable
-    = Branch (BST comparable) comparable (BST comparable)
+    = Branch comparable (BST comparable) (BST comparable)
     | Leaf
 ```
 
@@ -33,7 +33,7 @@ It'll keep things just a little simpler.
 
 ```elm
 type BST
-    = Branch BST Int BST
+    = Branch Int BST BST
     | Leaf
 ```
 
@@ -41,8 +41,8 @@ Here's what a tree with 1, 2, and 3 in it looks like:
 
 ```elm
 Branch
-    (Branch Leaf 1 Leaf)
     2
+    (Branch Leaf 1 Leaf)
     (Branch Leaf 3 Leaf)
 ```
 
@@ -77,8 +77,8 @@ bst =
         [ null Leaf
         , object3
             Branch
-            ("lt" := (lazy (\_ -> bst)))
             ("value" := int)
+            ("lt" := (lazy (\_ -> bst)))
             ("gt" := (lazy (\_ -> bst)))
         ]
 ```
