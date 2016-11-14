@@ -1,11 +1,10 @@
 ---
-date: "2016-11-14T09:00:00-06:00"
+date: "2016-11-13T22:30:00-06:00"
 title: "Functional Sets, Part 1: Construction"
 tags: ["elm"]
 featureimage: "/images/windows-by-samuel-zeller.jpeg"
 thumbnail: "/images/windows-by-samuel-zeller-with-title.png"
 section: "Technology"
-draft: true
 
 ---
 
