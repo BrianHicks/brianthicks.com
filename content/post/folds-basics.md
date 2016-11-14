@@ -12,7 +12,7 @@ draft: true
 Welcome back! 
 We're in the middle of a series about implementing functional data structures in Elm.
 In [part one]({{< ref "sets-intro.md" >}}) we implemented the skeleton of our sets using a binary search tree.
-Last week, [part two]({{< ref "sets-find-size.md" >}}), we added membership tests and size to our set.
+Last week, [part two]({{< ref "sets-member-size.md" >}}), we added membership tests and size to our set.
 This week we're going to make a quick pit stop to talk about how folds work, and next week we'll implement them for our set.
 
 <!--more-->
