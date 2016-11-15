@@ -1,0 +1,32 @@
+digraph {
+  three[label="3", shape=circle];
+  two[label="2", shape=circle];
+  one[label="1", shape=circle];
+  four[label="4", shape=circle];
+  five[label="5", shape=circle];
+
+  emptyOneLeft[label="", shape=circle];
+  emptyOneRight[label="", shape=circle];
+  emptyTwoRight[label="", shape=circle];
+  emptyFourLeft[label="", shape=circle];
+  emptyFiveLeft[label="", shape=circle];
+  emptyFiveRight[label="", shape=circle];
+
+  one -> emptyOneLeft;
+  one -> emptyOneRight;
+
+  two -> one;
+  two -> emptyTwoRight;
+
+  three -> two;
+  three -> four;
+
+  four -> emptyFourLeft;
+  four -> five;
+
+  emptyFourLeft -> five[style=invis];
+  {rank=same; emptyFourLeft, five}
+
+  five -> emptyFiveLeft;
+  five -> emptyFiveRight;
+}
