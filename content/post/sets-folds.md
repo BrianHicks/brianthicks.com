@@ -11,8 +11,8 @@ draft: true
 
 We're in the middle of a quest to build a toy set implementation from first principles.
 So far, we've implemented [our constructors]({{< ref "sets-intro.md" >}}), [size, and member]({{< ref "sets-member-size.md" >}}).
-Last week we stopped off briefly to review [how folds work]({{< ref "folds-basics.md" >}}).
-This week, we're going to implement folds for our set!
+Last week we stopped off to review [how folds work]({{< ref "folds-basics.md" >}}).
+This week, we're going to create folds for our set!
 
 <!--more-->
 
@@ -34,10 +34,10 @@ We have only a few minor changes to make here.
 First, since the members of our set have to be comparable, we take `commparable` instead of `a`.
 Second, we're accepting our `Set` type instead of `List`.
 
-As an aside: when you make functions like this that accept a collection, always make the collection the last argument.
-This makes it a lot easier to use the [application]({{< ref "values-pipes-and-arrows.md" >}}) and [composition]({{< ref "welding-functional-pipes.md" >}}) operators with your functions.
+As an aside: when you make functions that accept a collection, make the collection the last argument.
+This makes it easier to use the [application]({{< ref "values-pipes-and-arrows.md" >}}) and [composition]({{< ref "welding-functional-pipes.md" >}}) operators with your functions.
 
-But we have a little problem&hellip;
+But this raises a question&hellip;
 What's the ordering of a tree?
 How do we walk left to right or right to left in our implementation?
 I didn't know, so I asked my colleague [Rebecca](https://twitter.com/cercerilla).
@@ -48,16 +48,16 @@ She drew this on the whiteboard:
            caption="Walk order in a tree (with apologies to Rebecca, whose drawing was much nicer.)" >}}
 
 All we have to do is follow that red line to get the proper walk order.
-To put our `foldl` in words: an empty set just returns the accumulator.
+To put our `foldl` in words: if we have an empty set, we return the accumulator.
 If we have a tree, we fold the whole left branch, then the head, then the right branch.
 
 So when we call that on our tree of one through five, rooted at three, we'll recurse down the left branch first.
 When we hit the subtree rooted at two, we'll recurse down the left side of that, and then do the same for one.
-The left subtree of one is empty, so we'll fold the head, then the right subtree (which is also empty)
+The left subtree of one is empty, so we'll fold the head, then the right subtree (which is also empty.)
 At that point we'll pop back up a level, fold the head of two, then the right subtree there.
 We continue going up and down until we've traversed the whole tree.
 
-When we want to `foldr` instead, we'll just go in the opposite order.
+When we want to `foldr` instead, we'll go in the opposite order.
 We'll start with the right subtree, then the head, then the left subtree.
 I'll let you trace that line yourself, it works the same way.
 
@@ -91,24 +91,28 @@ foldl fn acc set =
 ```
 
 Our cases look pretty much how we described them above.
-We start with our empty case, where we just return in whatever accumulator value we passed in unchanged.
+We start with our empty case, where we return the accumulator unchanged.
 Easy enough.
 
-It gets a little more complicated in the `Tree` case.
-We're doing a lot of recursive calls here, so I've assigned a bunch of temporary variables to hold things.
+Our `Tree` case is more complex.
+We're doing recursive calls here, so I've assigned a bunch of temporary variables to hold things.
 First we're calling `foldl` on the left subtree.
 This will walk down all the left trees in the set until it finds an empty node.
 
 Next we process the head.
 This is different, because it's a single value.
-No recursion necessary, but we will use the result of the fold as our accumulator value in the call to the function.
+No recursion necessary, but we'll use the result of the last fold as the accumulator value in the call.
 
-We'll finish things off by doing the same thing we did on the left subtree on the right one.
+We'll finish things off by doing the same operation we did on the left subtree on the right.
 But in this case, we're passing in the accumulated value from the head.
 Finally, we return this accumulated value.
 
-When we implement `foldr`, we just do these three things in the reverse order: right first, then head, then left.
+When we implement `foldr`, we do these three things in the reverse order: right first, then head, then left.
 Try tracing out these calls, and you'll find that they happen in the same order as the line in the graphic above.
+
+Remember last week when I said that `foldl` works slightly faster than `foldr` for a list because we don't have to reverse the list first?
+Well with a tree, we don't have that problem.
+Folds over this kind of tree have the same number of operations, regardless of direction.
 
 ## Let's Fold Some Stuff!
 
@@ -125,11 +129,11 @@ Folded!
 
 How about something more complex?
 Remember how we [implemented `member` and `size`]({{< ref "sets-member-size.md" >}}) as recursive calls before?
-Now we can just use `foldl` to do the same thing!
+Now we can use `foldl` to do the same thing!
 
 ### Size
 
-Size gets significantly smaller (down from 7 lines to 3):
+`size` shrinks drastically when we redo it with `foldl` (down from 7 lines to 3):
 
 ```elm
 size : Set comparable -> Int
@@ -137,12 +141,12 @@ size =
     foldl (\_ count -> count + 1) 0
 ```
 
-Our combiner function here just ignores the value that's actually in the set, and instead just increments the accumulator value by one.
-This is exactly what we were doing before, but now we can express it much more simply.
+Our combiner function ignores the value that's in the set, and instead increments the accumulator value.
+This is exactly what we were doing before, but now we can express it much more tersely.
 
 Notice we're also doing this in point-free style!
 Since we're not providing all the arguments to `foldl`, it's curried into the function we want.
-We could also implement it like this:
+We could also implement `size` like this:
 
 ```elm
 size : Set comparable -> Int
@@ -150,11 +154,11 @@ size set =
     foldl (\_ count -> count + 1) 0 set
 ```
 
-I prefer the point-free style, but do whatever makes the most sense to you.
+I prefer the point-free style, but do whatever makes sense to you.
 
 ### Member
 
-Member is a little more complicated:
+`member` is a more complex:
 
 ```elm
 member : comparable -> Set comparable -> Bool
@@ -162,7 +166,8 @@ member item set =
     foldl (\candidate acc -> acc || (candidate == item)) False set
 ```
 
-Here we start out with the accumulator value as `False` and assume that if we never find the member, the value will always be false.
+Here we start out with the accumulator value as `False`.
+We assume that if we never find the member, the value will always be false.
 
 Our accumulator function takes the candidate and the accumulator.
 The notation here says "return the accumulator value if it's true, otherwise the equality value of the candidate and item we're searching for".
@@ -170,24 +175,24 @@ Yay for boolean logic!
 
 But this implementation has a problem.
 The `member` implementation we wrote before only had to check a few values as it made it's way down the tree.
-Because of the way our trees are implemented, it should only have to look at `log(n)` items, where `n` is the size of the tree.
+Because we're using a binary search tree, it should only have to look at `log(n)` items, where `n` is the size of the tree.
 But this new implementation looks at *every* value.
 That means it has to look at all `n` items in the tree.
-That may not seem like a big difference, and in the size trees we've been working with, it isn't.
-But when we get to very large trees, or values which are expensive to compare, it'll make a big difference!
-If we have a set with a thousand values in it, our old implementation would only have to look at 6(ish) values. If we do it with a fold we'll have to look at all 1000.
-
-This just demonstrates that while folds are super useful, they're not suitable for *every* function.
+That may not seem like a significant difference, and in the size trees we've been working with, it isn't.
+But when we have trees with many items or values which are expensive to compare this difference blows up in our faces.
+If we have a set with a thousand values in it, our old implementation would only have to look at 6(ish) values.
+But if we do it with a fold we'll have to look at all 1000!
+This tells us that while folds are useful, they're not suitable for *every* function.
 
 ## Folds: Done!
 
 So we've seen:
 
-- How folds are implemented for trees
-- How those tricky recursive functions work this time
-- When folds work really well (when you've got to consider every value) and when they don't (when you only want to consider some.)
+- How to implement `fold` for binary search trees (and thus, for our set)
+- How to reimplement some work we've done to be more clear by using `foldl` or `foldr`
+- When folds work well (when you've got to consider every value) and when they don't (when you only want to consider some.)
 
-Now that we've written folds, we can do some really fun things.
+Now that we've written folds, we can get into even more mischief.
 Next week, combining sets and removing items!
 
 {{< elmSignup >}}
