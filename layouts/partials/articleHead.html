@@ -5,7 +5,7 @@
 
     {{ "<!-- schema.org -->" | safeHTML }}
     <meta itemprop="name" content="{{.Site.Params.author}}">
-    <meta itemprop="description" content="{{if eq `` .Site.Params.description}}{{.Params.description}}{{else}}{{.Site.Params.description}}{{end}}">
+    <meta itemprop="description" content="{{.Summary}}">
     {{with (or .Params.thumbnail .Params.featureimage)}}<meta itemprop="image" content="{{. | absURL}}">{{end}}
 
     {{ "<!-- twitter -->" | safeHTML }}

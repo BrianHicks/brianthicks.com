@@ -4,7 +4,6 @@
 
 {{ "<!-- search engines -->" | safeHTML }}
 {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-<meta name="description" content="{{if eq `` .Site.Params.description}}{{.Params.description}}{{else}}{{.Site.Params.description}}{{end}}">
 {{ .Hugo.Generator }}
 
 {{ "<!-- CSS -->" | safeHTML }}
