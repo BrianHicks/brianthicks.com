@@ -42,11 +42,11 @@ But instead, we get:
            caption="An unbalanced tree, the result of our naive insert implementation" >}}
 
 In a small set, this doesn't make a huge difference.
-But it means that the functions we'll implement today won't be as fast as they could be on larger sets.
+But it means that the functions we'll implement going forward won't be as fast as they could be on larger sets.
 A binary search tree ought to have `O(log n)` search performance, but in this case we'd get `O(n)`.
 That means if we inserted 1 through 1000 in order right now, we'd have to perform 1000 operations to see if `1000` is in the set.
-If the tree was balanced, we would only have to perform around TODO(log2 of 1000)!
-This seems like something we might want to fix.
+If we balanced the tree, we would only have to perform around TODO(log2 of 1000)!
+This seems like something we might want to fix, so let's do that.
 
 ## AVL Trees
 
@@ -54,8 +54,8 @@ Fortunately for us, tons of smart people have thought a lot about this problem.
 We have to choose between Red/Black trees, TODO trees, TODO trees&hellip;
 But we're going to use AVL Trees.
 
-[AVL trees](TODO) are named after their inventors, a trio of soviet computer scientists named TODO, TODO, and TODO.
-To implement them, we'll need to keep track of the height of each tree.
+[AVL trees](TODO) take their name from their inventors, a trio of soviet computer scientists named TODO, TODO, and TODO.
+To create one, we'll need to keep track of the height of each tree.
 An empty set is height 0, a singleton is height 1, and anything else is the height of it's tallest subtree plus 1.
 When we `insert`, we'll look at the new heights of the trees after insertion.
 If the difference between them is greater than 1, we'll rotate!
@@ -84,8 +84,8 @@ height set =
 ```
 
 An empty set is height 0, of course.
-Everything else will just be whatever height we've pre-calculated.
-We don't want to recaculate it here, because we'll be looking up height quite a lot as we modify our tree.
+Everything else will be whatever height we've pre-calculated.
+We don't want to recaculate it here, because we'll be looking up height quite a lot as we change our tree.
 We'll do *that* in a new constructor:
 
 ```elm
@@ -99,7 +99,7 @@ tree head left right =
 ```
 
 `tree` takes a head and two subtrees, and returns the new tree with the right height.
-The calculation here is just like I said above: we add one to the height of the tallest subtree.
+The calculation here is like I said above: we add one to the height of the tallest subtree.
 
 There are a couple more minor changes here (`singleton` now sets height to `1`.)
 The big change we'll need is to make `insert` use the new `tree` constructor to keep our heights correct:
@@ -122,15 +122,8 @@ insert item set =
 
 That's pretty much all we'll need to do to the set the stage!
 There's an embedded Elm program at the bottom of this post that will let you play around with making your own sets.
-Purple elements are empty sets, everything else will display both the value and the balanced height of that value.
 
-The program also has two buttons to rotate the tree.
-What do they do?
-It's a mystery!
-
-&hellip;
-
-Nah, let's look at that:
+But first, we need a way to balance our trees&hellip;
 
 ## Rotation
 
@@ -152,7 +145,7 @@ Let's refer to the left subtree of the original tree as `lessThans`, and the lef
 Now, armed with our terms, we can rotate left.
 We'll be creating a new `Tree`, with `subHead` as the head.
 The left subtree will be another new tree, with `head` as the head, `lessThans` as the left subtree, and `betweens` as the right subtree.
-Last, we just attach `greaterThans` as the right subtree.
+Last, we attach `greaterThans` as the right subtree.
 To rotate right, we do the opposite.
 
 Whew!
@@ -191,9 +184,13 @@ If we had to call `insert` in the rotation, we'd end up in an infinite loop.
 
 Getting all this in your head can be difficult.
 It helps me to visualize these things, when I can, so I wrote a little program to do that.
-As I said above, purple circles indicate empty sets.
-Everything else *should* be fairly self-explanatory.
-Do note that everything you input is interpreted as a string, so `a` through `z` may work better than numbers if you want to try a large number of values.
+Purple circles indicate empty sets.
+Everything else is labelled.
+The "height balance" of a tree is the height of the right subtree minus the height of the left.
+Do note that the program interprets all values as strings, so `a` through `z` may work better than numbers if you want to try a large number of values.
+
+Next week we'll apply these rotations automatically when we insert.
+See you then!
 
 ### Things to try:
 
@@ -205,8 +202,5 @@ Do note that everything you input is interpreted as a string, so `a` through `z`
   Trace the operations you'd take to get to any given letter.
 
 {{< elmEmbed src="/scripts/sets/naiveInsertRotate.js" name="NaiveInsertRotate" >}}
-
-Next week we'll apply these rotations automatically when we insert.
-See you then!
 
 {{< elmSignup >}}
