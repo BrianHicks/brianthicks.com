@@ -11,10 +11,10 @@ draft: true
 
 [Last time]({{< ref "sets-intro.md" >}}) we started making a set using a binary search tree.
 Let's continue by adding more functionality to our set!
-Specifically, we're going to answer two questions:
+We're going to answer two questions:
 
 1. Is an item in the set?
-2. How big is the set?
+2. How many items are in the set?
 
 And we're going to do it recursively!
 
@@ -22,8 +22,8 @@ And we're going to do it recursively!
 
 ## Quick Recap
 
-Our sets are really [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree).
-We've modelled this data structure in our Elm code like this:
+Our sets are [binary search trees](https://en.wikipedia.org/wiki/Binary_search_tree) under the covers.
+We've modeled this data structure in our Elm code like this:
 
 ```elm
 type Set comparable
@@ -35,9 +35,9 @@ We can create empty sets using `empty`, sets with a single item using `singleton
 
 ## Balanced Lies
 
-I have a confession to make: our implementation of `insert` (and therefore `fromList`) behaves badly right now.
+I have a confession to make: our implementation of `insert` (and thus `fromList`) behaves badly right now.
 It's quite naive!
-Ideally, if you ran `fromList [1, 2, 3, 4, 5]` you'd get this:
+In an ideal world, if you ran `fromList [1, 2, 3, 4, 5]` you'd get this:
 
 {{< figure src="/images/sets/one-through-five-balanced.png"
            caption="A balanced tree containing the numbers 1 through 5." >}}
@@ -46,12 +46,15 @@ But if you run it against the code we implemented last time, you'll get this ins
 
 {{< figure src="/images/sets/one-through-five-unbalanced.png"
            caption="An unbalanced tree, the result of a naive insert implementation" >}}
-           
+
 In a small set, this doesn't make a huge difference.
 But it means that the functions we'll implement today won't be as fast as they could be on larger sets.
-We're going to fix this later on in the series, don't worry.
-For now, we'll just assume we're working with a well-balanced tree.
+For now, we'll assume we're working with a well-balanced tree.
 For 1 through 5, we can get it with `fromList [3, 2, 4, 1, 5]`.
+
+Smarter people than I have spilled much ink about self-balancing trees.
+So I'm going to do what every respectable programmer does: ignore it.
+We'll cover fixing this regressive behavior later in this series, after we're all done with writing things that can change our trees.
 
 ## Membership / Contains
 
@@ -103,13 +106,13 @@ Given `oneThroughFive`, we want to find if `5` is in the set:
 
 {{< figure src="/images/sets/one-through-five-balanced.png"
            caption="A set containing the numbers 1 through 5." >}}
-           
+
 We hit the `Set` case in our code, and examine the head.
 `3` and `5` are not equal, but `5` is greater than `3` so we recurse down the right subtree.
 
 {{< figure src="/images/sets/four-and-five.png"
            caption="A set containing the numbers 4 and 5." >}}
-           
+
 We again hit the `Set` case in our code.
 `4` and `5` are not equal.
 Surprise!
@@ -117,7 +120,7 @@ We're closer, but `5` is greater than `4`, so we recurse down the right subtree 
 
 {{< figure src="/images/sets/singleton-five.png"
            caption="A set containing only 5." >}}
-           
+
 This time, the head is `5` and our item is `5`.
 They're euqal, so our code returns `True`.
 Since we're not modifying the value on it's way back up the tree, we return `True` from the top level.
@@ -131,7 +134,7 @@ When we got there, we'd find that the subtree was `Empty`.
 
 {{< figure src="/images/sets/empty.png"
            caption="An empty set." >}}
-           
+
 Our code would return `False`, and we'd get that back out the top.
 
 ## Count on Me
@@ -152,7 +155,7 @@ size set =
             1 + size left + size right
 ```
 
-So what are we doing here? 
+So what are we doing here?
 Remember how in `member` we only ever returned a value, and never modified it on the way back from our recursive calls?
 Well, we don't always have to do that!
 In fact, it's necessary in this case.
