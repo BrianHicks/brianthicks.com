@@ -206,4 +206,7 @@ Do note that everything you input is interpreted as a string, so `a` through `z`
 
 {{< elmEmbed src="/scripts/sets/naiveInsertRotate.js" name="NaiveInsertRotate" >}}
 
+Next week we'll apply these rotations automatically when we insert.
+See you then!
+
 {{< elmSignup >}}
