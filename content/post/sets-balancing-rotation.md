@@ -5,7 +5,6 @@ tags: ["elm"]
 featureimage: "/images/stars-by-warlen-g-vasco.jpeg"
 thumbnail: "/images/stars-by-warlen-g-vasco-with-title.png"
 section: "Technology"
-draft: true
 
 ---
 
