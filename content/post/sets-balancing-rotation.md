@@ -2,6 +2,8 @@
 date: "2016-11-21T09:00:00-06:00"
 title: "Functional Sets, Part 2: Rotation"
 tags: ["elm"]
+featureimage: "/images/stars-by-warlen-g-vasco.jpeg"
+thumbnail: "/images/stars-by-warlen-g-vasco-with-title.png"
 section: "Technology"
 draft: true
 
@@ -30,7 +32,7 @@ We can create empty sets using `empty`, sets with a single item using `singleton
 
 Unfortunately, all is not well in set land&hellip;
 Our `insert` function behaves badly under certain conditions.
-The most obvious place this happens is when you try to create a set from a list that's already in order.
+The simplest place this happens is when you try to create a set from a list that's already in order.
 When we run `fromList [1, 2, 3, 4, 5]` we'd want to get this:
 
 {{< figure src="/images/sets/one-through-five-balanced.png"
@@ -45,16 +47,16 @@ In a small set, this doesn't make a huge difference.
 But it means that the functions we'll implement going forward won't be as fast as they could be on larger sets.
 A binary search tree ought to have `O(log n)` search performance, but in this case we'd get `O(n)`.
 That means if we inserted 1 through 1000 in order right now, we'd have to perform 1000 operations to see if `1000` is in the set.
-If we balanced the tree, we would only have to perform around TODO(log2 of 1000)!
+If we balanced the tree, we would only have to perform around ten!
 This seems like something we might want to fix, so let's do that.
 
 ## AVL Trees
 
-Fortunately for us, tons of smart people have thought a lot about this problem.
-We have to choose between Red/Black trees, TODO trees, TODO trees&hellip;
+Fortunately for us, tons of smart people have thought about this problem.
+We have to choose from red-black trees, scapegoat trees, splay trees, treaps&hellip;
 But we're going to use AVL Trees.
 
-[AVL trees](TODO) take their name from their inventors, a trio of soviet computer scientists named TODO, TODO, and TODO.
+[AVL trees](https://en.wikipedia.org/wiki/AVL_tree) take their name from their inventors: Adelson-Velsky and Landis.
 To create one, we'll need to keep track of the height of each tree.
 An empty set is height 0, a singleton is height 1, and anything else is the height of it's tallest subtree plus 1.
 When we `insert`, we'll look at the new heights of the trees after insertion.
@@ -85,7 +87,7 @@ height set =
 
 An empty set is height 0, of course.
 Everything else will be whatever height we've pre-calculated.
-We don't want to recaculate it here, because we'll be looking up height quite a lot as we change our tree.
+We don't want to recaculate it every time, because it would be extra work and break our `O(log n)` performance.
 We'll do *that* in a new constructor:
 
 ```elm
@@ -129,10 +131,10 @@ But first, we need a way to balance our trees&hellip;
 
 Wikipedia has an *amazing* GIF to explain tree rotation:
 
-{{< figure src="TODO"
+{{< figure src="/images/sets/Tree_rotation_animation_250x250.gif"
            caption="A Tree Rotating Left and Right"
            attr="Wikipedia"
-           attrlink="TODO" >}}
+           attrlink="https://en.wikipedia.org/wiki/File:Tree_rotation_animation_250x250.gif" >}}
            
 In words: to rotate left, we have to have a tree with a non-empty subtree as it's right subtree.
 For the sake of clarity, we're going to call the original head `head` and the subtree's head `subHead`.
@@ -173,7 +175,7 @@ rotr set =
 ```
 
 We always put `lessThans`, `betweens` and `greaterThans` in order in the source.
-If these ever get out of order, we're going to be breaking our guarantees about order.
+If these ever get out of order, we're going to be breaking our guarantees about structure.
 
 Note that we don't need `insert` at all to rotate!
 This is helpful, since we'll rotate as part of balancing, and we have to balance when we insert.
@@ -183,9 +185,8 @@ If we had to call `insert` in the rotation, we'd end up in an infinite loop.
 ## Make Your Own Trees
 
 Getting all this in your head can be difficult.
-It helps me to visualize these things, when I can, so I wrote a little program to do that.
+It helps me to visualize these things, when I can, so I wrote a program to do that.
 Purple circles indicate empty sets.
-Everything else is labelled.
 The "height balance" of a tree is the height of the right subtree minus the height of the left.
 Do note that the program interprets all values as strings, so `a` through `z` may work better than numbers if you want to try a large number of values.
 
