@@ -1,0 +1,23 @@
+digraph {
+  a[label="A", shape=circle];
+  b[label="B", shape=circle];
+  c[label="C", shape=circle];
+
+  emptyALeft[label="", shape=circle];
+  emptyBLeft[label="", shape=circle];
+  emptyCLeft[label="", shape=circle];
+  emptyCRight[label="", shape=circle];
+
+  a -> b;
+  a -> emptyALeft;
+  emptyALeft -> b[style=invis];
+  {rank=same; emptyALeft, b}
+
+  b -> emptyBLeft;
+  b -> c;
+  emptyBLeft -> c[style=invis];
+  {rank=same; emptyBLeft, c}
+
+  c -> emptyCLeft;
+  c -> emptyCRight;
+}
