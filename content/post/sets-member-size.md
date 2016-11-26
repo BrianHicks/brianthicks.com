@@ -1,6 +1,6 @@
 ---
-date: "2016-11-21T09:00:00-06:00"
-title: "Functional Sets, Part 2: Membership and Size"
+date: "2016-12-05T09:00:00-06:00"
+title: "Functional Sets, Part 4: Membership and Size"
 tags: ["elm"]
 featureimage: "/images/trees-by-jakub-sejkora.jpeg"
 thumbnail: "/images/trees-by-jakub-sejkora-with-title.png"
@@ -9,9 +9,8 @@ draft: true
 
 ---
 
-[Last time]({{< ref "sets-intro.md" >}}) we started making a set using a binary search tree.
-Let's continue by adding more functionality to our set!
-We're going to answer two questions:
+Now that [our trees balance themselves]({{< ref "sets-balance.md" >}}) we can keep replicating the built-in set API.
+This week, we'll answer two questions:
 
 1. Is an item in the set?
 2. How many items are in the set?
@@ -22,39 +21,16 @@ And we're going to do it recursively!
 
 ## Quick Recap
 
-Our sets are [binary search trees](https://en.wikipedia.org/wiki/Binary_search_tree) under the covers.
+Our sets are [AVL trees](https://en.wikipedia.org/wiki/AVL_tree) (a kind of [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree)) under the covers.
 We've modeled this data structure in our Elm code like this:
 
 ```elm
 type Set comparable
-    = Set comparable (Set comparable) (Set comparable)
+    = Set Int comparable (Set comparable) (Set comparable)
     | Empty
 ```
 
 We can create empty sets using `empty`, sets with a single item using `singleton`, and bigger sets by using `insert` or `fromList`.
-
-## Balanced Lies
-
-I have a confession to make: our implementation of `insert` (and thus `fromList`) behaves badly right now.
-It's quite naive!
-In an ideal world, if you ran `fromList [1, 2, 3, 4, 5]` you'd get this:
-
-{{< figure src="/images/sets/one-through-five-balanced.png"
-           caption="A balanced tree containing the numbers 1 through 5." >}}
-
-But if you run it against the code we implemented last time, you'll get this instead:
-
-{{< figure src="/images/sets/one-through-five-unbalanced.png"
-           caption="An unbalanced tree, the result of a naive insert implementation" >}}
-
-In a small set, this doesn't make a huge difference.
-But it means that the functions we'll implement today won't be as fast as they could be on larger sets.
-For now, we'll assume we're working with a well-balanced tree.
-For 1 through 5, we can get it with `fromList [3, 2, 4, 1, 5]`.
-
-Smarter people than I have spilled much ink about self-balancing trees.
-So I'm going to do what every respectable programmer does: ignore it.
-We'll cover fixing this regressive behavior later in this series, after we're all done with writing things that can change our trees.
 
 ## Membership / Contains
 
@@ -139,7 +115,6 @@ Our code would return `False`, and we'd get that back out the top.
 
 ## Count on Me
 
-We're all good with testing for membership now.
 Let's finish off by figuring out how many items are in our set.
 In `oneThroughFive`, the answer is `5`.
 We'll call the new function `size`.
