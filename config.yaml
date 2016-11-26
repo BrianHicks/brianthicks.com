@@ -6,6 +6,7 @@ theme: "type"
 googleAnalytics: ""
 # Posts per page
 paginate: 5
+disqusShortName: brianthicks
 
 permalinks:
   post: "/post/:year/:month/:day/:slug"
