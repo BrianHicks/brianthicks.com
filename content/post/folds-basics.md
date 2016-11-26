@@ -1,5 +1,5 @@
 ---
-date: "2016-11-28T09:00:00-06:00"
+date: "2016-12-12T09:00:00-06:00"
 title: "The Care and Feeding of Folds in Elm"
 tags: ["elm"]
 featureimage: "/images/walrus-by-jay-ruzesky.jpeg"
