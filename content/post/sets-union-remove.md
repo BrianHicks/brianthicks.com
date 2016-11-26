@@ -1,6 +1,6 @@
 ---
-date: "2016-12-12T09:00:00-06:00"
-title: "Functional Sets, Part 4: Union and Remove"
+date: "2017-01-02T09:00:00-06:00"
+title: "Functional Sets, Part 6: Union and Remove"
 tags: ["elm"]
 featureimage: "/images/union-station-by-tatiana-latino.jpeg"
 thumbnail: "/images/union-station-by-tatiana-latino-with-title.png"
@@ -73,7 +73,7 @@ Let's see!
 We want this call to look like:
 
 ```elm
-remove 1 (fromList [1, 2]) == singleton 1
+remove 1 (fromList [1, 2]) == singleton 2
 ```
 
 If the set is empty or doesn't contain the value, we shouldn't do anything.
