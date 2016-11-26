@@ -1,6 +1,6 @@
 ---
-date: "2016-12-05T09:00:00-06:00"
-title: "Functional Sets, Part 3: Folds"
+date: "2016-12-19T09:00:00-06:00"
+title: "Functional Sets, Part 5: Folds"
 tags: ["elm"]
 featureimage: "/images/porches-by-vision-webagency.jpeg"
 thumbnail: "/images/porches-by-vision-webagency-with-title.png"
@@ -10,7 +10,7 @@ draft: true
 ---
 
 We're in the middle of a quest to build a toy set implementation from first principles.
-So far, we've implemented [our constructors]({{< ref "sets-intro.md" >}}), [size, and member]({{< ref "sets-member-size.md" >}}).
+So far, we've implemented [our constructors]({{< ref "sets-intro.md" >}}), [rotation]({{< ref "sets-balancing-rotation.md" >}}), [balancing]({{< ref "sets-balancing.md" >}}), [size, and member]({{< ref "sets-member-size.md" >}}).
 Last week we stopped off to review [how folds work]({{< ref "folds-basics.md" >}}).
 This week, we're going to create folds for our set!
 
@@ -142,7 +142,7 @@ size =
 ```
 
 Our combiner function ignores the value that's in the set, and instead increments the accumulator value.
-This is exactly what we were doing before, but now we can express it much more tersely.
+This is exactly what we were doing before, but now we can express it much more succinctly.
 
 Notice we're also doing this in point-free style!
 Since we're not providing all the arguments to `foldl`, it's curried into the function we want.
@@ -158,7 +158,7 @@ I prefer the point-free style, but do whatever makes sense to you.
 
 ### Member
 
-`member` is a more complex:
+`member` is somewhat more complex:
 
 ```elm
 member : comparable -> Set comparable -> Bool
@@ -180,7 +180,7 @@ But this new implementation looks at *every* value.
 That means it has to look at all `n` items in the tree.
 That may not seem like a significant difference, and in the size trees we've been working with, it isn't.
 But when we have trees with many items or values which are expensive to compare this difference blows up in our faces.
-If we have a set with a thousand values in it, our old implementation would only have to look at 6(ish) values.
+If we have a set with a thousand values in it, our old implementation would only have to look at 10(ish) values.
 But if we do it with a fold we'll have to look at all 1000!
 This tells us that while folds are useful, they're not suitable for *every* function.
 
