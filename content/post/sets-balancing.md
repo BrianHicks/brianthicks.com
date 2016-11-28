@@ -1,11 +1,10 @@
 ---
-date: "2016-11-28T09:00:00-06:00"
+date: "2016-11-27T20:25:00-06:00"
 title: "Functional Sets, Part 3: Balancing"
 tags: ["elm"]
 featureimage: "/images/balanced-stones-by-austin-neill.jpg"
 thumbnail: "/images/balanced-stones-by-austin-neill-with-title.png"
 section: "Technology"
-draft: true
 
 ---
 
