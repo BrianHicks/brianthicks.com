@@ -97,7 +97,7 @@ We're closer, but `5` is greater than `4`, so we recurse down the right subtree 
            caption="A set containing only 5." >}}
 
 This time, the head is `5` and our item is `5`.
-They're euqal, so our code returns `True`.
+They're equal, so our code returns `True`.
 Since we're not modifying the value on it's way back up the tree, we return `True` from the top level.
 
 ### Lost and Lost
@@ -150,7 +150,7 @@ Set
     (Set 15 Empty Empty)
 ```
 
-When we call `size eightAndFifteen`, we can substitude the subtrees for our addition:
+When we call `size eightAndFifteen`, we can substitute the subtrees for our addition:
 
 ```elm
 1 + size Empty + size (Set 15 Empty Empty)
