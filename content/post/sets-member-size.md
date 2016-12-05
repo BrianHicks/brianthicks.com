@@ -5,7 +5,6 @@ tags: ["elm"]
 featureimage: "/images/trees-by-jakub-sejkora.jpeg"
 thumbnail: "/images/trees-by-jakub-sejkora-with-title.png"
 section: "Technology"
-draft: true
 
 ---
 
