@@ -11,15 +11,19 @@ disqusShortName: brianthicks
 permalinks:
   post: "/post/:year/:month/:day/:slug"
 
+# Theme Params
 params:
-  author: "Brian Hicks"
+  author:
+    name: "Brian Hicks"
+    email: brian@brianthicks.com
   description: "Developing in St. Louis"
   gravatar: "fca2f8814a85e23af81f5553adbd4d62"
 
-  # headerText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Remove all header text in **config.toml** to disable this feature."
   # To add a header background to the main site, save your image under static/img/.
   # If now image path is provided, a orange background will be shown instead.
+  # headerText: ""
   headerImage: ""
+
   copyright: "The content on this site is licensed as <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nd/4.0/\">CC Attribution-NoDerivatives</a> except for code samples, which are licensed as <a rel=\"license\" href=\"http://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>."
 
   segment:
