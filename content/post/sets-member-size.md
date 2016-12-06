@@ -25,7 +25,7 @@ We've modeled this data structure in our Elm code like this:
 
 ```elm
 type Set comparable
-    = Set Int comparable (Set comparable) (Set comparable)
+    = Tree Int comparable (Set comparable) (Set comparable)
     | Empty
 ```
 
@@ -54,13 +54,13 @@ member item set =
         Empty ->
             False
 
-        Set head left right ->
-            if item == head then
-                True
-            else if item < head then
+        Tree _ head left right ->
+            if item < head then
                 member item left
-            else
+            else if item > head then
                 member item right
+            else
+                True
 ```
 
 A general piece of advice when working with recursive functions: start with the base case first.
@@ -68,11 +68,9 @@ We're doing that here with `Empty`.
 An empty set does not contain any values by definition, so we return `False`.
 
 If we have a non-empty set, we do a couple of checks.
-First, if the item and the head are equal we're done, return `True`
-This is the base case for non-empty sets.
-
-If the item we're looking for is less than the head, we recurse down the left tree.
+First, if the item we're looking for is less than the head, we recurse down the left tree.
 Otherwise, we recurse down the right tree.
+If neither of those are true, the item and the head are equal, so we return `True`.
 
 ### Lost and Found
 
@@ -125,7 +123,7 @@ size set =
         Empty ->
             0
 
-        Set head left right ->
+        Tree _ _ left right ->
             1 + size left + size right
 ```
 
@@ -144,22 +142,19 @@ The recursive calls add up!
 If we do `fromList [8, 15]`, we'll get a set that looks like this:
 
 ```elm
-Set
-    8
-    Empty
-    (Set 15 Empty Empty)
+Tree 2 8 Empty (Tree 1 15 Empty Empty)
 ```
 
 When we call `size eightAndFifteen`, we can substitute the subtrees for our addition:
 
 ```elm
-1 + size Empty + size (Set 15 Empty Empty)
+1 + size Empty + size (Tree 1 15 Empty Empty)
 ```
 
 The left subtree will come back with `0`, so we're left with:
 
 ```elm
-1 + 0 + size (Set 15 Empty Empty)
+1 + 0 + size (Tree 1 15 Empty Empty)
 ```
 
 And replacing the second `size` call:
