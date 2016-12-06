@@ -21,7 +21,7 @@ We've modeled this data structure in our Elm code like this:
 
 ```elm
 type Set comparable
-    = Set comparable (Set comparable) (Set comparable)
+    = Tree comparable (Set comparable) (Set comparable)
     | Empty
 ```
 
