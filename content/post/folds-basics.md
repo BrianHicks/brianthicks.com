@@ -5,7 +5,6 @@ tags: ["elm"]
 featureimage: "/images/walrus-by-jay-ruzesky.jpeg"
 thumbnail: "/images/walrus-by-jay-ruzesky-with-title.png"
 section: "Technology"
-draft: true
 
 ---
 
