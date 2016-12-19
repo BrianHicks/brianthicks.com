@@ -5,11 +5,10 @@ tags: ["elm"]
 featureimage: "/images/porches-by-vision-webagency.jpeg"
 thumbnail: "/images/porches-by-vision-webagency-with-title.png"
 section: "Technology"
-draft: true
 
 ---
 
-We're in the middle of a quest to build a toy set implementation from first principles.
+We're in the middle of a quest to build a set implementation from scratch.
 So far, we've implemented [our constructors]({{< ref "sets-intro.md" >}}), [rotation]({{< ref "sets-balancing-rotation.md" >}}), [balancing]({{< ref "sets-balancing.md" >}}), [size, and member]({{< ref "sets-member-size.md" >}}).
 Last week we stopped off to review [how folds work]({{< ref "folds-basics.md" >}}).
 This week, we're going to create folds for our set!
@@ -31,11 +30,11 @@ foldl : (comparable -> a -> a) -> a -> Set comparable -> a
 ```
 
 We have only a few minor changes to make here.
-First, since the members of our set have to be comparable, we take `commparable` instead of `a`.
+First, since the members of our set have to be comparable, we take `comparable` instead of `a`.
 Second, we're accepting our `Set` type instead of `List`.
 
 As an aside: when you make functions that accept a collection, make the collection the last argument.
-This makes it easier to use the [application]({{< ref "values-pipes-and-arrows.md" >}}) and [composition]({{< ref "welding-functional-pipes.md" >}}) operators with your functions.
+This makes it easier to use the [application]({{< ref "values-pipes-and-arrows.md" >}}) and [composition]({{< ref "welding-functional-pipes.md" >}}) operators.
 
 But this raises a question&hellip;
 What's the ordering of a tree?
@@ -51,7 +50,7 @@ All we have to do is follow that red line to get the proper walk order.
 To put our `foldl` in words: if we have an empty set, we return the accumulator.
 If we have a tree, we fold the whole left branch, then the head, then the right branch.
 
-So when we call that on our tree of one through five, rooted at three, we'll recurse down the left branch first.
+When we call that on our tree of one through five, rooted at three, we'll recurse down the left branch first.
 When we hit the subtree rooted at two, we'll recurse down the left side of that, and then do the same for one.
 The left subtree of one is empty, so we'll fold the head, then the right subtree (which is also empty.)
 At that point we'll pop back up a level, fold the head of two, then the right subtree there.
@@ -76,7 +75,7 @@ foldl fn acc set =
         Empty ->
             acc
 
-        Tree head left right ->
+        Tree _ head left right ->
             let
                 accLeft =
                     foldl fn acc left
@@ -138,7 +137,7 @@ Now we can use `foldl` to do the same thing!
 ```elm
 size : Set comparable -> Int
 size =
-    foldl (\_ count -> count + 1) 0
+    foldl (\_ acc -> acc + 1) 0
 ```
 
 Our combiner function ignores the value that's in the set, and instead increments the accumulator value.
@@ -151,7 +150,7 @@ We could also implement `size` like this:
 ```elm
 size : Set comparable -> Int
 size set =
-    foldl (\_ count -> count + 1) 0 set
+    foldl (\_ acc -> acc + 1) 0 set
 ```
 
 I prefer the point-free style, but do whatever makes sense to you.
