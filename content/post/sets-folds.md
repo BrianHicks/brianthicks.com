@@ -192,6 +192,6 @@ So we've seen:
 - When folds work well (when you've got to consider every value) and when they don't (when you only want to consider some.)
 
 Now that we've written folds, we can get into even more mischief.
-Next week, combining sets and removing items!
+Next time, combining sets and removing items!
 
 {{< elmSignup >}}
