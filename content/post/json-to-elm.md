@@ -27,7 +27,7 @@ Please meet JSON to Elm.
 
 ![A Screenshot of the JSON to Elm Interface](/images/jsonToElm.png)
 
-[JSON to Elm](http://json2elm.com) can generate a base decoder from a sample JSON object.
+[JSON to Elm](http://json2elm.com) from Noah Hall of NoRedInk can generate a base decoder from a sample JSON object.
 
 Once you have your decoder, you can paste it into your project and then customize.
 It's a great jump start to getting your object decoders off the ground.
