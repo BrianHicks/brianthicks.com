@@ -5,7 +5,6 @@ tags: ["elm"]
 featureimage: "/images/boiler-by-jaime-spaniol.png"
 thumbnail: "/images/boiler-by-jaime-spaniol-with-title.png"
 section: "Technology"
-draft: true
 
 ---
 
