@@ -34,7 +34,7 @@ responses.
 
 We're going to show this off by deserializing some data
 from
-[Typicode's JSON Placeholder API](https://groups.google.com/forum/#!searchin/elm-discuss/JSON%7Csort:relevance/elm-discuss/2ViXhO5R2b4/N6eQx3R-BAAJ).
+[Typicode's JSON Placeholder API](http://jsonplaceholder.typicode.com/)
 We're going to decode part of a user (`/users/{id}`) into the following model:
 
 ```elm
