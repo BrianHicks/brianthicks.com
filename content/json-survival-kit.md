@@ -2,6 +2,7 @@
 title: "\"Elm's JSON decoder library is challenging my intuition. I've been at it for days and I feel like I'm no longer making progress.\""
 slug: json-survival-kit
 date: "2017-01-04T00:00:00-06:00"
+featureimage: "/json-survival-kit/cover_no_title.jpg"
 
 ---
 
