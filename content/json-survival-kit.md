@@ -55,3 +55,6 @@ You'll learn how to get yourself unstuck—and more importantly, you'll know for
 When you need to change your data or add a new decoder, you'll get it right the first time, every time.
 
 Load up your favorite text editor and grab the JSON Survival Kit. You'll breeze through decoding, all your types will fit together, and you'll be one step closer to shipping your app.
+
+<script src="https://gumroad.com/js/gumroad-embed.js"></script>
+<div class="gumroad-product-embed" data-gumroad-product-id="json-survival-kit"><a href="https://gumroad.com/l/json-survival-kit">Loading...</a></div>
