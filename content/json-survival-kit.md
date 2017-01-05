@@ -1,10 +1,9 @@
 ---
-title: "The JSON Survival Kit"
+title: "\"Elm's JSON decoder library is challenging my intuition. I've been at it for days and I feel like I'm no longer making progress.\""
+slug: json-survival-kit
 date: "2017-01-04T00:00:00-06:00"
 
 ---
-
-## "Elm's JSON decoder library is challenging my intuition. I've been at it for days and I feel like I'm no longer making progress."
 
 You've been working on your decoder forever, and with no end in sight.
 You're not sure it will ever behave.
