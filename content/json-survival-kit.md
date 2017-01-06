@@ -6,7 +6,6 @@ featureimage: "/json-survival-kit/cover_no_title.jpg"
 
 ---
 
-You've been working in Elm on your JSON decoder for days without progress.
 You're starting to feel like you're lost in the desert, and your camel–I mean, Decoder–will never do what you want.
 
 The docs don't help you find your way, either.
