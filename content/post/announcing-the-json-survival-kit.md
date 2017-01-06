@@ -1,7 +1,10 @@
 ---
 date: 2017-01-06T08:00:00-05:00 # yes DST but published while I was in FL
 title: "Announcing The JSON Survival Kit"
+tags: ["elm"]
 featureimage: "/json-survival-kit/cover_no_title.jpg"
+thumbnail: "/json-survival-kit/gumroad.jpg"
+section: "Technology"
 
 ---
 
