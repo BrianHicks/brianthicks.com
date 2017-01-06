@@ -1,60 +1,62 @@
 ---
-title: "\"Elm's JSON decoder library is challenging my intuition. I've been at it for days and I feel like I'm no longer making progress.\""
+title: "I've been working on this Decoder for days and I haven't made any progress… send help!"
 slug: json-survival-kit
 date: "2017-01-04T00:00:00-06:00"
 featureimage: "/json-survival-kit/cover_no_title.jpg"
 
 ---
 
-You've been working on your decoder forever, and with no end in sight.
-You're not sure it will ever behave.
+You've been working in Elm on your JSON decoder for days without progress.
+You're starting to feel like you're lost in the desert, and your camel–I mean, Decoder–will never do what you want.
 
-The code compiles, and your decoder looks like it should work, but then it just… doesn't?
-And worse, the normally clear compiler errors are gone.
-What's going on here, anyway?
+The docs don't help you find your way, either.
+Nobody *really* has a JSON body like `["alice", "bob", "charlie"]`… how is that useful?
+You have to know the docs for them to be useful.
+And what's up with all those little `int`s and `string`s, anyway?
 
-You know you're perfectly capable of decoding JSON in other languages, but you're completely flummoxed on how to do it with Elm.
+You *know* JSON can be easy, you work with it in JavaScript all the time!
+But how can you get from here to there in Elm?
 
-## How can something that looks so easy be so hard?
+## Know Where You're Going
 
-Wouldn't it be wonderful if you could get what you wanted from your decoders?
-You'd take the data you're given and transform it into the model you need.
+What if you could see how all those little JSON decoders worked together in the bigger picture?
+You'd know right away how to use them on your own!
+You'd find your way through the desert, and maybe even find a faster way than before.
 
-Even when the data changed, you'd get exactly what you wanted for your model.
-Your decoders would be stable, speedy, and adaptable.
+You could get back to working on the problem you set out to solve.
+You'd finish your app in record time, and with all the benefits of Elm: the type safety, super helpful compiler errors, speed, and correctness.
 
-Instead of the slog and the guesswork, you'd finish your app in record time!
+If you could only get it working, it would feel so good to finally *ship*.
 
-## A thousand tiny decoders
+## Then Again… Boilerplate
 
-That guesswork, though, is driving you mad.
-It seems like you have to know how to use all the decoders already in order for the docs to make any sense.
+But even when you *finally* find your way, writing boilerplate upon boilerplate, it turns out your Decoder is super brittle.
+Even the smallest schema change will blow it over like a house made of sticks.
 
-You're not even sure when you would use some of the examples; they don't seem at all relevant… but what if they are?
+The code compiles, but when you open it in your browser you get… nothing?
+Was all that time and energy a waste?
 
-It'd be great to get past JSON and on to the rest of your app, but you're out of options and out of luck.
+Surely there's a faster way to do this, maybe with fewer wasted keystrokes?
 
-## What if it *just worked*?
+## Stop Writing The Same Code Over And Over
 
-Imagine: what if you could pick out exactly which decoders you wanted and stick them together in exactly the shape of your JSON?
-You'd get the type safety you started using Elm for, and be able to work with any API you wanted.
+You could write expressive, stable decoders… once!
+Your decoders would adapt to change like a reed in the wind, rather than like a brick through a window.
 
-Your app would compile, you'd ship on time (or early!) and best yet: you'd know exactly what was going on under the covers.
+When there *was* a breaking change you'd get relevant, *friendly* errors instead of the dreaded blank screen.
+The Elm compiler and your types would light your way!
 
-It's easy to get stuck when you're puzzling over loading and decoding JSON, but it doesn't have to be.
+It's easy to get stuck when you're trying to put all the puzzle pieces together, but it doesn't have to be this way.
 
-## The JSON Survival Kit: make JSON decoders work for you.
+## The JSON Survival Kit: See The Bigger Picture
 
-You can create perfect decoders with the Elm JSON Survival Kit, a short ebook containing step-by-step examples, real-life decoders, and debugging tips.
-You'll learn how all the parts fit together, break down the walls between your data and model, and finally get the type system on your side.
-Sidle up your API and ship in a snap.
+Find your way with *The JSON Survival Kit*, a short ebook that shows you the bigger picture of Elm's `Json.Decode`.
+You'll learn how to piece the JSON decoder API together in a way that works for your situation so you can get back to solving your problems.
+Get step-by-step instructions for avoiding boilerplate, write decoders so adapting to new data is a breeze, and finally understand why the time and effort is worth it (hint: it *so* is.)
+Finish your JSON Decoder and ship your app.
 
-## Debugging? Done.
-
-You'll learn how to get yourself unstuck—and more importantly, you'll know for sure how the whole thing works.
-When you need to change your data or add a new decoder, you'll get it right the first time, every time.
-
-Load up your favorite text editor and grab the JSON Survival Kit. You'll breeze through decoding, all your types will fit together, and you'll be one step closer to shipping your app.
+Just grab your schema and buy *The JSON Survival Kit*.
+You'll be done in a snap, and never get stuck again.
 
 <script src="https://gumroad.com/js/gumroad-embed.js"></script>
 <div class="gumroad-product-embed" data-gumroad-product-id="json-survival-kit"><a href="https://gumroad.com/l/json-survival-kit">Loading...</a></div>
