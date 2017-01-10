@@ -5,6 +5,9 @@ date: "2017-01-04T00:00:00-06:00"
 featureimage: "/json-survival-kit/cover_no_title.jpg"
 thumbnail: "/json-survival-kit/gumroad.jpg"
 type: post
+menu:
+  nav:
+    name: "The JSON Survival Kit"
 
 ---
 
