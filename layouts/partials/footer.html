@@ -4,6 +4,23 @@
 
 {{ template "_internal/google_analytics.html" . }}
 
+<!-- Drip -->
+<script type="text/javascript">
+if (window.location.hostname !== "localhost") {
+	var _dcq = _dcq || [];
+	var _dcs = _dcs || {};
+	_dcs.account = '{{ .Site.Params.drip.account }}';
+
+	(function() {
+		var dc = document.createElement('script');
+		dc.type = 'text/javascript'; dc.async = true;
+		dc.src = '//tag.getdrip.com/9478027.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(dc, s);
+	})();
+}
+</script>
+
 <link href="/scripts/highlight/styles/tomorrow.css" rel="stylesheet"/>
 <script src="/scripts/highlight/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>

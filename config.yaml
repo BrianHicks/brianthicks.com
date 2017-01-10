@@ -29,6 +29,9 @@ params:
   segment:
     write_key: ki2miw1o3b
 
+  drip:
+    account: 9478027
+
   social:
   # Insert your accout name and the icon will be shown in the right menu
     rss: true
