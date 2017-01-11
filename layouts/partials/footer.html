@@ -14,7 +14,7 @@ if (window.location.hostname !== "localhost") {
 	(function() {
 		var dc = document.createElement('script');
 		dc.type = 'text/javascript'; dc.async = true;
-		dc.src = '//tag.getdrip.com/9478027.js';
+		dc.src = '//tag.getdrip.com/{{ .Site.Params.drip.account }}.js';
 		var s = document.getElementsByTagName('script')[0];
 		s.parentNode.insertBefore(dc, s);
 	})();
