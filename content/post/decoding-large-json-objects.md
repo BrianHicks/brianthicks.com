@@ -176,7 +176,7 @@ To summarize our summary, you can:
 2. Use `apply` or `(|:)` from `Json.Decode.Extra` for a quick fix.
 3. Use `Json.Decode.Pipeline` to make a readable decoding pipeline to make future maintenance easier.
 
-{{< elmJsonSignup >}}
+{{< elmSignup >}}
 
 ---
 

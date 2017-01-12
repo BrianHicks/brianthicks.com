@@ -172,4 +172,4 @@ To sum up:
 
 Use these to slay the monsters in your JSON!
 
-{{< elmJsonSignup >}}
+{{< elmSignup >}}

@@ -153,4 +153,4 @@ communication, instead of both communication and deserialization.
 Now you know! To debug your JSON decoders, separate your deserialization layer
 from your HTTP requests and you'll have a much easier (and quicker) time of it!
 
-{{< elmJsonSignup >}}
+{{< elmSignup >}}

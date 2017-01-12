@@ -122,4 +122,4 @@ So now you know!
 Composing JSON Decoders in Elm is like building with LEGO: snap together bricks to make something bigger.
 This style of function composition shows up in more places in the Elm core, but JSON Decoding shows it off well.
 
-{{< elmJsonSignup >}}
+{{< elmSignup >}}

@@ -50,4 +50,4 @@ Modeling data in JSON is hard, and we have a very limited set of values to encod
 That said, JSON to Elm is a super useful tool and can speed up your development workflow significantly.
 Give it a try!
 
-{{< elmJsonSignup >}}
+{{< elmSignup >}}

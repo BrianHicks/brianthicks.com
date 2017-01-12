@@ -118,4 +118,4 @@ Try it yourself!
 [Run this gist](https://gist.github.com/BrianHicks/988e31bd221d2164f984227ecbe1fa1e) and see what you get.
 And use `lazy` next time you're trying to write a recursive decoder.
 
-{{< elmJsonSignup >}}
+{{< elmSignup >}}
