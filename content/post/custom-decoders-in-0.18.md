@@ -10,7 +10,7 @@ thumbnail: "/images/typewriter-by-sergey-zolkin-with-title.png"
 
 You've modeled your data exactly how it should be, and everything's working fine.
 Now it's time to finish your JSON Decoder, but certain fields are strings where in your Elm code they're complex data types!
-This happens most often with dates, but tagged unions have this problem to.
+This happens most often with dates, but tagged unions have this problem too.
 
 In 0.17 we had `customDecoder`, which could turn any `Result String a` into a `Decoder a`, but it went away in 0.18.
 So… what do we do?
