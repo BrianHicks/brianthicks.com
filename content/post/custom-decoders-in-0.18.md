@@ -19,7 +19,7 @@ So… what do we do?
 
 ## Rolling Our Own Custom Decoder
 
-What we need to do, essentially, is create a function that converts one data type to a `Decoder a`.
+What we need to do, essentially, is create a function that converts some input data to a `Decoder a`.
 Let's use date decoding as an example.
 JSON doesn't have a way to express dates, so we have to encode dates in strings.
 
@@ -39,7 +39,7 @@ Date.fromString "2017-01-13T09:00:00-05:00"
 ```
 
 But that's not exactly a JSON Decoder, is it?
-For that, we'll just need to lift it into Decoder land by using `andThen`, `succeed`, and `fail`:
+For that, we'll need to lift it into Decoder land by using `andThen`, `succeed`, and `fail`:
 
 ```elm
 import Date exposing (Date)
@@ -63,12 +63,12 @@ date =
 
 `succeed` returns a decoder that always succeeds with the given value, and `fail` returns a decoder that always fails with the given error.
 We can map from `Result String a` to `Decoder a` that way.
-Once this is done, you can use the `date` decoder just like any other decoder!
+Once you have this, you can use the `date` decoder just like any other decoder!
 
 ## In Real Life: Use `fromResult` from `Json.Decode.Extra`
 
 Of course, this is a lot of code to write for something fairly minor.
-Going the long way around lets you customize to your heart's content, but if you just need to map from `Result String a` to `Decoder a` there's a simpler option.
+Going the long way around lets you customize to your heart's content, but if you only need to map from `Result String a` to `Decoder a` there's a simpler option.
 
 `Json.Decode.Extra` exposes a function `fromResult` that does this mapping for you.
 The decoder above could be rewritten like this:
@@ -93,6 +93,6 @@ Now you know:
 
 - If you need to convert from any data type to a decoder, use `andThen`, `succeed`, and `fail`.
 - If you need to convert a `Result String a`, use `fromResult` from `Json.Decode.Extra`
-- If you just need a date, use `date` from `Json.Decode.Extra`
+- If you need a date, use `date` from `Json.Decode.Extra`
 
 {{< elmSignup >}}
