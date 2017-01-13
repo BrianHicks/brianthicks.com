@@ -29,7 +29,7 @@ For example, today's date would be:
 "2017-01-13T09:00:00-05:00"
 ```
 
-That's [ISO860](https://en.wikipedia.org/wiki/ISO_8601) format, designed to be unambiguous.
+That's [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) format, designed to be unambiguous.
 But we have to put it in a string.
 Good thing we have `Date.fromString`, and can convert from this string to this result:
 
