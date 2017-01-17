@@ -85,11 +85,11 @@ remove item set =
         Empty ->
             set
 
-        Tree head left right ->
+        Tree _ head left right ->
             if item < head then
-                Tree head (remove item left) right
+                tree head (remove item left) right
             else if item > head then
-                Tree head left (remove item right)
+                tree head left (remove item right)
             else
                 union left right
 ```
