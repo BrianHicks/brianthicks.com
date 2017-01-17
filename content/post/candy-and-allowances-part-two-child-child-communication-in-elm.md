@@ -5,6 +5,14 @@ tags: ["elm"]
 
 ---
 
+---
+
+**UPDATE 2017-01-16**: before you read this, read the [reuse section of the Elm guide](https://guide.elm-lang.org/reuse/).
+It will set you up in a better way!
+The text below is preserved for reference purposes.
+
+---
+
 In our [previous article]({{< ref
 "candy-and-allowances-parent-child-communication-in-elm.md" >}}) we talked about
 how parents and children can communicate with one another in Elm. But how about

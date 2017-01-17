@@ -5,6 +5,14 @@ tags: ["elm"]
 
 ---
 
+---
+
+**UPDATE 2017-01-16**: before you read this, read the [reuse section of the Elm guide](https://guide.elm-lang.org/reuse/).
+It will set you up in a better way!
+The text below is preserved for reference purposes.
+
+---
+
 Nobody wants to feel like their application holds together by duct tape and
 baling wire. Coupling components is icky, but&hellip; sometimes you've got a
 parent and child components that just *have* to talk to each other. It can feel
@@ -27,7 +35,7 @@ type alias Model =
     { money : Float
     , children : Dict String Child.Model
     }
-    
+
 
 init : Model
 init =
@@ -39,12 +47,12 @@ init =
             ]
     }
 
-    
+
 type Msg
     = Paycheck Float
     | ChildMsg String Child.Msg
-    
-    
+
+
 update : Msg -> Model -> Model
 update msg model =
     case msg of
@@ -72,7 +80,7 @@ on in the Child model:
 ```elm
 type alias Model =
     { money : Float }
-    
+
 
 type Msg
     = Allowance Float
@@ -275,7 +283,7 @@ To sum up:
   feedback loop back to the parent. A real life version of this might look like
   updating the parent's view from a scroll bar: messages would indicate the
   percent scrolled, and the parent could update its offset accordingly.
-  
+
   This pattern should scale up just fine, as well. If you need more messages,
   make another union type for them (called, for example, `MsgOut` and using a
   similar way.) That said, if a child component has a huge number of events the
@@ -283,7 +291,7 @@ To sum up:
   functionality out to multiple children or make the child part of the parent to
   begin with. A minimal interface here will make your child components much
   easier to reuse.
-  
+
 Now you'll know what tools to reach for the next time you need to solve this
 problem!
 
