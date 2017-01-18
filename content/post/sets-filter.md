@@ -15,7 +15,7 @@ We'll have it take a function that checks whether we should include a value, and
 
 <!--more-->
 
-Of course, we can't just remove values at random without unbalancing our sets, so we'll use `foldl`:
+Of course, we can't remove values at random without unbalancing our sets, so we'll use `foldl` with `insert` to keep our set balanced:
 
 ```elm
 filter : (comparable -> Bool) -> Set comparable -> Set comparable
@@ -31,12 +31,11 @@ filter cmp set =
         set
 ```
 
-In this, we're just inserting the item into a new set if the comparator function returns `True`, otherwise we'll skip adding it and just return the accumulator value.
+We're inserting the item into a new set if the comparator function returns `True`, otherwise we'll skip adding it and return the accumulator value.
 Easy enough!
 
 We could also implement this in reverse: we'd start with the accumulator as our initial value and [use `remove`]({{< ref "post/sets-union-remove.md" >}}) if the comparator function didn't match.
-Both approaches are equally valid, but one is probably faster.
-If we were doing a real implementation we would want to benchmark.
+Both approaches work, but in the real world we would benchmark this before committing to one or the other.
 
 So how do we use `filter`?
 Say we had a set with the numbers 1 through 10:
@@ -55,8 +54,7 @@ evens =
     filter (\i -> i % 2 == 0) numbers
 ```
 
-Side note: I've been using point-free style before, and we could here too!
-But it's not really appropriate, and actually looks worse.
+Side note: I've shown point-free style before, but here it actually makes our code worse!
 Check it out:
 
 ```elm
@@ -70,8 +68,9 @@ Remember that next time you're feeling especially clever!
 
 ## Bonus: `partition`
 
-Now that we have `filter`, it's really easy to add `partition`.
+With `filter` done, we can add `partition`.
 We use this when we want to split a set in two according to some criteria.
+It takes the same filter function, but returns both items which passed and failed the filter.
 
 ```elm
 partition : (comparable -> Bool) -> Set comparable -> ( Set comparable, Set comparable )
@@ -91,7 +90,6 @@ partition cmp set =
 
 How about we do something more *interesting* with `filter`?
 We can implement two more combination functions, `intersect` and `diff`.
-Let's do `intersect` first.
 
 Last week we implemented `union`.
 We can represent that operation as a Venn diagram.
@@ -101,7 +99,7 @@ When we take a union of the two sets, we get everything contained in both sets.
 ![union, in a Venn diagram](/images/sets/union.png)
 
 Taking the intersection of the two sets, on the other hand, means taking all the values that the two sets have *in common*.
-In our Venn diagram, this is the area where the two circles overlap.
+The circles in our Venn diagram overlap for these values.
 
 ![intersect, in a Venn diagram](/images/sets/intersect.png)
 
@@ -113,8 +111,7 @@ intersect a b =
 
 We use `filter` to implement `intersect`.
 We select which items to include by using `member`.
-All these little helper-looking functions are really starting to add up!
-This can read "if this member of set b is also a member of set a, include it."
+This can read "if both set `a` and `b` have this item, include it."
 That works out to the intersection of the sets!
 
 ```elm
@@ -124,18 +121,17 @@ intersect (fromList [1, 2]) (fromList [2, 3]) == fromList [2]
 ## `diff`
 
 But what if we want only the values in one set or the other, instead of both?
-That's a `diff` operation.
+To do that, we use `diff`.
 `diff` removes all the items in the second set from the first set.
 
 ![diff, in a Venn diagram](/images/sets/diff.png)
 
 Do note that we're implementing an *asymmetric diff*.
 That means that we're only removing values from *one* set.
-In some set implementations, this is referred to as subtraction (where `union` is addition.)
-Photoshop and other image manipulations usually refer to these terms this way.
+Some set implementations (and most image editing programs) refer to this as subtraction (where `union` is addition.)
 They refer to diff as a *symmetric diff*, which removes any items in common between the two sets, and leaves only items unique to one or the other.
 
-Elm's built-in Set implement uses asymmetric diffs, with the right-hand set removing values from the left-hand set.
+Elm's built-in Set uses asymmetric diffs, with the right-hand set removing values from the left-hand set.
 We'll do that too!
 
 ```elm
@@ -145,8 +141,8 @@ diff a b =
     filter (\item -> not <| member item b) a
 ```
 
-This is essentially the same as `intersect`, but with an added `not`.
-We're checking if an item is a member of `b`.
+This looks like `intersect`, but with an added `not`.
+We're checking if the set `b` has an item from set `a`.
 If so, we don't include it.
 
 It ends up working like this:
@@ -159,9 +155,9 @@ diff (fromList [1, 2]) (fromList [2, 3]) == fromList [1]
 
 So we've learned:
 
-- `filter` (like every other collection operation) can be implemented in terms of folds.
-- `partition` does the same thing, but keeps the items that fell through the filter in a separate set.
-- `intersect` and `diff` are implemented in terms of `filter`.
+- You can use folds to implement every collection operation. `filter` is no exception.
+- `partition` does the same thing as `filter`, but keeps the items that fell through the filter in a separate set.
+- `intersect` and `diff` use `filter`.
    We wouldn't *have* to do this (we could implement using folds every time) but using `filter` makes things much cleaner.
 
 After this, we have one major piece of the API left: mapping.
