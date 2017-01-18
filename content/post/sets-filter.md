@@ -9,13 +9,13 @@ draft: true
 
 ---
 
-This week in [the Sets series]({{< ref "post/sets-intro.md" >}}), we're going to look at `filter.`
+This week in [the Sets series]({{< ref "post/sets-intro.md" >}}), we'll look at `filter.`
 It does the same thing as `List.filter`, except using our sets.
-We'll have it take a function that checks whether we should include a value, and use the output of that function to filter the values from the set.
+We'll have it take a function that checks whether we should include a value and use the output of that function to filter the values from the set.
 
 <!--more-->
 
-Of course, we can't remove values at random without unbalancing our sets, so we'll use `foldl` with `insert` to keep our set balanced:
+We can't remove values at random without unbalancing our sets, so we'll use `foldl` with `insert` to keep our set balanced:
 
 ```elm
 filter : (comparable -> Bool) -> Set comparable -> Set comparable
@@ -34,8 +34,8 @@ filter cmp set =
 We're inserting the item into a new set if the comparator function returns `True`, otherwise we'll skip adding it and return the accumulator value.
 Easy enough!
 
-We could also implement this in reverse: we'd start with the accumulator as our initial value and [use `remove`]({{< ref "post/sets-union-remove.md" >}}) if the comparator function didn't match.
-Both approaches work, but in the real world we would benchmark this before committing to one or the other.
+We could implement this in reverse: we'd start with the accumulator as our initial value and [use `remove`]({{< ref "post/sets-union-remove.md" >}}) if the comparator function didn't match.
+Both approaches work, but in the real world we would benchmark before deciding.
 
 So how do we use `filter`?
 Say we had a set with the numbers 1 through 10:
@@ -54,8 +54,7 @@ evens =
     filter (\i -> i % 2 == 0) numbers
 ```
 
-Side note: I've shown point-free style before, but here it actually makes our code worse!
-Check it out:
+Side note: I've shown point-free style before, but here it makes our code worse!
 
 ```elm
 evens : Set Int
@@ -63,8 +62,8 @@ evens =
     filter (flip (%) 2 >> (==) 0) numbers
 ```
 
-A little bit goes a long way with point-free style.
-Remember that next time you're feeling especially clever!
+A little goes a long way with point-free style.
+Remember that next time you're feeling clever!
 
 ## Bonus: `partition`
 
