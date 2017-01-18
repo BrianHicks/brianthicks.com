@@ -2,24 +2,19 @@
 date: "2017-01-23T09:00:00-06:00"
 title: "Functional Sets, Part 7: Filter, Diff, and Intersect"
 tags: ["elm"]
-# featureimage: "/images/union-station-by-tatiana-latino.jpeg"
-# thumbnail: "/images/union-station-by-tatiana-latino-with-title.png"
+featureimage: "/images/coffee-by-thomas-martinsen.png"
+thumbnail: "/images/coffee-by-thomas-martinsen-with-title.png"
 section: "Technology"
 draft: true
 
 ---
 
-Now that we can [`remove` items]({{< ref "post/sets-union-remove.md" >}}) from our sets ([start at the beginning]({{< ref "post/sets-intro.md" >}})), the next logical step is to select which to keep with a function.
-That's called `filter`.
-Let's do it!
+This week in [the Sets series]({{< ref "post/sets-intro.md" >}}), we're going to look at `filter.`
+It does the same thing as `List.filter`, except using our sets.
+We'll have it take a function that checks whether we should include a value, and use the output of that function to filter the values from the set.
 
 <!--more-->
 
-## `filter`
-
-This week we're going to look at `filter`.
-It does the same thing as `List.filter`, except using our sets.
-We'll have it take a function that checks whether we should include a value, and use the output of that function to filter the values from the set.
 Of course, we can't just remove values at random without unbalancing our sets, so we'll use `foldl`:
 
 ```elm
@@ -165,7 +160,7 @@ diff (fromList [1, 2]) (fromList [2, 3]) == fromList [1]
 So we've learned:
 
 - `filter` (like every other collection operation) can be implemented in terms of folds.
-- `partition` does the same thing!
+- `partition` does the same thing, but keeps the items that fell through the filter in a separate set.
 - `intersect` and `diff` are implemented in terms of `filter`.
    We wouldn't *have* to do this (we could implement using folds every time) but using `filter` makes things much cleaner.
 
