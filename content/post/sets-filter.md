@@ -5,7 +5,6 @@ tags: ["elm"]
 featureimage: "/images/coffee-by-thomas-martinsen.png"
 thumbnail: "/images/coffee-by-thomas-martinsen-with-title.png"
 section: "Technology"
-draft: true
 
 ---
 
