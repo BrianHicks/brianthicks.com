@@ -42,8 +42,8 @@ Here's what a tree with 1, 2, and 3 in it looks like:
 ```elm
 Branch
     2
-    (Branch Leaf 1 Leaf)
-    (Branch Leaf 3 Leaf)
+    (Branch 1 Leaf Leaf)
+    (Branch 3 Leaf Leaf)
 ```
 
 Which would look like this in JSON:
