@@ -9,28 +9,37 @@ draft: true
 
 ---
 
-With [filter and friends finished]({{< ref "post/sets-filter.md" >}}), our [`Set` implementation]({{< ref "post/sets-intro.md" >}}) is almost finished!
+Now that we have [filter and friends]({{< ref "post/sets-filter.md" >}}), we're almost done with our [`Set` implementation]({{< ref "post/sets-intro.md" >}}).
 Once we have `map`, we'll be done!
 
 <!--more-->
 
-If you're unfamiliar with `map`, it's used to apply a function to every item in a collection.
-Say we have a set with the numbers one through five.
-We can use `map` to double every number:
+`map` applies a function to every item in a collection.
+Say we have a list containing the numbers one through five.
+We can use `List.map` to double every number:
+
+```elm
+List.range 1 5 |> List.map ((*) 2) -- [2, 4, 6, 8, 10]
+```
+
+We're going to make `map` for our sets.
+So, given the same list (but converted to a set) we should get:
 
 ```elm
 Set.fromList (List.range 1 5)
-    |> Set.map ((*) 2) -- [2, 4, 6, 8, 10]
+    |> Set.map ((*) 2) -- {2, 4, 6, 8, 10}
 ```
 
-How do we make this for our Sets?
-What if we deconstruct our set, piece by piece, like we [did with member]({{< ref "post/sets-member-size.md" >}})?
+Let's do this…
+What if we deconstruct the set piece by piece like we [did with member]({{< ref "post/sets-member-size.md" >}})?
 That way, we'd apply the function exactly once to each item, and get a new set!
 
-But… what about functions that return the same value?
-What if our map function was `always 1`?
-If we applied that function to every item, we would have a set with 5 ones in it!
-That won't work since Sets always have unique values.
+Not so fast!
+What about functions that return the same value?
+What if we got `always 1`?
+When applied to the set from earlier we would get a set with `1`, five times.
+That won't work!
+Sets always have unique values, so we need a different approach.
 
 `foldl` comes to our rescue here again.
 Since it moves values through a function to an accumulator piece by piece, we can build a new Set as we go.
@@ -48,12 +57,23 @@ map fn set =
         set
 ```
 
-This looks like `filter` and every other collection operator we've made since `foldl`.
-Since we can make every
+It works just like we said above:
+
+```elm
+Set.fromList (List.range 1 5)
+    |> Set.map ((*) 2) -- {2, 4, 6, 8, 10}
+```
+
+And if we use a function that returns duplicate values, they're deduplicated automatically:
+
+```elm
+Set.fromList (List.range 1 5)
+    |> Set.map (always 1) -- {1}
+```
 
 And… that's it!
 That's the whole Set API!
-If you've been following along this whole time, you now know a lot more about how to implement data structures in Elm.
+If you've been following along this whole time, you should know a lot more about how to implement data structures in Elm.
 We'll be back next week to sum up and sneak a peek at how we can extend our Sets to be Dicts.
 
 {{< elmSignup >}}
