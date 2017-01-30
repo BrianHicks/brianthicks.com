@@ -5,7 +5,6 @@ tags: ["elm"]
 featureimage: "/images/map-by-jean-fredric-fortier.png"
 thumbnail: "/images/map-by-jean-fredric-fortier-with-title.png"
 section: "Technology"
-draft: true
 
 ---
 
