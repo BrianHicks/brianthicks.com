@@ -87,9 +87,9 @@ remove item set =
 
         Tree _ head left right ->
             if item < head then
-                tree head (remove item left) right
+                tree head (remove item left) right |> balance
             else if item > head then
-                tree head left (remove item right)
+                tree head left (remove item right) |> balance
             else
                 union left right
 ```
@@ -103,6 +103,13 @@ In this case, we can't return an `Empty`, because the subtrees might have values
 We also can't return a `Tree`, because we don't have a head.
 So we use our newly-minted `union` function to combine the left and right subtrees into a new `Set`.
 The function calls then bubble up like normal, and we're done.
+
+**Update**: You also have to rebalance the parent trees after removal, or the set becomes unbalanced.
+Try this yourself by removing the `balance` calls above and creating a set, then removing all the items in the left side.
+The tree will become more and more unbalanced the more items you remove from it.
+An easy replication: `List.range 1 10 |> remove 1 |> remove 2 |> remove 3`.
+
+Thanks to [Ilias Van Peer](https://ilias.xyz/) for the catch!
 
 ## Union'd and Remove'd!
 
