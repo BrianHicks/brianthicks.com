@@ -1,7 +1,7 @@
 ---
 date: "2016-12-05T09:00:00-06:00"
 title: "Functional Sets, Part 4: Membership and Size"
-tags: ["elm"]
+tags: ["elm", "sets"]
 featureimage: "/images/trees-by-jakub-sejkora.jpeg"
 thumbnail: "/images/trees-by-jakub-sejkora-with-title.png"
 section: "Technology"

@@ -1,7 +1,7 @@
 ---
 date: "2016-12-19T09:00:00-06:00"
 title: "Functional Sets, Part 5: Folds"
-tags: ["elm"]
+tags: ["elm", "sets"]
 featureimage: "/images/porches-by-vision-webagency.jpeg"
 thumbnail: "/images/porches-by-vision-webagency-with-title.png"
 section: "Technology"
@@ -42,7 +42,7 @@ How do we walk left to right or right to left in our implementation?
 I didn't know, so I asked my colleague [Rebecca](https://twitter.com/cercerilla).
 She drew this on the whiteboard:
 
-{{< figure src="/images/sets/walk-order.png" 
+{{< figure src="/images/sets/walk-order.png"
            alt="Walk order in a tree"
            caption="Walk order in a tree (with apologies to Rebecca, whose drawing was much nicer.)" >}}
 

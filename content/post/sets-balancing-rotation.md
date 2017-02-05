@@ -1,7 +1,7 @@
 ---
 date: "2016-11-21T09:00:00-06:00"
 title: "Functional Sets, Part 2: Rotation"
-tags: ["elm"]
+tags: ["elm", "sets"]
 featureimage: "/images/stars-by-warlen-g-vasco.jpeg"
 thumbnail: "/images/stars-by-warlen-g-vasco-with-title.png"
 section: "Technology"
@@ -36,7 +36,7 @@ When we run `fromList [1, 2, 3, 4, 5]` we'd want to get this:
 
 {{< figure src="/images/sets/one-through-five-balanced.png"
            caption="A balanced tree containing the numbers 1 through 5." >}}
-           
+
 But instead, we get:
 
 {{< figure src="/images/sets/one-through-five-unbalanced.png"
@@ -134,7 +134,7 @@ Wikipedia has an *amazing* GIF to explain tree rotation:
            caption="A Tree Rotating Left and Right"
            attr="Wikipedia"
            attrlink="https://en.wikipedia.org/wiki/File:Tree_rotation_animation_250x250.gif" >}}
-           
+
 In words: to rotate left, we have to have a tree with a non-empty subtree as it's right subtree.
 For the sake of clarity, we're going to call the original head `head` and the subtree's head `subHead`.
 

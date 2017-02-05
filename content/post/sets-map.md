@@ -1,7 +1,7 @@
 ---
 date: "2017-01-30T09:00:00-06:00"
 title: "Functional Sets, Part 8: Map"
-tags: ["elm"]
+tags: ["elm", "sets"]
 featureimage: "/images/map-by-jean-fredric-fortier.png"
 thumbnail: "/images/map-by-jean-fredric-fortier-with-title.png"
 section: "Technology"

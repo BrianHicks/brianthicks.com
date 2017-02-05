@@ -1,7 +1,7 @@
 ---
 date: "2017-02-06T09:00:00"
 title: "Functional Sets, Part 9: Wrap-up"
-tags: ["elm"]
+tags: ["elm", "sets"]
 featureimage: "/images/cern-reception-by-samuel-zeller.png"
 thumbnail: "/images/cern-reception-by-samuel-zeller-with-title.png"
 section: "Technology"

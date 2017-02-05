@@ -1,7 +1,7 @@
 ---
 date: "2016-11-27T20:25:00-06:00"
 title: "Functional Sets, Part 3: Balancing"
-tags: ["elm"]
+tags: ["elm", "sets"]
 featureimage: "/images/balanced-stones-by-austin-neill.jpg"
 thumbnail: "/images/balanced-stones-by-austin-neill-with-title.png"
 section: "Technology"
@@ -180,7 +180,7 @@ Things to play around with:
 
 - Insert three values in order.
   They get reblanced!
-- Insert three values so that you would get a leaning tree. 
+- Insert three values so that you would get a leaning tree.
   Check out how the code fixes it.
 - Insert a bunch of values.
   AVL trees are height-balanced, not weight balanced.

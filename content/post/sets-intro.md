@@ -1,7 +1,7 @@
 ---
 date: "2016-11-13T22:30:00-06:00"
 title: "Functional Sets, Part 1: Construction"
-tags: ["elm"]
+tags: ["elm", "sets"]
 featureimage: "/images/windows-by-samuel-zeller.jpeg"
 thumbnail: "/images/windows-by-samuel-zeller-with-title.png"
 section: "Technology"
@@ -129,13 +129,13 @@ Now we're comparing `0` (the item we're inserting) to `1` (the head of the curre
 
 {{< figure src="/images/sets/insert2.png"
            caption="Comparing the inserted value to the head." >}}
-           
+
 We find that `0` is less than `1`, so we reconstruct the current tree and insert the new item to the left.
 This is the same as calling `insert 0 Empty`, since the left node is empty.
 
 {{< figure src="/images/sets/insert3.png"
            caption="Comparing the inserted value to the left branch." >}}
-           
+
 This time around, the `set` in question is `Empty`, so we'll return a new singleton.
 Our new set then bubbles up through the recursive calls.
 It ends up replacing the left branch of the original set.

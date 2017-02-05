@@ -1,7 +1,7 @@
 ---
 date: "2017-01-16T09:00:00-06:00"
 title: "Functional Sets, Part 6: Union and Remove"
-tags: ["elm"]
+tags: ["elm", "sets"]
 featureimage: "/images/union-station-by-tatiana-latino.jpeg"
 thumbnail: "/images/union-station-by-tatiana-latino-with-title.png"
 section: "Technology"

@@ -1,7 +1,7 @@
 ---
 date: "2017-01-23T09:00:00-06:00"
 title: "Functional Sets, Part 7: Filter, Diff, and Intersect"
-tags: ["elm"]
+tags: ["elm", "sets"]
 featureimage: "/images/coffee-by-thomas-martinsen.png"
 thumbnail: "/images/coffee-by-thomas-martinsen-with-title.png"
 section: "Technology"
