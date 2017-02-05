@@ -4,7 +4,6 @@
     {{partial "headCommon.html" .}}
 
     {{ "<!-- schema.org -->" | safeHTML }}
-    <meta itemprop="name" content="{{.Site.Params.author}}">
     <meta itemprop="description" content="{{.Summary}}">
     {{with (or .Params.thumbnail .Params.featureimage)}}<meta itemprop="image" content="{{. | absURL}}">{{end}}
 
@@ -21,7 +20,7 @@
     <meta name="twitter:description" content="{{.Summary}}">
 
     {{ "<!-- open graph -->" | safeHTML }}
-    <meta itemprop="article:author" content="{{.Site.Params.author}}">
+    {{with .Site.Params.author}}<meta itemprop="article:author" content="{{.name}} <{{.email}}>">{{end}}
     <meta itemprop="article:published_time" content="{{dateFormat `2006-01-02T15:04:05Z07:00` .Date}}">
     {{with .Params.tags}}<meta itemprop="tag" content="{{delimit . `, `}}">{{end}}
     {{with .Params.section}}<meta itemprop="article:section" content="{{.}}">{{end}}
