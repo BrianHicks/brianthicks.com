@@ -50,7 +50,7 @@ That means that if you removed all the items on one side of the tree, it would b
 
 Try this yourself by creating a set, then removing all the items in the left side.
 The tree will become more and more unbalanced the more items you remove from it.
-An easy replication: `List.range 1 10 |> remove 1 |> remove 2 |> remove 3`.
+An easy replication: `List.range 1 10 |> fromList |> remove 1 |> remove 2 |> remove 3`.
 
 We fix this by rebalancing the tree after each removal:
 
