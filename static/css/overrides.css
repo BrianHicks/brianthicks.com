@@ -1,0 +1,4 @@
+.post-content ul, .post-content ol {
+  list-style-position: outside;
+  margin-left: 50px;
+}
