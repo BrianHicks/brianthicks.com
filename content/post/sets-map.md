@@ -75,4 +75,4 @@ That's the whole Set API!
 If you've been following along this whole time, you should know a lot more about how to implement data structures in Elm.
 We'll be back next week to sum up and sneak a peek at how we can extend our Sets to be Dicts.
 
-{{< elmSignup >}}
+{{< setsSeriesSignup >}}

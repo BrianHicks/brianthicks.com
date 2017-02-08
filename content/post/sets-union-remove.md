@@ -123,4 +123,4 @@ So this week, we've seen:
 Next week we're going to make another useful function: `filter`.
 We'll use it to do some more set operations!
 
-{{< elmSignup >}}
+{{< setsSeriesSignup >}}

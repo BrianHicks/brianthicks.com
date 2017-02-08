@@ -203,4 +203,4 @@ See you then!
 
 {{< elmEmbed src="/scripts/sets/naiveInsertRotate.js" name="NaiveInsertRotate" >}}
 
-{{< elmSignup >}}
+{{< setsSeriesSignup >}}

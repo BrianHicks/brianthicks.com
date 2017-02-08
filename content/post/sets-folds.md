@@ -194,4 +194,4 @@ So we've seen:
 Now that we've written folds, we can get into even more mischief.
 Next time, combining sets and removing items!
 
-{{< elmSignup >}}
+{{< setsSeriesSignup >}}

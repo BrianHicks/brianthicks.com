@@ -183,4 +183,4 @@ And *you* have two more tools in your recursive function debugging toolbox:
 - Start with the base case first
 - Write out and substitute calls step-by-step to debug.
 
-{{< elmSignup >}}
+{{< setsSeriesSignup >}}

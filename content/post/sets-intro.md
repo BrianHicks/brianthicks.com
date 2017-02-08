@@ -171,4 +171,4 @@ Next week we're going to look at how to tell if a set contains a value.
 We'll also cover how to measure how many values are in our set.
 Stay tuned!
 
-{{< elmSignup >}}
+{{< setsSeriesSignup >}}

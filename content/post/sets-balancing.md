@@ -188,4 +188,4 @@ Things to play around with:
 
 {{< elmEmbed src="/scripts/sets/insertBalanced.js" name="InsertBalanced" >}}
 
-{{< elmSignup >}}
+{{< setsSeriesSignup >}}

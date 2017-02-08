@@ -161,4 +161,4 @@ So we've learned:
 After this, we have one major piece of the API left: mapping.
 See you then!
 
-{{< elmSignup >}}
+{{< setsSeriesSignup >}}
