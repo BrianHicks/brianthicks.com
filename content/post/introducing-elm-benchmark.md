@@ -46,6 +46,8 @@ main =
     program get
 ```
 
+<iframe src='https://gfycat.com/ifr/ShabbyGlamorousIndiancow' frameborder='0' scrolling='no' width='320' height='153' allowfullscreen></iframe>
+
 ([Run this example on Ellie](https://ellie-app.com/vTDNPCLyZ5a1/1))
 
 ## Adding More Benchmarks
@@ -85,13 +87,15 @@ suite =
             ]
 ```
 
+<iframe src='https://gfycat.com/ifr/IcySarcasticFrigatebird' frameborder='0' scrolling='no' width='320' height='333' allowfullscreen></iframe>
+
 ([Run this example on Ellie](https://ellie-app.com/vTJDQ4Ltd2a1/0))
 
 This lets us share benchmark fixtures.
 Thanks to Elm's immutability guarantees, we can do this without influencing our measurements.
 
 `benchmark` and `describe` cover 90% of what you'll typically use.
-But in cases like `Skinney/elm-array-exploration` and `BrianHicks/elm-avl-exploration` we need one more thing:
+But in cases like `Skinney/elm-array-exploration` and `zwilias/elm-avl-dict-exploration` we need one more thing:
 
 ## Comparing Two Implementations
 
@@ -107,6 +111,8 @@ insert =
         (Benchmark.benchmark2 "Dict.AVL" AVL.get "a" (AVL.singleton "a" 1))
 
 ```
+
+<iframe src='https://gfycat.com/ifr/RelievedHandyAnemonecrab' frameborder='0' scrolling='no' width='320' height='177' allowfullscreen></iframe>
 
 ([Run this example on Ellie](https://ellie-app.com/vTJDQ4Ltd2a1/1))
 
