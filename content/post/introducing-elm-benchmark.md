@@ -1,45 +1,29 @@
 ---
 date: "2017-02-27T09:00:00-06:00"
-title: "Functional Sets Bonus: Benchmarking"
-tags: ["elm", "sets"]
+title: "Introducing elm-benchmark"
+tags: ["elm"]
 featureimage: "/images/bench-by-will-paterson.png"
 thumbnail: "/images/bench-by-will-paterson-with-title.png"
 section: "Technology"
-draft: true
 
 ---
 
 After the [sets series]({{< ref "sets-intro.md" >}}) finished, I got really curious&hellip;
 How fast were these sets, exactly?
-I had to shave a lot of yaks to answer that question.
-
-To sum up: Elm now has a benchmarking library at [`BrianHicks/elm-benchmark`](https://github.com/brianhicks/elm-benchmark).
+I had to shave a lot of yaks to answer that question, but to sum up: Elm now has a [benchmarking library](http://package.elm-lang.org/packages/BrianHicks/elm-benchmark/latest)!
 Let's take a look at how to use it!
 
 <!--more-->
 
-## `BrianHicks/elm-avl-exploration`
-
-I've pushed the code from the series to [BrianHicks/elm-avl-exploration](https://github.com/BrianHicks/elm-avl-exploration) with a few changes:
-
-- It's `Dict` now instead of `Set`.
-  I did this so I could compare `Dict` to `Dict`.
-  A head-to-head comparison is fairer than comparing `Dict` to `Set`.
-- The library has some optimizations that aren't in the series.
-  Specifically `Singleton`, a third case of `Dict` that represents *only* a leaf node.
-  I found this optimization using benchmarking!
-  Hooray!
-
-Let's check out how to use `elm-benchmark` to measure this `Dict.Avl` against `Dict`:
-
 ## Our First Benchmark
 
-The basic building blocks of `elm-benchmark` are `benchmark` through `benchmark8`.
+The basic building blocks of `elm-benchmark` are [`benchmark` through `benchmark8`](http://package.elm-lang.org/packages/BrianHicks/elm-benchmark/1.0.1/Benchmark#benchmark).
 The number refers to the *arity* of a function (the number of arguments).
-So a benchmark for `get : comparable -> Dict comparable b -> Maybe b` would look like this:
+So a benchmark for `Dict.get` (`get : comparable -> Dict comparable b -> Maybe b`) would look like this:
 
 ```elm
 import Benchmark exposing (Benchmark)
+import Dict
 
 
 get : Benchmark
@@ -50,8 +34,8 @@ get =
 All the benchmarking functions take a name as their first argument.
 For a single benchmark this can look pretty silly, but you'll usually have a bunch of benchmarks and need to know which is which.
 
-To run this benchmark, we'll use `Benchmark.Runner.program`.
-It takes any `Benchmark`, and will run it in the browser once compiled.
+To run this benchmark, we'll use [`Benchmark.Runner.program`](http://package.elm-lang.org/packages/BrianHicks/elm-benchmark/1.0.1/Benchmark-Runner#program).
+It takes any `Benchmark` and runs it in the browser, once compiled.
 
 ```elm
 import Benchmark.Runner exposing (BenchmarkProgram, program)
@@ -61,6 +45,8 @@ main : BenchmarkProgram
 main =
     program get
 ```
+
+([Run this example on Ellie](https://ellie-app.com/vTDNPCLyZ5a1/1))
 
 ## Adding More Benchmarks
 
@@ -99,6 +85,8 @@ suite =
             ]
 ```
 
+([Run this example on Ellie](https://ellie-app.com/vTJDQ4Ltd2a1/0))
+
 This lets us share benchmark fixtures.
 Thanks to Elm's immutability guarantees, we can do this without influencing our measurements.
 
@@ -115,10 +103,12 @@ Here's how we do that for `get`:
 insert : Benchmark
 insert =
     Benchmark.compare "get"
-        (Benchmark.benchmark2 "Dict.Avl" Avl.get "a" (Avl.singleton "a" 1))
         (Benchmark.benchmark2 "Dict" Dict.get "a" (Dict.singleton "a" 1))
+        (Benchmark.benchmark2 "Dict.AVL" AVL.get "a" (AVL.singleton "a" 1))
 
 ```
+
+([Run this example on Ellie](https://ellie-app.com/vTJDQ4Ltd2a1/1))
 
 When you run this, `elm-benchmark` will run both of these benchmarks, then compare their results.
 
@@ -131,4 +121,4 @@ You can get help by [opening an issue against `elm-benchmark`](https://github.co
 
 Have fun!
 
-{{< setsSeriesSignup >}}
+{{< elmSignup >}}
