@@ -15,9 +15,9 @@
 <link rel="apple-touch-icon" sizes="180x180" href="http://gravatar.com/avatar/{{.Site.Params.gravatar}}?s=180" />
 
 {{ "<!-- RSS -->" | safeHTML }}
-{{ if .RSSlink }}
-<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-<link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ if .Site.RSSLink }}
+<link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+<link href="{{ .Site.RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 {{ end }}
 
 {{ "<!-- Font Awesome -->" | safeHTML }}
