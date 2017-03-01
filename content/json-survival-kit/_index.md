@@ -1,6 +1,5 @@
 ---
 title: "I've been working on this Elm JSON Decoder for days and I haven't made any progress… send help!"
-slug: json-survival-kit
 date: "2017-01-04T00:00:00-06:00"
 featureimage: "/json-survival-kit/cover_no_title.jpg"
 thumbnail: "/json-survival-kit/gumroad.jpg"
