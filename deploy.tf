@@ -81,7 +81,7 @@ resource "null_resource" "blog-image" {
   }
 }
 
-resource "template_file" "blog-service" {
+data "template_file" "blog-service" {
   template = <<EOF
 [Unit]
 After=docker.service
@@ -90,9 +90,9 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-ExecStartPre=-/usr/bin/docker pull ${docker_image}
+ExecStartPre=-/usr/bin/docker pull $${docker_image}
 ExecStartPre=-/usr/bin/docker rm -f blog
-ExecStart=/usr/bin/docker run --rm --name blog -p 80:80 -p 443:443 -v /var/lib/caddy:/root/.caddy -e DOMAIN=www.${domain} -e REPO=${repo} -e TLS=${tls} -e HOOK_SECRET=${hook_secret} ${docker_image}
+ExecStart=/usr/bin/docker run --rm --name blog -p 80:80 -p 443:443 -v /var/lib/caddy:/root/.caddy -e DOMAIN=www.$${domain} -e REPO=$${repo} -e TLS=$${tls} -e HOOK_SECRET=$${hook_secret} $${docker_image}
 Restart=always
 
 [Install]
@@ -109,7 +109,7 @@ EOF
 }
 
 resource "null_resource" "blog-docker" {
-  depends_on = ["null_resource.blog-image", "template_file.blog-service"]
+  depends_on = ["null_resource.blog-image", "data.template_file.blog-service"]
 
   triggers {
     host = "${digitalocean_droplet.blog.ipv4_address}"
@@ -119,7 +119,7 @@ resource "null_resource" "blog-docker" {
     repo = "${var.git_remote}"
     tls = "${var.letsencrypt_email}"
     secret = "${var.hook_secret}"
-    service = "${sha1(template_file.blog-service.rendered)}"
+    service = "${sha1(data.template_file.blog-service.rendered)}"
   }
 
   connection {
@@ -131,7 +131,7 @@ resource "null_resource" "blog-docker" {
 
   provisioner "remote-exec" {
     inline = [
-      "echo ${base64encode(template_file.blog-service.rendered)} | base64 -d > /etc/systemd/system/blog.service",
+      "echo ${base64encode(data.template_file.blog-service.rendered)} | base64 -d > /etc/systemd/system/blog.service",
       "systemctl daemon-reload",
       "systemctl enable blog",
       "systemctl restart blog"
