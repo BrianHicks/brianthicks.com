@@ -19,7 +19,7 @@ Never get stuck on JSON Decoding again!
 
 <!--more-->
 
-You can [get The JSON Survival Kit now]({{< ref "json-survival-kit.md" >}}).
+You can [get The JSON Survival Kit now](/json-survival-kit/).
 Or if you want a free sample chapter first, slap your email in the box below:
 
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
