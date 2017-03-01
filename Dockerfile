@@ -2,9 +2,9 @@ FROM abiosoft/caddy
 
 RUN apk add --update perl make
 
-RUN curl -L https://github.com/spf13/hugo/releases/download/v0.16/hugo_0.16_linux-64bit.tgz > hugo.tar.gz && \
+RUN curl -L https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19_Linux-64bit.tar.gz > hugo.tar.gz && \
     tar -xzvf hugo.tar.gz && \
-    cp hugo /usr/local/bin/hugo && \
+    cp hugo_0.19_linux_amd64/hugo_0.19_linux_amd64 /usr/local/bin/hugo && \
     rm -rf hugo*
 
 ENV HOOK_SECRET=
