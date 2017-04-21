@@ -18,9 +18,8 @@ We just have a few things to wrap up.
 This was a long series!
 If you'd like to go through it again, or didn't see all of the posts the first time, I've set up a way to get them by email.
 You'll get them once per week, but without any interruption.
-I've also included some exercises in each, to help with comprehension.
 
-[Sign up here to get the post series and exercises in your inbox.](https://www.getdrip.com/forms/40161339/submissions/new)
+[Sign up here to get the post series in your inbox.](https://www.getdrip.com/forms/40161339/submissions/new)
 
 ## `Dict`s
 
