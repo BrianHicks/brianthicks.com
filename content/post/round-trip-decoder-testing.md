@@ -39,7 +39,7 @@ encoder person =
 
 decoder : Decoder Person
 decoder =
-    Decode.map2 Person
+    Decode.map Person
         (Decode.field "name" Decode.string)
 ```
 
@@ -76,8 +76,9 @@ serialization =
     describe "serialization"
         [ fuzz person "round trip" <|
             \thisPerson ->
-                Encode.encode 0 (encoder thisPerson)
-                    |> Decode.decodeString decoder
+                thisPerson
+                    |> encoder
+                    |> Decode.decodeValue decoder
                     |> Expect.equal (Ok thisPerson)
         ]
 
@@ -159,3 +160,5 @@ So now you know!
 Next time you find yourself wondering if your encoder is going to break, write some fuzz tests and sleep easy!
 
 {{< elmSignup >}}
+
+**Update**: corrected typo and simplified test case to roundtrip on `Value` instead of `String`. Thanks to Ian Mackenzie!
