@@ -4,6 +4,7 @@ title: "Add Safety to Your Elm JSON Encoders With Fuzz Testing"
 featureimage: "/images/use-fuzz-tests-to-add-safety-to-your-elm-json-decoders.png"
 thumbnail: "/images/use-fuzz-tests-to-add-safety-to-your-elm-json-decoders-with-title.png"
 section: "Technology"
+tags: ["elm"]
 
 ---
 
