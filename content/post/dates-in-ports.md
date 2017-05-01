@@ -1,11 +1,10 @@
 ---
-date: "2017-05-02T09:00:00-06:00"
+date: "2017-05-01T09:00:00-06:00"
 title: "Sending Dates Through Elm Ports"
-featureimage: ""
-thumbnail: ""
+featureimage: "/images/dates-in-ports.png"
+thumbnail: "/images/dates-in-ports-with-title.png"
 section: "Technology"
 tags: ["elm"]
-draft: true
 
 ---
 
