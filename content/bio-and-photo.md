@@ -6,9 +6,5 @@ title: "Bio and Photo"
 
 {{< gravatar >}}
 
-Brian Hicks is the CTO of Asteris, a devops consultancy based in St. Louis, MO.
-He organizes [elm-conf US](https://www.elm-conf.us/), blogs about Elm (and other
-things) at [brianthicks.com](https://www.brianthicks.com/) and runs
-the [St. Louis Tech Slack](https://stl-tech.github.io). He enjoys biking around
-St. Louis, hanging out with his wife and son,
-and [tweeting about his cat](https://twitter.com/brianhicks).
+Brian Hicks is the lead organizer of [elm-conf](https://www.elm-conf.us) and the author of [The JSON Survival Kit](https://www.brianthicks.com/json-survival-kit/).
+He lives in St. Louis with his wife, son, and cat, and works at [NoRedInk](https://www.noredink.com).
