@@ -1,0 +1,10 @@
+[build]
+base = "."
+publish = "public"
+command = "make"
+
+[context.deploy-preview.environment]
+HUGO_VERSION="0.24.1"
+
+[context.production.environment]
+HUGO_VERSION="0.24.1"
