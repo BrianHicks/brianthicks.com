@@ -1,0 +1,6 @@
+/:year/:month/:date/:slug/             /post/:year/:month/:date/:slug  301
+/development/:year/:month/:date/:slug  /post/:year/:month/:date/:slug  301
+/rss/                                  /index.xml                      301
+/atom.xml                              /index.xml                      301
+/feed/index.atom                       /index.xml                      301
+/author/brian-hicks/rss/               /index.xml                      301
