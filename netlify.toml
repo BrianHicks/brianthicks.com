@@ -1,10 +1,6 @@
 [build]
-base = "."
-publish = "public"
-command = "make"
+  publish = "public"
+  command = "git submodule init && git submodule update && hugo"
 
-[context.deploy-preview.environment]
-HUGO_VERSION="0.24.1"
-
-[context.production.environment]
-HUGO_VERSION="0.24.1"
+[context.environment]
+  HUGO_VERSION = "0.25"
