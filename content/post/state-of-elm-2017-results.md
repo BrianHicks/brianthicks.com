@@ -13,6 +13,8 @@ I've embedded the Elm Europe talk below (it's shorter) but the [longer version](
 
 {{< youtube BAtql6ZbvpU >}}
 
+<!--more-->
+
 ## So&hellip; What's This Survey For Anyway?
 
 The State of Elm survey takes the temperature of the Elm community.
