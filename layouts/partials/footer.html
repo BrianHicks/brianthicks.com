@@ -26,21 +26,18 @@ if (window.location.hostname !== "localhost") {
 //
 // Based on code by Pat Maddox and Eric Davis (thanks!)
 //
-function dripTagPage() {
+(function() {
   if (_dcq == undefined) { return }
 
-  pageName = "{{.Title}}";
+  var pageName = "{{.Title}}";
+  var url = "{{.URL}}";
 
   // Tag e.g. "Read - The Title of This"
   _dcq.push(["identify", {tags: ["Read", "Read - " + pageName]}]);
 
   // Add event like "Visited URL"
-  _dcq.push(["track", "Visited {{.URL}}", {title: pageName, path: "{{.URL}}"}])
-
-  return true;
-}
-
-dripTagPage();
+  _dcq.push(["track", "Visited " + url, {title: pageName, path: url}]);
+})();
 </script>
 
 <link href="/scripts/highlight/styles/tomorrow.css" rel="stylesheet"/>
