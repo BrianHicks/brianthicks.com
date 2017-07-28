@@ -21,6 +21,28 @@ if (window.location.hostname !== "localhost") {
 }
 </script>
 
+<script>
+// Logs a page to Drip (getDrip.com) by tagging and adding a Drip event
+//
+// Based on code by Pat Maddox and Eric Davis (thanks!)
+//
+function dripTagPage() {
+  if (_dcq == undefined) { return }
+
+  pageName = "{{.Title}}";
+
+  // Tag e.g. "Read - The Title of This"
+  _dcq.push(["identify", {tags: ["Read", "Read - " + pageName]}]);
+
+  // Add event like "Visited URL"
+  _dcq.push(["track", "Visited {{.URL}}", {title: pageName, path: "{{.URL}}"}])
+
+  return true;
+}
+
+dripTagPage();
+</script>
+
 <link href="/scripts/highlight/styles/tomorrow.css" rel="stylesheet"/>
 <script src="/scripts/highlight/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
