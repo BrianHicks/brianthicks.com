@@ -40,15 +40,25 @@ A reader of [the JSON Survival Kit](/json-survival-kit/) wrote me with a questio
 >
 > If not, then I'll just give up on Elm&ndash;as this is the first project that I'm trying to do, and something as basic as this, I'm finding impossible.
 
-As [I've written about here before]({{< ref "composing-decoders-like-lego.md" >}}) (and in chapter 1 of *The JSON Survival Kit*), the big mindset shift you need to use `Json.Decode` successfully is to think of your decoders like bricks.
-You can have one brick alone, and combine them to build whatever you like!
+The biggest mindset shift you need to succeed with JSON Decoding is to think of your decoders like bricks.
+([I've written about this before]({{< ref "composing-decoders-like-lego.md" >}}), and it's chapter 1 of *The JSON Survival Kit*.)
+You can combine bricks to build whatever you like; the same is true of decoders!
 
 <!--more-->
 
 ## Fixing the Problems We Have Now
 
-We can see three basic levels of this object: sites, then computers, then the details of those computers.
-The innermost object is the easiest here, so we'll start there.
+Ok, are you thinking in bricks?
+Good!
+
+Now first, let's look at the structure of the JSON to get our blueprint.
+This object has three levels:
+
+1. A mapping of the names of sites or datacenters to&hellip;
+2. A mapping of the names of computers to&hellip;
+3. Metadata about those computers.
+
+The innermost object (metadata) is the easiest here, so we'll start with that.
 It's an object with two fields which don't change.
 Let's call it `machine` and define a record to go with it:
 
@@ -76,7 +86,8 @@ Despite the similarities, you can't do this with Elm's records.
 They're flexible, but don't combine key-value and structural semantics the way JavaScript objects do.
 
 Elm *does*, however, have a first-class representation of key-value data structure: `Dict`.
-Even better, `Json.Decode.dict` provides an easy way for us to map the keys of a JSON object into a `Dict`, if only we give it a decoder for the value:
+Even better, `Json.Decode.dict` provides an easy way for us to map the keys of a JSON object into a `Dict`.
+We only need to give it a decoder for the value:
 
 ```elm
 import Dict exposing (Dict)
@@ -103,16 +114,17 @@ We can also make this a little smaller by defining `sites` as `dict (dict machin
 
 To get this to work for your own problem, you first need to [change your mindset to think in small combined JSON blocks instead of a huge blob]({{< ref "composing-decoders-like-lego.md" >}}).
 Seriously, this is the most important thing to do!
-You can follow any other advice mechanically and not understand the result without getting this.
+You can follow any other advice mechanically and not understand the result without getting this first.
 
 Before I did anything else, I formatted the JSON to get a feel for the structure.
 I like to use [`jq`](https://stedolan.github.io/jq/) for this, but the tool itself doesn't matter as much as the formatting.
 You want to be able to look at the *structure* of your JSON object, *not the keys themselves*.
-This is because `Json.Decode` works with the structure of your data, not necessarily the values, and you'll need to think in terms of that structure to write a decoder.
+This is because `Json.Decode` works with the structure of your data, not necessarily the values.
+You'll need to think in terms of that structure to write a good decoder.
 
 After you get that structure start with the innermost object.
 If the innermost object changes a lot, start with the one that changes the least.
-Write the decoder for something smaller and you can compose around it instead of starting with an enormous blob.
+Write the decoder for something smaller and compose it instead of starting with an enormous blob.
 Then put that little bit into the next largest object, and the next, and so on until you're done.
 
 Sometimes the object that changes the least is the outermost object!
