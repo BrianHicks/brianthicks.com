@@ -5,7 +5,6 @@ tags: ["elm"]
 featureimage: "/images/{{ .TranslationBaseName }}.png"
 thumbnail: "/images/{{ .TranslationBaseName }}-with-title.png"
 section: "Technology"
-
 ---
 
 <!--more-->
