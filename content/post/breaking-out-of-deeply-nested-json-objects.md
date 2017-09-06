@@ -132,4 +132,6 @@ If that's the case, it may make sense to decode the inner values with `Json.Deco
 It will encode `Value`, which you can't use directly.
 But, it's a useful placeholder to verify that you're doing the right thing as you break down your structure.
 
+(Update: [here is another post about breaking down JSON objects from the bottom up in this way]({{< ref "breaking-down-decoders-from-the-bottom-up.md" >}})!)
+
 {{< elmSignup >}}
