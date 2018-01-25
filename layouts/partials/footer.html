@@ -1,23 +1,24 @@
 <footer class="site-footer">
-	<p class="text">&copy; {{ now.Format "2006" }} - {{ .Site.Params.copyright | markdownify }}</p>
+    <p class="text">&copy; {{ now.Format "2006" }} - {{ .Site.Params.copyright | markdownify }}</p>
 </footer>
 
 {{ template "_internal/google_analytics.html" . }}
 
 <!-- Drip -->
+<!--
 <script type="text/javascript">
 if (window.location.hostname !== "localhost") {
-	var _dcq = _dcq || [];
-	var _dcs = _dcs || {};
-	_dcs.account = '{{ .Site.Params.drip.account }}';
+    var _dcq = _dcq || [];
+    var _dcs = _dcs || {};
+    _dcs.account = '{{ .Site.Params.drip.account }}';
 
-	(function() {
-		var dc = document.createElement('script');
-		dc.type = 'text/javascript'; dc.async = true;
-		dc.src = '//tag.getdrip.com/{{ .Site.Params.drip.account }}.js';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(dc, s);
-	})();
+    (function() {
+        var dc = document.createElement('script');
+        dc.type = 'text/javascript'; dc.async = true;
+        dc.src = '//tag.getdrip.com/{{ .Site.Params.drip.account }}.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(dc, s);
+    })();
 }
 </script>
 
@@ -39,6 +40,7 @@ if (window.location.hostname !== "localhost") {
   _dcq.push(["track", "Visited " + url, {title: pageName, path: url}]);
 })();
 </script>
+-->
 
 <link href="/scripts/highlight/styles/tomorrow.css" rel="stylesheet"/>
 <script src="/scripts/highlight/highlight.pack.js"></script>
