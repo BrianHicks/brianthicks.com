@@ -19,7 +19,10 @@ This was a long series!
 If you'd like to go through it again, or didn't see all of the posts the first time, I've set up a way to get them by email.
 You'll get them once per week, but without any interruption.
 
-[Sign up here to get the post series in your inbox.](https://www.getdrip.com/forms/40161339/submissions/new)
+(this is temporarily switched off while I switch email providers.
+Be back soon!)
+
+<!--[Sign up here to get the post series in your inbox.](https://www.getdrip.com/forms/40161339/submissions/new)-->
 
 ## `Dict`s
 
