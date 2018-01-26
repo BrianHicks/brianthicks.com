@@ -4,9 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--Favicon-->
+    <!-- Search engines -->
+    {{ with .Site.Params.author }}<meta name="author" content="{{ .name }} <{{ .email }}>">{{ end }}
+    {{ .Hugo.Generator }}
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="http://gravatar.com/avatar/{{.Site.Params.gravatar}}?s=32" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="http://gravatar.com/avatar/{{.Site.Params.gravatar}}?s=180" />
+
+    <!-- RSS -->
+    {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+
+    <!-- twitter -->
+    <meta name="twitter:widgets:csp" content="on">
+    <meta name="twitter:card" content="summary">
+    {{with .Site.Params.social.twitter}}<meta name="twitter:site" content="@{{.}}">{{end}}
+    <meta name="twitter:title" content="{{.Title}}">
+    <meta name="twitter:description" content="{{truncate 100 (or .Summary .Site.Params.description)}}">
+    {{with .Site.Params.gravatar}}<meta name="twitter:image" content="https://www.gravatar.com/avatar/{{.}}?s=256">{{end}}
+
+    <!-- open graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{.Title}}">
+    <meta property="og:description" content="{{truncate 100 (or .Summary .Site.Params.description)}}">
+    <meta property="og:url" content="{{.Permalink}}">
+    {{with .Site.Params.gravatar}}<meta property="og:image" content="https://www.gravatar.com/avatar/{{.}}?s=256">{{end}}
 
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
   </head>
