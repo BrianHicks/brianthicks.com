@@ -1,9 +1,14 @@
 {{ define "main" }}
-  <h1>Stuff</h1>
-  {{ range .Data.Pages }}
+  <h1>{{.Title}}</h1>
+  {{range .Paginator.Pages}}
   <article>
     <h2>{{.Title}}</h2>
     {{.Summary}}
   </article>
   {{ end }}
+  <nav class="page-nav">
+    {{$title := .Title}}
+    {{with .Paginator.Prev}}<a href="{{.URL}}" title="Newer {{$title}}">Newer {{$title}}</a>{{end}}
+    {{with .Paginator.Next}}<a href="{{.URL}}" title="Older {{$title}}">Older {{$title}}</a>{{end}}
+  </nav>
 {{ end }}
