@@ -1,12 +1,10 @@
 baseurl: "https://www.brianthicks.com/"
 languageCode: "en-us"
 title: "Brian Hicks"
-theme: "type"
-# Add your tracking code to enable Google Analytics
-googleAnalytics: ""
+theme: "2018"
 # Posts per page
 paginate: 5
-disqusShortName: brianthicks
+sectionPagesMenu: "main"
 
 permalinks:
   post: "/post/:year/:month/:day/:slug"
@@ -25,32 +23,3 @@ params:
   headerImage: ""
 
   copyright: "The content on this site is licensed as <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC Attribution-ShareAlike</a> except for code samples, which are licensed as <a rel=\"license\" href=\"http://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>."
-
-  segment:
-    write_key: ki2miw1o3b
-
-  drip:
-    account: 9478027
-
-  social:
-  # Insert your accout name and the icon will be shown in the right menu
-    rss: true
-    email: "brian@brianthicks.com"
-    github: "BrianHicks"
-    twitter: "brianhicks"
-    behance: ""
-    bitbucket: ""
-    dribbble: ""
-    facebook: ""
-    flickr: ""
-    googleplus: ""
-    instagram: ""
-    linkedin: ""
-    pinterest: ""
-    reddit: ""
-    soundcloud: ""
-    stackexchange: ""
-    steam: ""
-    tumblr: ""
-    wordpress: ""
-    youtube: ""
