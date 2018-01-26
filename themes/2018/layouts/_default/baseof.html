@@ -13,5 +13,8 @@
       {{ end }}
     </nav>
     {{ block "main" . }}{{end}}
+    <footer>
+      {{safeHTML .Site.Params.copyright}}
+    </footer>
   </body>
 </html>
