@@ -11,12 +11,16 @@
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
   </head>
   <body>
-    <nav class="main-nav">
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}
-      <a class="main-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}" title="{{.Title}}">{{.Name}}</a>
-      {{ end }}
-    </nav>
+    <header>
+      <!-- accessibility note: https://www.w3.org/WAI/tutorials/images/decorative/#decorative-image-as-part-of-a-text-link -->
+      <a href="{{.Site.BaseURL}}"><img src="http://gravatar.com/avatar/{{.Site.Params.gravatar}}?s=32" alt="" /> {{.Site.Title}}</a>
+      <nav class="main-nav">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        <a class="main-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}" title="{{.Title}}">{{.Name}}</a>
+        {{ end }}
+      </nav>
+    </header>
     {{ block "main" . }}{{end}}
     <footer>
       {{safeHTML .Site.Params.copyright}}
