@@ -164,6 +164,15 @@ section, article {
     max-width: 38rem;
 }
 
+figure {
+    max-width: 38rem;
+    font-size: 0.875rem;
+    line-height: calc(16/14);
+}
+figure > img {
+    width: 100%;
+}
+
 article > p.post-meta {
     font-size: 0.875rem;
     line-height: calc(16/14);
