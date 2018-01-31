@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Search engines -->
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     {{ with .Site.Params.author }}<meta name="author" content="{{ .name }} <{{ .email }}>">{{ end }}
     {{ .Hugo.Generator }}
 
@@ -32,8 +33,6 @@
     <meta property="og:description" content="{{truncate 100 (or .Summary .Site.Params.description)}}">
     <meta property="og:url" content="{{.Permalink}}">
     {{with .Site.Params.gravatar}}<meta property="og:image" content="https://www.gravatar.com/avatar/{{.}}?s=256">{{end}}
-
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
   </head>
   <body>
     <header>
