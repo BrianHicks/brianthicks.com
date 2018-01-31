@@ -169,7 +169,7 @@ article > hr.before-content {
 }
 
 article.list + article.list {
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 article > a.read-more:after {
