@@ -9,7 +9,7 @@ I wrote [The JSON Survival Kit](/json-survival-kit), and would love if you check
 
 Here are some popular posts:
 
-- [Breaking out of Deeply Nested JSON Object]({{< ref "post/breaking-out-of-deeply-nested-json-objects.md" >}})
+- [Breaking out of Deeply Nested JSON Objects]({{< ref "post/breaking-out-of-deeply-nested-json-objects.md" >}})
 - [Composing Decoders like LEGO]({{< ref "post/composing-decoders-like-lego.md" >}})
 - State of Elm Results
   - [2017]({{< ref "post/state-of-elm-2017-results.md" >}})
