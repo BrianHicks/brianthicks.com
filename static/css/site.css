@@ -94,7 +94,7 @@ ul { list-style-type: disc; }
 ol { list-style-type: decimal; }
 
 a {
-    color: #640285;
+    color: #9013FE;
     text-decoration: none;
 }
 
@@ -108,7 +108,7 @@ header.site-header {
 
     margin: 2rem auto 2rem auto;
 }
-header.site-header a:hover { color: #640285; }
+header.site-header a:hover { color: #9013FE; }
 
 /* logo */
 header.site-header > a.logo {
