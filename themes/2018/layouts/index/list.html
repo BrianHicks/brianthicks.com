@@ -1,4 +1,7 @@
 {{define "main"}}
-<h1>{{.Title}}</h1>
-{{.Content}}
+<article>
+  <h1>{{.Title}}</h1>
+  <hr class="before-content" />
+  {{.Content}}
+</article>
 {{end}}
