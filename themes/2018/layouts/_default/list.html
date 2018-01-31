@@ -7,11 +7,7 @@
     {{range .Paginator.Pages}}
     <article class="list">
         <h2 class="title"><a href="{{.Permalink}}">{{.Title}}</a></h2>
-        <p class="post-meta">
-          {{dateFormat "January 2, 2006" .Date}} &middot;
-          {{.ReadingTime}} Minute Read &middot;
-          <a href="{{.Permalink}}" alt="Permalink for {{.Title}}">∞ Permalink</a>
-        </p>
+        {{partial "post-meta.html" .}}
         <hr class="before-content" />
         {{.Summary}}
         <a class="read-more" href="{{.Permalink}}">Read on</a>
