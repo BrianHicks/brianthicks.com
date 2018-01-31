@@ -131,10 +131,10 @@ header.site-header > nav.main-nav > ol > li {
 }
 a.main-nav-item {
     margin-left: 0.5rem;
-    color: #4A4A4A;
+    color: #7C7C7C;
 }
 a.main-nav-item.active {
-    color: #9B9B9B;
+    color: #4A4A4A;
 }
 
 /******
