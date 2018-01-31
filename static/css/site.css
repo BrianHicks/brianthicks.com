@@ -6,6 +6,7 @@
  ***************/
 html {
     font-size: 20px;
+    background-color: #FAFAFA;
 }
 
 body {
@@ -49,12 +50,49 @@ ul { list-style-type: bullet; }
 
 ol { list-style-type: number; }
 
+a {
+    color: #640285;
+    text-decoration: none;
+}
+
 /********
   HEADER
  ********/
-header {
-    margin: auto;
+header.site-header {
     max-width: 38rem;
+    display: flex;
+    align-items: center;
+
+    margin: 3rem auto 1rem auto;
+}
+header.site-header a:hover { color: #640285; }
+
+/* logo */
+header.site-header > a.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+    font-weight: 700;
+    color: #4A4A4A;
+}
+header.site-header > a.logo > img {
+    margin-right: 0.5rem;
+    border-radius: 4px;
+}
+
+/* navigation */
+header.site-header > nav.main-nav > ol { margin-bottom: 0; }
+header.site-header > nav.main-nav > ol > li {
+    list-style-type: none;
+    margin-left: 0;
+    display: inline;
+}
+a.main-nav-item {
+    margin-left: 0.5rem;
+    color: #4A4A4A;
+}
+a.main-nav-item.active {
+    color: #9B9B9B;
 }
 
 /******

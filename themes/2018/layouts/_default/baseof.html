@@ -39,14 +39,17 @@
     <link rel="stylesheet" href="/css/site.css">
   </head>
   <body>
-    <header>
+    <header class="site-header">
       <!-- accessibility note: https://www.w3.org/WAI/tutorials/images/decorative/#decorative-image-as-part-of-a-text-link -->
-      <a href="{{.Site.BaseURL}}"><img src="//gravatar.com/avatar/{{.Site.Params.gravatar}}?s=32" alt="" /> {{.Site.Title}}</a>
+      <a class="logo" href="{{.Site.BaseURL}}"><img src="//gravatar.com/avatar/{{.Site.Params.gravatar}}?s=84" width=42 height=42 alt="" /> {{.Site.Title}}</a>
       <nav class="main-nav">
-        {{ $currentPage := . }}
-        {{ range .Site.Menus.main }}
-        <a class="main-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}" title="{{.Title}}">{{.Name}}</a>
-        {{ end }}
+        <!-- accessibility note: I hear this is nicer for folks on screen readers. I'm not sure how to test it though! -->
+        <ol>
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+          <li><a class="main-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}" title="{{.Title}}">{{.Name}}</a></li>
+          {{ end }}
+        </ol>
       </nav>
     </header>
     {{ block "main" . }}{{end}}
