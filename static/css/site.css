@@ -16,6 +16,7 @@ body {
     line-height: calc(24/18);
     font-family: 'Alegreya Sans', sans-serif;
     color: #4A4A4A;
+    padding: 1rem;
 }
 
 /* code blocks should be set off from body text */
@@ -105,7 +106,7 @@ header.site-header {
     display: flex;
     align-items: center;
 
-    margin: 3rem auto 2rem auto;
+    margin: 2rem auto 2rem auto;
 }
 header.site-header a:hover { color: #640285; }
 
@@ -197,7 +198,7 @@ nav.page-nav {
  ********/
 footer.site-footer {
     max-width: 38rem;
-    margin: 2rem auto;
+    margin: 2rem auto 1rem auto;
 }
 footer.site-footer:before {
     content: " ";
