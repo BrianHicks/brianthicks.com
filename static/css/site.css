@@ -1,0 +1,107 @@
+/* https://fonts.google.com/selection?selection.family=Alegreya+Sans+SC|Alegreya+Sans:400,400i,700|Fira+Mono|Oswald:400,500&query=fira+mono */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Alegreya+Sans:400,400i,700|Fira+Mono|Oswald:400,500');
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-size: 1.125rem;
+    line-height: calc(24/18);
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+/* code blocks should be set off from body text */
+pre, code {
+    font-size: 1rem;
+    font-family: 'Fira Mono', monospace;
+    font-style: normal;
+}
+pre {
+    margin-left: 1rem;
+    overflow-x: scroll; /* TODO: just run forever on wide displays */
+
+    /* overflow scrolling gets really annoying on systems where the scrollbar
+       shows by default (macOS with an external mouse for instance.) We avoid
+       overrunning the text or bumping against the next element by moving the
+       bottom of the element down halfway to the next. */
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* blockquotes should be in italics */
+/* TODO: attribution */
+blockquote {
+    margin-left: 1rem;
+    font-style: italic;
+}
+
+/* elements in body text should have a consistent following margin */
+ul, ol, p, blockquote { margin-bottom: 1rem; }
+
+ul > li, ol > li { margin-left: 1rem; }
+
+ul { list-style-type: bullet; }
+
+ol { list-style-type: number; }
+
+/* header */
+header {
+    margin: auto;
+    max-width: 38rem;
+}
+
+/* article, the main content container (both single and list) */
+section, article {
+    margin: auto;
+    max-width: 38rem;
+}
+
+/* TODO: h2 through h6 */
+h1, article > h2.title {
+    /* article titles are huge */
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 3.0625rem; /* 49px */
+    line-height: calc(56/49);
+
+    /* they should also be closer to square—narrower but taller than body content */
+    max-width: 28.5rem;
+
+    /* they should have a nice bottom margin */
+    margin-bottom: 1rem;
+}
+
+article > p {
+    margin-bottom: 1rem;
+}
+
+article > p.post-meta {
+    font-size: 0.875rem;
+    line-height: calc(16/14);
+}
+
+article > hr.before-content {
+    width: 40%;
+    margin-left: 0;
+    background-color: #3023AE;
+    background-image: linear-gradient(134deg, #3023AE 0%, #C86DD7 100%);
+    height: 1px;
+    border: 0;
+
+    /* this serves as a separator, so it gets a little more margin to set off the body text */
+    margin-bottom: 2rem;
+}
+
+article.list:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #3023AE;
+    background-image: linear-gradient(134deg, #3023AE 0%, #C86DD7 100%);
+    margin: 1rem 0;
+}
+article.list:last-child:after {
+    display: none;
+}

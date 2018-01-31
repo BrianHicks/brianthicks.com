@@ -1,11 +1,16 @@
 {{ define "main" }}
-  <h1>{{.Title}}</h1>
-  {{range .Paginator.Pages}}
-  <article>
-    <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
-    {{.Summary}}
-  </article>
-  {{ end }}
+  <section class="articles">
+    <h1>{{.Title}}</h1>
+    {{range .Paginator.Pages}}
+    <article class="list">
+        <h2 class="title"><a href="{{.Permalink}}">{{.Title}}</a></h2>
+        <p class="post-meta">{{dateFormat "January 2, 2006" .Date}} &middot; {{.ReadingTime}} Minute Read</p>
+        <hr class="before-content" />
+        {{.Summary}}
+        <a href="{{.Permalink}}">Read on</a>
+    </article>
+    {{ end }}
+  </section>
   <nav class="page-nav">
     {{$title := .Title}}
     {{with .Paginator.Prev}}<a href="{{.URL}}" title="Newer {{$title}}">Newer {{$title}}</a>{{end}}

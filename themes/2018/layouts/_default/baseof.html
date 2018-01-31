@@ -33,6 +33,10 @@
     <meta property="og:description" content="{{truncate 100 (or .Summary .Site.Params.description)}}">
     <meta property="og:url" content="{{.Permalink}}">
     {{with .Site.Params.gravatar}}<meta property="og:image" content="https://www.gravatar.com/avatar/{{.}}?s=256">{{end}}
+
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/site.css">
   </head>
   <body>
     <header>
