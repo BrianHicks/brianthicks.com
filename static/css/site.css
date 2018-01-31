@@ -27,7 +27,7 @@ pre, code {
 }
 pre {
     margin-left: 1rem;
-    overflow-x: scroll; /* TODO: just run forever on wide displays */
+    overflow-x: auto; /* TODO: just run forever on wide displays */
 
     /* overflow scrolling gets really annoying on systems where the scrollbar
        shows by default (macOS with an external mouse for instance.) We avoid

@@ -37,7 +37,13 @@
     <!-- styles -->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/site.css">
-    <!-- <link rel="stylesheet" href="/scripts/highlight/styles/tomorrow.css"> -->
+
+    <!-- syntax highlighting -->
+    <link rel="stylesheet" href="/scripts/highlight/styles/tomorrow.css">
+    <style>
+      /* override background until I have time to make my own highlighting theme. */
+      .hljs { background: transparent; }
+    </style>
 
   </head>
   <body>
@@ -60,7 +66,7 @@
     </footer>
 
     <!-- scripts -->
-    <!-- <script src="/scripts/highlight/highlight.pack.js"></script> -->
-    <!-- <script>hljs.initHighlightingOnLoad();</script> -->
+    <script src="/scripts/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
