@@ -11,7 +11,7 @@ section: "Technology"
 A reader of [the JSON Survival Kit](/json-survival-kit/) wrote me with a question (lightly edited):
 
 > I've got a JSON string that works fine in JavaScript:
-> 
+>
 >
 >     {
 >       "Site1": {

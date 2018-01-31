@@ -26,7 +26,7 @@ Pretty impressive!
            attr="LEGO World 2013 by Brickset"
            attrlink="https://www.flickr.com/photos/brickset/8488933168" >}}
 
-Elm's decoders are like that. 
+Elm's decoders are like that.
 It sounds like a ridiculous claim to make, but they are.
 A decoder exposes a standard interface that can snap together in any way you can think up.
 The docs say it best:
@@ -89,7 +89,7 @@ Now we're using a bunch of decoders!
 
 First `object2` takes a function that takes two arguments and applies the given decoders in order.
 These decoders can, of course, be for any value.
-Snap&hellip; click&hellip; 
+Snap&hellip; click&hellip;
 (For more on how this works: [Decoding Large JSON objects: A Summary]({{< ref "decoding-large-json-objects.md" >}}))
 
 Next, the `(:=)` decoder takes a path and a decoder, and applies that decoder to the field.
