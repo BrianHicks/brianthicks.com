@@ -146,12 +146,6 @@ section, article {
     max-width: 38rem;
 }
 
-/* TODO: h2 through h6 */
-
-article > p {
-    margin-bottom: 1rem;
-}
-
 article > p.post-meta {
     font-size: 0.875rem;
     line-height: calc(16/14);
@@ -174,17 +168,9 @@ article > hr.before-content {
     margin-bottom: 2rem;
 }
 
-article.list:after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 100%;
-    background-color: #3023AE;
-    background-image: linear-gradient(134deg, #3023AE 0%, #C86DD7 100%);
-    margin: 1rem 0;
+article.list + article.list {
+    margin-top: 4rem;
 }
-article.list:last-child:after {
-    display: none;
 
 article > a.read-more:after {
     content: " →";
