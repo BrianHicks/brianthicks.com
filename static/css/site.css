@@ -130,12 +130,29 @@ header.site-header > nav.main-nav > ol > li {
     margin-left: 0;
     display: inline;
 }
+
 a.main-nav-item {
     margin-left: 0.5rem;
     color: #7C7C7C;
+    white-space: nowrap;
 }
 a.main-nav-item.active {
     color: #4A4A4A;
+}
+
+@media screen and (max-width: 600px) {
+    header.site-header {
+        display: block;
+    }
+    header.site-header > a.logo {
+        margin-bottom: 1rem;
+    }
+    header.site-header > nav.main-nav > ol > li {
+        display: block;
+    }
+    a.main-nav-item:first-child {
+        margin-left: 0;
+    }
 }
 
 /******
