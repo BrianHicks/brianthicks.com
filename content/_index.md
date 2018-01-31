@@ -5,6 +5,7 @@ date: "2018-01-25T23:32:00-06:00"
 
 I'm Brian Hicks.
 I work with and write about Elm, organize [elm-conf](https://www.elm-conf.us), and run the State of Elm survey.
+I wrote [The JSON Survival Kit](/json-survival-kit), and would love if you checked it out!
 
 Here are some popular posts:
 
