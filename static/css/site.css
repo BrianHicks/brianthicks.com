@@ -168,9 +168,10 @@ figure {
     max-width: 38rem;
     font-size: 0.875rem;
     line-height: calc(16/14);
+    text-align: center;
 }
 figure > img {
-    width: 100%;
+    max-width: 100%;
 }
 
 article > p.post-meta {
