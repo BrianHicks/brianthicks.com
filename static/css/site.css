@@ -185,6 +185,10 @@ article.list:after {
 }
 article.list:last-child:after {
     display: none;
+
+article > a.read-more:after {
+    content: " →";
+    margin-left: 5px;
 }
 
 /********
