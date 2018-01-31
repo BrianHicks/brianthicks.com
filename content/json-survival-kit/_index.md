@@ -1,7 +1,7 @@
 ---
 title: "The JSON Survival Kit"
 date: "2017-01-04T00:00:00-06:00"
-showList: false
+hideList: true
 ---
 
 ## I've been working on this Elm JSON Decoder for days and I haven't made any progress&hellip; send help!

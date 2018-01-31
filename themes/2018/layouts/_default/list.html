@@ -3,7 +3,7 @@
     <h1>{{.Title}}</h1>
     {{if .Content}}<hr class="before-content">{{end}}
     {{.Content}}
-    {{if ne .Params.showList false}}
+    {{if not .Params.hideList}}
     {{range .Paginator.Pages}}
     <article class="list">
         <h2 class="title"><a href="{{.Permalink}}">{{.Title}}</a></h2>
