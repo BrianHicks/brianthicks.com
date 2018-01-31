@@ -1,6 +1,9 @@
 /* https://fonts.google.com/selection?selection.family=Alegreya+Sans+SC|Alegreya+Sans:400,400i,700|Fira+Mono|Oswald:400,500&query=fira+mono */
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Alegreya+Sans:400,400i,700|Fira+Mono|Oswald:400,500');
 
+/***************
+  GLOBAL SHTUFF
+ ***************/
 html {
     font-size: 20px;
 }
@@ -45,12 +48,17 @@ ul { list-style-type: bullet; }
 
 ol { list-style-type: number; }
 
-/* header */
+/********
+  HEADER
+ ********/
 header {
     margin: auto;
     max-width: 38rem;
 }
 
+/******
+  BODY
+ ******/
 /* article, the main content container (both single and list) */
 section, article {
     margin: auto;
@@ -105,3 +113,7 @@ article.list:after {
 article.list:last-child:after {
     display: none;
 }
+
+/********
+  FOOTER
+ ********/
