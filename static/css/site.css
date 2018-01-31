@@ -89,9 +89,9 @@ ul, ol, p, blockquote { margin-bottom: 1rem; }
 
 ul > li, ol > li { margin-left: 1rem; }
 
-ul { list-style-type: bullet; }
+ul { list-style-type: disc; }
 
-ol { list-style-type: number; }
+ol { list-style-type: decimal; }
 
 a {
     color: #640285;
