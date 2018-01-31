@@ -1,7 +1,7 @@
 /* sizes from http://simplescale.online/?scale_base=16&scale_ratio=2&scale_interval=5 */
 
 /* https://fonts.google.com/selection?selection.family=Alegreya+Sans+SC|Alegreya+Sans:400,400i,700|Fira+Mono|Oswald:400,500&query=fira+mono */
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Alegreya+Sans:400,400i,700|Fira+Mono|Oswald:400,500');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Alegreya+Sans:400,400i,700|Fira+Mono|Oswald:500');
 
 /***************
   GLOBAL SHTUFF
@@ -36,6 +36,46 @@ pre {
     margin-bottom: 0.5rem;
 }
 
+/**********
+  HEADINGS
+ **********/
+h1, h2, h3 {
+    /* TODO: better fallback */
+    font-family: 'Oswald', sans-serif;
+}
+
+h1, h2 {
+    /* these level headers break the flow of body content, so they're huge,
+       narrower, and taller */
+    max-width: 28.5rem;
+
+    /* they also should have a nice bottom margin */
+    margin-bottom: 2rem;
+}
+
+h1 {
+    /* page titles are huge */
+    font-weight: 500;
+    font-size: 3.0625rem; /* 49px */
+    line-height: calc(56/49);
+}
+h2 {
+    font-weight: 500;
+    font-size: 2rem; /* 32px */
+    line-height: calc(37/32);
+}
+h3 {
+    font-weight: 500;
+    font-size: 1.33rem; /* 24px */
+}
+
+h4, h5, h6 {
+    /* anything below this should just be inline text, treated like a
+       paragraph. I don't think I've ever used below an h4, so we're probably
+       good here. I'll adjust it if I need to! */
+    font-weight: 700;
+}
+
 /* blockquotes should be in italics */
 /* TODO: attribution */
 blockquote {
@@ -65,7 +105,7 @@ header.site-header {
     display: flex;
     align-items: center;
 
-    margin: 3rem auto 1rem auto;
+    margin: 3rem auto 2rem auto;
 }
 header.site-header a:hover { color: #640285; }
 
@@ -107,19 +147,6 @@ section, article {
 }
 
 /* TODO: h2 through h6 */
-h1, article > h2.title {
-    /* article titles are huge */
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    font-size: 3.0625rem; /* 49px */
-    line-height: calc(56/49);
-
-    /* they should also be closer to square—narrower but taller than body content */
-    max-width: 28.5rem;
-
-    /* they should have a nice bottom margin */
-    margin-bottom: 1rem;
-}
 
 article > p {
     margin-bottom: 1rem;
@@ -128,6 +155,10 @@ article > p {
 article > p.post-meta {
     font-size: 0.875rem;
     line-height: calc(16/14);
+}
+
+article > h2 + p.post-meta {
+    margin-top: -1rem;
 }
 
 article > hr.before-content {
