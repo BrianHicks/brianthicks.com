@@ -4,7 +4,7 @@ date: "2018-01-25T23:32:00-06:00"
 ---
 
 I'm Brian Hicks.
-I do programmer stuff, mostly about Elm.
+I work with and write about Elm, organize [elm-conf](https://www.elm-conf.us), and run the State of Elm survey.
 
 Here are some popular posts:
 
