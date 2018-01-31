@@ -1,7 +1,7 @@
 {{ define "main" }}
   <section class="articles">
     <h1>{{.Title}}</h1>
-    {{if ne .Content ""}}<hr class="before-content">{{end}}
+    {{if .Content}}<hr class="before-content">{{end}}
     {{.Content}}
     {{if ne .Params.showList false}}
     {{range .Paginator.Pages}}
