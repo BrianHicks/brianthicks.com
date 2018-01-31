@@ -19,8 +19,8 @@
     {{end}}
     <nav class="page-nav">
       {{$title := .Title}}
-      {{with .Paginator.Prev}}<a href="{{.URL}}" title="Newer {{$title}}">Newer {{$title}}</a>{{end}}
       {{with .Paginator.Next}}<a href="{{.URL}}" title="Older {{$title}}">Older {{$title}}</a>{{end}}
+      {{with .Paginator.Prev}}<a href="{{.URL}}" title="Newer {{$title}}">Newer {{$title}}</a>{{end}}
     </nav>
     {{end}}
   </section>
