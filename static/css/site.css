@@ -181,6 +181,17 @@ article > a.read-more:after {
     margin-left: 5px;
 }
 
+/*************
+  SECTION NAV
+ *************/
+nav.page-nav {
+    max-width: 38rem;
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
 /********
   FOOTER
  ********/
