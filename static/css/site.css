@@ -136,7 +136,8 @@ article > hr.before-content {
     height: 1px;
     border: 0;
 
-    /* this serves as a separator, so it gets a little more margin to set off the body text */
+    /* this serves as a separator, so it gets a little more margin to set off the
+       body text */
     margin-bottom: 2rem;
 }
 
