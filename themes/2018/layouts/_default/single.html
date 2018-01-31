@@ -1,7 +1,11 @@
 {{ define "main"}}
   <article class="single">
     <h1 class="title">{{.Title}}</h1>
-    <p class="post-meta">{{dateFormat "January 2, 2006" .Date}} &middot; {{.ReadingTime}} Minute Read</p>
+    <p class="post-meta">
+      {{dateFormat "January 2, 2006" .Date}} &middot;
+      {{.ReadingTime}} Minute Read &middot;
+      <a href="{{.Permalink}}" alt="Permalink for {{.Title}}">Permalink</a>
+    </p>
     <hr class="before-content" />
     {{.Content}}
   </article>
