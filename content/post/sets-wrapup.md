@@ -24,7 +24,7 @@ Be back soon!)
 
 <!--[Sign up here to get the post series in your inbox.](https://www.getdrip.com/forms/40161339/submissions/new)-->
 
-## `Dict`s
+## Write Your Own `Dict`
 
 There's another fun experiment you can do now: build `Dict` on top of what we've already got!
 
