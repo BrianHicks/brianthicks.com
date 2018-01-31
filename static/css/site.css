@@ -1,7 +1,7 @@
 /* sizes from http://simplescale.online/?scale_base=16&scale_ratio=2&scale_interval=5 */
 
-/* https://fonts.google.com/selection?selection.family=Alegreya+Sans+SC|Alegreya+Sans:400,400i,700|Fira+Mono|Oswald:400,500&query=fira+mono */
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Alegreya+Sans:400,400i,700|Fira+Mono|Oswald:500');
+/* original selection: https://fonts.google.com/selection?selection.family=Alegreya+Sans+SC|Alegreya+Sans:400,400i,700|Fira+Mono|Oswald:400,500 */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700|Fira+Mono|Oswald:500');
 
 /***************
   GLOBAL SHTUFF
