@@ -151,6 +151,10 @@ article > p.post-meta {
     line-height: calc(16/14);
 }
 
+article > h2 > a {
+    color: #4A4A4A;
+}
+
 article > h2 + p.post-meta {
     margin-top: -1rem;
 }
