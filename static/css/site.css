@@ -184,3 +184,16 @@ article > a.read-more:after {
 /********
   FOOTER
  ********/
+footer.site-footer {
+    max-width: 38rem;
+    margin: 2rem auto;
+}
+footer.site-footer:before {
+    content: " ";
+    display: block;
+    height: 1px;
+    width: 40%;
+    background-color: #3023AE;
+    background-image: linear-gradient(134deg, #3023AE 0%, #C86DD7 100%);
+    margin-bottom: 1rem;
+}
