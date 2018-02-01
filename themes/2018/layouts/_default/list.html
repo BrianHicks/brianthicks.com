@@ -1,5 +1,6 @@
 {{ define "main" }}
   <section class="articles">
+    {{partial "headnote.html" .}}
     <h1>{{.Title}}</h1>
     {{if .Content}}<hr class="before-content">{{end}}
     {{.Content}}

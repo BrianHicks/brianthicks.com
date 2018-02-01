@@ -158,6 +158,15 @@ a.main-nav-item.active {
 /******
   BODY
  ******/
+/* headnote */
+aside.headnote {
+    background: hsla(272, 99%, 44%, .03);
+    border: 1px solid hsla(272, 99%, 44%, 1);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
 /* article, the main content container (both single and list) */
 section, article {
     margin: auto;
