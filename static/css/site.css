@@ -218,6 +218,15 @@ article > a.read-more:after {
     margin-left: 5px;
 }
 
+/* typeform, for State of Elm */
+.typeform-widget {
+    max-width: 38rem;
+    padding: 1px;
+    border: 1px solid #9013FE !important;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
 /*************
   SECTION NAV
  *************/
