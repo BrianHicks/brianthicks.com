@@ -2,6 +2,7 @@
 date: "2018-02-01T07:56:47-06:00"
 title: "State of Elm 2018"
 tags: ["elm"]
+readingTime: 10
 ---
 
 The State of Elm 2018 is on!

@@ -1,5 +1,5 @@
 <p class="post-meta">
   {{dateFormat "January 2, 2006" .Date}}&nbsp;&middot;
-  {{.ReadingTime}} Minute Read&nbsp;&middot;
+  {{with .Params.readingTime}}{{.}}{{else}}{{.ReadingTime}}{{end}} Minute Read&nbsp;&middot;
   <a href="{{.Permalink}}" alt="Permalink for {{.Title}}">∞&nbsp;Permalink</a>
 </p>
