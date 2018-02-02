@@ -8,7 +8,7 @@ section: "Technology"
 
 ---
 
-Now that we have [filter and friends]({{< ref "post/sets-filter.md" >}}), we're almost done with our [`Set` implementation]({{< ref "post/sets-intro.md" >}}).
+Now that we have [filter and friends]({{< ref "post/sets-filter.md" >}}), we're almost done with our [`Set` implementation]({{< ref "guide/functional-sets/1.md" >}}).
 Once we have `map`, we'll be done!
 
 <!--more-->

@@ -8,7 +8,7 @@ section: "Technology"
 
 ---
 
-[Last time]({{< ref "sets-intro.md" >}}) we started making a set using a binary search tree.
+[Last time]({{< ref "guide/functional-sets/1.md" >}}) we started making a set using a binary search tree.
 Let's continue by adding more functionality to our set!
 We're going to improve it by making sure our set stays in proper order.
 

@@ -8,7 +8,7 @@ section: "Technology"
 
 ---
 
-After the [sets series]({{< ref "sets-intro.md" >}}) finished, I got really curious&hellip;
+After the [sets series]({{< ref "guide/functional-sets/1.md" >}}) finished, I got really curious&hellip;
 How fast were these sets, exactly?
 I had to shave a lot of yaks to answer that question, but to sum up: Elm now has a [benchmarking library](http://package.elm-lang.org/packages/BrianHicks/elm-benchmark/latest)!
 Let's take a look at how to use it!

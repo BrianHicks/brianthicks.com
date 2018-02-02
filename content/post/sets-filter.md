@@ -8,7 +8,7 @@ section: "Technology"
 
 ---
 
-This week in [the Sets series]({{< ref "post/sets-intro.md" >}}), we'll look at `filter.`
+This week in [the Sets series]({{< ref "guide/functional-sets/1.md" >}}), we'll look at `filter.`
 It does the same thing as `List.filter`, except using our sets.
 We'll have it take a function that checks whether we should include a value and use the output of that function to filter the values from the set.
 

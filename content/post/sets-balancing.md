@@ -8,7 +8,7 @@ section: "Technology"
 
 ---
 
-In this series, we've already [implemented sets, convenient ways to create them]({{< ref "sets-intro.md" >}}) and [rotation]({{< ref "sets-balancing-rotation.md" >}}).
+In this series, we've already [implemented sets, convenient ways to create them]({{< ref "guide/functional-sets/1.md" >}}) and [rotation]({{< ref "sets-balancing-rotation.md" >}}).
 Next, we'll make our trees use those rotation functions!
 
 <!--more-->
