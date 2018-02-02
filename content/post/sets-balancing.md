@@ -8,7 +8,7 @@ section: "Technology"
 
 ---
 
-In this series, we've already [implemented sets, convenient ways to create them]({{< ref "guide/functional-sets/1.md" >}}) and [rotation]({{< ref "sets-balancing-rotation.md" >}}).
+In this series, we've already [implemented sets, convenient ways to create them]({{< ref "guide/functional-sets/1.md" >}}) and [rotation]({{< ref "guide/functional-sets/2.md" >}}).
 Next, we'll make our trees use those rotation functions!
 
 <!--more-->
@@ -24,7 +24,7 @@ It looks like this:
            attr="Wikipedia"
            attrlink="https://en.wikipedia.org/wiki/File:Tree_rotation_animation_250x250.gif" >}}
 
-[Last time we created functions]({{< ref "sets-balancing-rotation.md" >}}) (`rotl` and `rotr`) to do this rotation for us.
+[Last time we created functions]({{< ref "guide/functional-sets/2.md" >}}) (`rotl` and `rotr`) to do this rotation for us.
 Now, let's use them!
 
 ## Our Trigger: Height Difference
