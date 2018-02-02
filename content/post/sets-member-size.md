@@ -8,7 +8,7 @@ section: "Technology"
 
 ---
 
-Now that [our trees balance themselves]({{< ref "sets-balancing.md" >}}) we can keep replicating the built-in set API.
+Now that [our trees balance themselves]({{< ref "/guide/functional-sets/3.md" >}}) we can keep replicating the built-in set API.
 This week, we'll answer two questions:
 
 1. Is an item in the set?

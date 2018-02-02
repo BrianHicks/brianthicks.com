@@ -9,7 +9,7 @@ section: "Technology"
 ---
 
 We're in the middle of a quest to build a set implementation from scratch.
-So far, we've implemented [our constructors]({{< ref "guide/functional-sets/1.md" >}}), [rotation]({{< ref "guide/functional-sets/2.md" >}}), [balancing]({{< ref "sets-balancing.md" >}}), [size, and member]({{< ref "sets-member-size.md" >}}).
+So far, we've implemented [our constructors]({{< ref "guide/functional-sets/1.md" >}}), [rotation]({{< ref "guide/functional-sets/2.md" >}}), [balancing]({{< ref "/guide/functional-sets/3.md" >}}), [size, and member]({{< ref "sets-member-size.md" >}}).
 Last week we stopped off to review [how folds work]({{< ref "folds-basics.md" >}}).
 This week, we're going to create folds for our set!
 
