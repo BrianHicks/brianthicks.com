@@ -1,7 +1,9 @@
-{{if ne .Params.hideMeta true}}
 <p class="post-meta">
-  {{dateFormat "January 2, 2006" .Date}}&nbsp;&middot;
+  {{range .Params.meta}}
+  {{.}}&nbsp;&middot;
+  {{end}}
+  {{if ne .Params.showPublished false}}Published {{dateFormat "January 2, 2006" .Date}}&nbsp;&middot;{{end}}
+  {{if eq .Params.showModified true}}Updated {{dateFormat "January 2, 2006" .Lastmod}}&nbsp;&middot;{{end}}
   {{with .Params.readingTime}}{{.}}{{else}}{{.ReadingTime}}{{end}} Minute Read&nbsp;&middot;
   <a href="{{.Permalink}}" alt="Permalink for {{.Title}}">∞&nbsp;Permalink</a>
 </p>
-{{end}}

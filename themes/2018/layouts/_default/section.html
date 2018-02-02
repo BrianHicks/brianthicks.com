@@ -1,0 +1,15 @@
+{{define "main"}}
+<section class="section">
+  {{partial "headnote.html" .}}
+  <h1>{{.Title}}</h1>
+  {{if .Content}}<hr class="before-content">{{end}}
+  {{.Content}}
+
+  {{range .Pages}}
+  <article class="list">
+    <h3 class="title"><a href="{{.Permalink}}">{{.Title}}</a></h3>
+    {{partial "post-meta.html" .}}
+  </article>
+  {{end}}
+</section>
+{{end}}
