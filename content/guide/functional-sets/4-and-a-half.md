@@ -7,7 +7,9 @@ showPublished: false
 showModified: true
 aliases:
  - /post/2016/12/12/the-care-and-feeding-of-folds-in-elm/
-menu: functional-sets
+menu:
+  functional-sets:
+    weight: 5
 ---
 
 Welcome back!
