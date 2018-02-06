@@ -8,7 +8,7 @@ section: "Technology"
 
 ---
 
-With [folds]({{< ref "sets-folds.md" >}}) done, our [sets]({{< ref "guide/functional-sets/1.md" >}}) are shaping up.
+With [folds]({{< ref "guide/functional-sets/5.md" >}}) done, our [sets]({{< ref "guide/functional-sets/1.md" >}}) are shaping up.
 Folds unlock some more interesting things for us.
 Namely: unions!
 
