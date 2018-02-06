@@ -10,7 +10,7 @@ I wrote [The JSON Survival Kit](/json-survival-kit), and would love if you check
 
 Here are some guides:
 
-- [How to make a set using in a functional programming style (8 parts)](/guide/functional-sets/)
+- [How to make a set using in a functional programming style (10 parts)](/guide/functional-sets/)
 
 And some popular posts:
 
