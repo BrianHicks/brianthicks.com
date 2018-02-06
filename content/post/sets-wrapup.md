@@ -46,7 +46,7 @@ type Dict comparable a
 
 ### Remove
 
-The [implementation of `remove`]({{< ref "post/sets-union-remove.md" >}}) I wrote originally had a bug.
+The [implementation of `remove`]({{< ref "/guide/functional-sets/6.md" >}}) I wrote originally had a bug.
 The tree rooted at the item for removal would be rebalanced, but the parents wouldn't be.
 That means that if you removed all the items on one side of the tree, it would become more and more unbalanced.
 

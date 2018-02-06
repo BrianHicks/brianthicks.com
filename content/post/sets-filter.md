@@ -33,7 +33,7 @@ filter cmp set =
 We're inserting the item into a new set if the comparator function returns `True`, otherwise we'll skip adding it and return the accumulator value.
 Easy enough!
 
-We could implement this in reverse: we'd start with the accumulator as our initial value and [use `remove`]({{< ref "post/sets-union-remove.md" >}}) if the comparator function didn't match.
+We could implement this in reverse: we'd start with the accumulator as our initial value and [use `remove`]({{< ref "/guide/functional-sets/6.md" >}}) if the comparator function didn't match.
 Both approaches work, but in the real world we would benchmark before deciding.
 
 So how do we use `filter`?
