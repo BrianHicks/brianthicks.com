@@ -4,6 +4,7 @@ date: "2018-02-01T07:44:00-05:00"
 hideMeta: true
 childMenu: functional-sets
 menu: guides
+readingTime: 60
 ---
 
 In this series, we're going to learn how to build a functional data structure using Elm.
