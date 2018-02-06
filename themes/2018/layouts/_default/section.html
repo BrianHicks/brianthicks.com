@@ -5,11 +5,13 @@
   {{if .Content}}<hr class="before-content">{{end}}
   {{.Content}}
 
-  {{range .Pages}}
+  {{with (index .Site.Menus .Params.childMenu)}}
+  {{range .}}
   <article class="list">
-    <h3 class="title"><a href="{{.Permalink}}">{{.Title}}</a></h3>
-    {{partial "post-meta.html" .}}
+    <h3 class="title"><a href="{{.Page.Permalink}}">{{.Title}}</a></h3>
+    {{partial "post-meta.html" .Page}}
   </article>
+  {{end}}
   {{end}}
 </section>
 {{end}}
