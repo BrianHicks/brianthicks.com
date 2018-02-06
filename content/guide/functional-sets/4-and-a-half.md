@@ -1,7 +1,6 @@
 ---
 date: "2016-12-12T09:00:00-06:00"
 title: "Interlude: The Care and Feeding of Folds in Elm"
-series: functional-sets
 meta: [Elm 0.18]
 showPublished: false
 showModified: true
