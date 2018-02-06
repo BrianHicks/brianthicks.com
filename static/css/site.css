@@ -54,6 +54,11 @@ h1, h2 {
     margin-bottom: 2rem;
 }
 
+h3 {
+    /* this level is smaller, but still set of slightly from the text. */
+    margin-bottom: 1rem;
+}
+
 h1, h1 > code {
     /* page titles are huge */
     font-weight: 500;
