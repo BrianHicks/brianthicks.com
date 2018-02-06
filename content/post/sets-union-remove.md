@@ -94,7 +94,7 @@ remove item set =
                 union left right
 ```
 
-This looks like [member]({{< ref "sets-member-size.md" >}})!
+This looks like [member]({{< ref "/guide/functional-sets/4.md" >}})!
 When we have an empty subtree, we return it unchanged.
 When we find a tree where the head is not equal to the item we're looking for, we try and remove from the relevant subtree.
 And finally, if the head we're looking at *is* the one we're looking for, we have to construct a new tree without it.

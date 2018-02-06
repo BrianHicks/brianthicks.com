@@ -30,7 +30,7 @@ Set.fromList (List.range 1 5)
 ```
 
 Let's do this…
-What if we deconstruct the set piece by piece like we [did with member]({{< ref "post/sets-member-size.md" >}})?
+What if we deconstruct the set piece by piece like we [did with member]({{< ref "/guide/functional-sets/4.md" >}})?
 That way, we'd apply the function exactly once to each item, and get a new set!
 
 Not so fast!

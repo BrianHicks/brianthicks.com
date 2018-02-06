@@ -9,7 +9,7 @@ section: "Technology"
 ---
 
 We're in the middle of a quest to build a set implementation from scratch.
-So far, we've implemented [our constructors]({{< ref "guide/functional-sets/1.md" >}}), [rotation]({{< ref "guide/functional-sets/2.md" >}}), [balancing]({{< ref "/guide/functional-sets/3.md" >}}), [size, and member]({{< ref "sets-member-size.md" >}}).
+So far, we've implemented [our constructors]({{< ref "guide/functional-sets/1.md" >}}), [rotation]({{< ref "guide/functional-sets/2.md" >}}), [balancing]({{< ref "/guide/functional-sets/3.md" >}}), [size, and member]({{< ref "/guide/functional-sets/4.md" >}}).
 Last week we stopped off to review [how folds work]({{< ref "folds-basics.md" >}}).
 This week, we're going to create folds for our set!
 
@@ -127,7 +127,7 @@ So we've taken all the values from our list, added them to the accumulator, and 
 Folded!
 
 How about something more complex?
-Remember how we [implemented `member` and `size`]({{< ref "sets-member-size.md" >}}) as recursive calls before?
+Remember how we [implemented `member` and `size`]({{< ref "/guide/functional-sets/4.md" >}}) as recursive calls before?
 Now we can use `foldl` to do the same thing!
 
 ### Size
