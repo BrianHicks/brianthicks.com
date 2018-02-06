@@ -1,5 +1,5 @@
 ---
-date: "1970-01-01T04:30:00Z"
+date: "2016-12-12T09:00:00-06:00"
 title: "Interlude: The Care and Feeding of Folds in Elm"
 series: functional-sets
 meta: [Elm 0.18]
