@@ -11,3 +11,5 @@ In this series of guides, I show you how to build a functional data structure us
 Our goal: build a set implementation from first principles, reimplementing the [standard library's Set API](http://package.elm-lang.org/packages/elm-lang/core/latest/Set).
 
 <!--more-->
+
+<script async id="_ck_341046" src="https://forms.convertkit.com/341046?v=6"></script>
