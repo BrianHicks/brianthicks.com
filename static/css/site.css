@@ -256,40 +256,16 @@ footer.cta li.active {
     font-weight: bold;
 }
 
-footer.cta > * {
+footer.cta > :first-child {
     border-right: 1px dashed #CCC;
     padding-right: 0.5rem;
     margin-right: 0.5rem;
 }
-footer.cta > :last-child {
+footer.cta > :only-child {
     border-right: none;
     padding-right: 0;
     margin-right: 0;
-}
-footer.cta > :only-child {
     width: 100%;
-}
-
-footer.cta > form input {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: none;
-}
-footer.cta > form input[type=email] {
-    border-bottom: 1px solid #9013FE;
-    font-size: 0.9rem;
-}
-footer.cta > form input[type=submit] {
-    border: 2px solid #9013FE;
-    color: #9013FE;
-    border-radius: 3px;
-    text-align: center;
-    background: #FFF;
-    font-size: 0.9rem;
-}
-footer.cta > form label {
-    font-size: 0.9rem;
 }
 
 @media screen and (max-width: 700px) {
