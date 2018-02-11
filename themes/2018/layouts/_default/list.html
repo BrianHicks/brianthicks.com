@@ -4,16 +4,19 @@
     <h1>{{.Title}}</h1>
     {{if .Content}}<hr class="before-content">{{end}}
     {{.Content}}
+
+    <!-- render a list of content in a paginator by default -->
     {{if not .Params.hideList}}
     {{range .Paginator.Pages}}
     <article class="list">
-        <h2 class="title"><a href="{{.Permalink}}">{{.Title}}</a></h2>
-        {{partial "post-meta.html" .}}
-        <hr class="before-content" />
-        {{.Summary}}
-        <a class="read-more" href="{{.Permalink}}">Read on</a>
+      <h2 class="title"><a href="{{.Permalink}}">{{.Title}}</a></h2>
+      {{partial "post-meta.html" .}}
+      <hr class="before-content" />
+      {{.Summary}}
+      <a class="read-more" href="{{.Permalink}}">Read on</a>
     </article>
     {{end}}
+
     <nav class="page-nav">
       {{$title := .Title}}
       {{with .Paginator.Next}}<a href="{{.URL}}" title="Older {{$title}}">Older {{$title}}</a>{{end}}

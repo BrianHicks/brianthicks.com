@@ -5,6 +5,7 @@ theme: "2018"
 # Posts per page
 paginate: 5
 sectionPagesMenu: "main"
+enableGitInfo: true
 
 permalinks:
   post: "/post/:year/:month/:day/:slug"

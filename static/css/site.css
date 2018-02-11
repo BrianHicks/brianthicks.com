@@ -6,6 +6,8 @@
 /***************
   GLOBAL SHTUFF
  ***************/
+* { box-sizing: border-box; }
+
 html {
     font-size: 18px;
     background-color: #FAFAFA;
@@ -54,6 +56,11 @@ h1, h2 {
     margin-bottom: 2rem;
 }
 
+h3 {
+    /* this level is smaller, but still set of slightly from the text. */
+    margin-bottom: 1rem;
+}
+
 h1, h1 > code {
     /* page titles are huge */
     font-weight: 500;
@@ -96,6 +103,10 @@ ol { list-style-type: decimal; }
 a {
     color: #9013FE;
     text-decoration: none;
+}
+
+em {
+    font-style: italic;
 }
 
 /********
@@ -222,10 +233,56 @@ article > a.read-more:after {
 .typeform-widget {
     max-width: 38rem;
     padding: 1px;
-    border: 1px solid #9013FE !important;
+    border: 1px solid #9013FE;
     border-radius: 5px;
     margin-bottom: 1rem;
 }
+
+/*****************
+  CALLS TO ACTION
+ *****************/
+footer.cta {
+    border: 1px solid #9013FE;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer.cta li.active {
+    font-weight: bold;
+}
+
+footer.cta > :first-child {
+    border-right: 1px dashed #CCC;
+    padding-right: 0.5rem;
+    margin-right: 0.5rem;
+}
+footer.cta > :only-child {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    footer.cta { display: block; }
+    footer.cta > * {
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
+
+        border-bottom: 1px dashed #CCC;
+        margin-bottom: 1rem;
+    }
+    footer.cta > :last-child {
+        border-bottom: none;
+    }
+}
+
 
 /*************
   SECTION NAV
