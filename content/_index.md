@@ -1,7 +1,6 @@
 ---
 title: "Hey there!"
 date: "2018-01-25T23:32:00-06:00"
-headnote: "The [2018 State of Elm Survey](/post/2018/02/01/state-of-elm-2018/) is now live!"
 ---
 
 I'm Brian Hicks.
