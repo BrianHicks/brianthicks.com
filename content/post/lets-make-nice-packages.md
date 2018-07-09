@@ -15,68 +15,63 @@ No, wait, come back!
 
 {{< youtube yVn7FOQuwDM >}}
 
-I'm super grateful for having had the chance to speak at Elm Europe.
-It was a blast!
-I'd highly recommend going next year, and plan to be there myself if I can.
+I really appreciate the opportunity to speak, and the conference was a blast!
+Elm Europe is worth attending, and I plan to be there myself next year if I can.
 
-There are a bunch of things I had to cut from the talk in the interests of time.
-Here are a few that came up in conversation with people at the conference:
+I cut a bunch of things from the talk in the interest of time.
+A few came up in conversation with people at the conference:
 
 ## Help People Along The Way
 
 First, if you follow all of the advice in my talk, *but do not help anyone along the way*, you will still fail.
-You're trying to solve a problem, right?
-In my experience, you'll have a much harder time solving the bigger picture problem if you don't get involved in the smaller ones.
+You may be focused on the bigger problem, but you'll have a much harder time solving it if you haven't been involved in the smaller ones along the way.
 
-If you do this, you're building a relationship and trust with the people you're working with.
-Everybody feels appreciated when someone takes the time not only to listen to them, but to help them find a solution to something that's bothering them.
-Then they'll be way more receptive to you saying, "hey, we talked about this earlier, what if we tried this new thing?"
+When you help people with their problems, you're building a relationship and trust with the people you're working with.
+Everybody feels appreciated when someone takes the time not only to listen to them but to help them find a solution, even if it's a short-term solution.
 
-Compare that to some random person showing up and say "hey I made a thing for youuuuuuu!"
-Why should they believe that it will work for them?
-It's just worse!
+Compare you saying, "hey, we talked about this earlier, what if we tried this new thing?" to "hey random person, I made a thing for youuuuuuu!"
+Why should they believe that your solution will work for them if they've never heard from you before?
 
-Practically speaking this means participating in discussions on Slack, Discourse, and Reddit.
+Practically speaking, participate in discussions on Slack, Discourse, and Reddit.
 Be helpful, empathetic, and kind.
-People really appreciate that!
+People really appreciate it!
 
 ## Publish Little Solutions
 
-Second, this whole process is a really nice way to get into blogging.
+Second, this whole process leads pretty quickly to blogging.
 People tend to have the same problems, but not everybody will ask online.
 So if you compile small solutions to problems you've helped with, and put them where people can see them, you're also building trust with people who you'll never have to speak with directly.
 
 ## What If I Need New Language Features to Solve the Problem?
 
 *Rarely* while you're doing this, you find that you need something that Elm doesn't have, and which you can't add in a package.
-The most common of these is Native code, but it comes up in other ways sometimes with language extensions or new syntax proposals.
+Native code comes up most frequently, but sometimes language extensions or new syntax proposals do too.
 
 This is an excellent time to stop and talk with people about what you're thinking about!
 Put stuff in the "Learn" or "Request Feedback" categories on Discourse or ask in #general or #api-design on Slack.
-Ask questions, people probably can help you in the way you've helped them.
-
 And remember, communication *is* collaboration.
-Having discussions is just as important as writing code and opening PRs, if not more!
+These discussions are just as useful as writing code, if not more, as it will help prevent building the wrong solution.
 
 ### Check for the X/Y Problem
 
-At the same time, do check that you're not hitting the [X/Y problem](TODO: link).
+At the same time, check that you're not hitting the [X/Y problem](TODO: link).
 (And by the way, if your problem statement reads like "I don't have access to some web platform API in Elm", you *definitely* are.
 The problem is always deeper than not having access to a specific API.)
 
-Fortunately, it's not terribly difficult to use your notes to check this!
-As a specific exercise, [5 Whys](TODO: link) is handy: just continue asking "why" until you get to the root of the problem.
+Fortunately, you can use your research to check this!
+As a specific exercise, try [5 Whys](TODO: link): just continue asking "why" until you get to the root of the problem.
 A nice first question is "what are people trying to do?"
 
 If you can't find the root problem in a satisfactory way, with concrete examples from people you've helped, then take it as a signal to reexamine your research.
 
-On the other hand, sometimes there are legitimately things that can't yet be done.
-Your research has revealed this in a concrete and quantifiable way, which is helpful.
-Good job!
-
 ### OK, I did all that and still can't solve this problem without language extensions
 
-If you have found you *still* need some kind of language change to make solving the problem even possible, it's time to write up your research and share it (probably on the elm-dev mailing list.)
+Sometimes there are things that just can't be done yet.
+Your research has revealed one in a concrete way.
+That's helpful!
+Good job!
+
+This means that it's time to write up your research and share it (probably on the elm-dev mailing list.)
 You'll need to include these three things:
 
 1. the problem you're trying to solve
@@ -90,8 +85,8 @@ It helps more than you'd realize!
 At this stage, please don't suggest solutions.
 The core team follows this design process too, including the deep research and thinking.
 At the language level, that research has a much bigger scope.
-New features also usually need to solve several problems at once, so there will probably be some discussion and then a period of waiting.
-It's better to do the right thing later than the wrong thing now.
+New features usually need to solve several problems at once, so expect discussion and then a period of waiting.
+It's better to do things *right* than *right now*.
 
 ## Note Organization
 
@@ -120,11 +115,11 @@ they're expressing.
 
 ## Questions
 
-> TODO: short example
+> verbatim quotes
 
 ## Worldview / Assumptions
 
-> TODO: short example
+> verbatim quotes
 ```
 
 To close out: if you have any questions about any of this, I'm always happy to talk about it!
