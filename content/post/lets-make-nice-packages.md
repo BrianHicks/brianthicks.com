@@ -13,8 +13,7 @@ No, wait, come back!
 
 <!--more-->
 
-<!-- TODO: post embed for talk -->
-{{< youtube BAtql6ZbvpU >}}
+{{< youtube yVn7FOQuwDM >}}
 
 I'm super grateful for having had the chance to speak at Elm Europe.
 It was a blast!
