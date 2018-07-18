@@ -1,8 +1,7 @@
 ---
-date: "2018-07-08T07:34:00+02:00"
+date: "2018-07-18T14:11:00-05:00"
 title: "Let's Make Nice Packages!"
 tags: ["elm"]
-draft: true
 ---
 
 This year at [Elm Europe](https://2018.elmeurope.org/) I gave a talk called "Let's Make Nice Packages!"
