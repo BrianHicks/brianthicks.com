@@ -53,12 +53,12 @@ These discussions are just as useful as writing code, if not more, as it will he
 
 ### Check for the X/Y Problem
 
-At the same time, check that you're not hitting the [X/Y problem](TODO: link).
+At the same time, check that you're not hitting the [X/Y problem](http://xyproblem.info/).
 (And by the way, if your problem statement reads like "I don't have access to some web platform API in Elm", you *definitely* are.
 The problem is always deeper than not having access to a specific API.)
 
 Fortunately, you can use your research to check this!
-As a specific exercise, try [5 Whys](TODO: link): just continue asking "why" until you get to the root of the problem.
+As a specific exercise, try [5 Whys](https://www.isixsigma.com/tools-templates/cause-effect/determine-root-cause-5-whys/): just continue asking "why" until you get to the root of the problem.
 A nice first question is "what are people trying to do?"
 
 If you can't find the root problem in a satisfactory way, with concrete examples from people you've helped, then take it as a signal to reexamine your research.
