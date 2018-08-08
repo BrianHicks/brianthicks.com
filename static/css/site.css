@@ -256,19 +256,17 @@ footer.cta li.active {
     font-weight: bold;
 }
 
-footer.cta > :first-child {
+footer.cta > * {
     border-right: 1px dashed #CCC;
     padding-right: 0.5rem;
     margin-right: 0.5rem;
+    max-width: 50%;
 }
-footer.cta > :only-child {
+footer.cta > :last-child {
     border-right: none;
     padding-right: 0;
     margin-right: 0;
     width: 100%;
-}
-footer.cta > * {
-    max-width: 50%;
 }
 
 @media screen and (max-width: 700px) {
@@ -280,6 +278,7 @@ footer.cta > * {
 
         border-bottom: 1px dashed #CCC;
         margin-bottom: 1rem;
+        max-width: none;
     }
     footer.cta > :last-child {
         border-bottom: none;
