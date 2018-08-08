@@ -123,3 +123,5 @@ they're expressing.
 
 To close out: if you have any questions about any of this, I'm always happy to talk about it!
 You can find me on Slack at @brianhicks, or you can email me at [brian@brianthicks.com](mailto:brian@brianthicks.com).
+
+{{< elmSignup >}}
