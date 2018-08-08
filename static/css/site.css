@@ -267,6 +267,9 @@ footer.cta > :only-child {
     margin-right: 0;
     width: 100%;
 }
+footer.cta > * {
+    max-width: 50%;
+}
 
 @media screen and (max-width: 700px) {
     footer.cta { display: block; }
