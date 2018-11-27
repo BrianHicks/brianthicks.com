@@ -18,7 +18,7 @@ TODO: intro
 
 ### What programming languages, other than Elm, are you most familiar with?
 
-### Where do you go for ELm news and discussion?
+### Where do you go for Elm news and discussion?
 
 ### What resources did you use to learn Elm?
 
