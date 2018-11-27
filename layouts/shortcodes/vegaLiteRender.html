@@ -1,3 +1,16 @@
 <script src="/scripts/vega-lite/vega.js"></script>
 <script src="/scripts/vega-lite/vega-lite.js"></script>
 <script src="/scripts/vega-lite/vega-embed.js"></script>
+<script>
+(function() {
+  var figures = document.getElementsByClassName('vega-lite');
+  for (var i = 0; i < figures.length; i++) {
+      var figure = figures[i];
+      var schema = figure.getAttribute('data-schema');
+      vegaEmbed(figure, schema, {
+          defaultStyle: true,
+          actions: false
+      });
+  }
+})();
+</script>
