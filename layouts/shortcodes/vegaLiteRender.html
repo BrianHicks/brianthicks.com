@@ -6,10 +6,11 @@
   var figures = document.getElementsByClassName('vega-lite');
   for (var i = 0; i < figures.length; i++) {
       var figure = figures[i];
-      var schema = figure.getAttribute('data-schema');
+      var schema = JSON.parse(figure.getAttribute('data-schema'));
       vegaEmbed(figure, schema, {
           defaultStyle: true,
-          actions: false
+          actions: false,
+          runAsync: true,
       });
   }
 })();
