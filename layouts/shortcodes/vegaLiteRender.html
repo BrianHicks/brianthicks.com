@@ -11,6 +11,12 @@
           defaultStyle: true,
           actions: false,
           runAsync: true,
+          renderer: 'svg'
+      }).then(function(result) {
+          var svg = result.view.container().children[0];
+          svg.setAttribute("width", "90%");
+          svg.setAttribute("style", "margin: 0 auto;");
+          svg.removeAttribute("height");
       });
   }
 })();
