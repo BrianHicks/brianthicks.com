@@ -8,6 +8,8 @@ draft: true
 
 TODO: intro
 
+TODO: why this took so long?
+
 <!--more-->
 
 ## About You
