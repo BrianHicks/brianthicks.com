@@ -131,6 +131,8 @@ I think most of the rest of these items stem from these two.
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-side.vega-lite.min.json" >}}
 
+It's really nice to see how many people have shipped a side project using Elm!
+
 TODO: order these in the same way as the work question above.
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-side-license.vega-lite.min.json" >}}
