@@ -137,7 +137,9 @@ TODO: order these in the same way as the work question above.
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-side-license.vega-lite.min.json" >}}
 
-TODO: fix this in the data, too
+The Elm compiler and most open-source Elm libraries are licensed as BSD-3, which falls under the top category here.
+
+TODO: fix this license name in the data, too
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-side-challenge-tagged.vega-lite.min.json" >}}
 
