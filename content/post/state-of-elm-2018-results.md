@@ -159,27 +159,76 @@ I'm curious what this means about how people's applications are delivered and bu
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/editors.vega-lite.min.json" >}}
 
-These are all great options!
-I don't have a lot of commentary there?
+VSCode is surprisingly popular!
+We didn't previously have a question like this but I would have expected to see atom at the top, followed by one of Vim or Emacs.
+That *nearly* happened here, but I was really surprised to see Atom a third place!
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/js-interop.vega-lite.min.json" >}}
 
-TODO: comentary. This is a good one to pair on with Richard.
+Most people use external JavaScript libraries; things like the AWS SDK and D3 were common.
+
+Next most common is localStorage, but almost nobody elaborated on *why*.
+
+"Files" came in third.
+I'm curious to see if that'll hold up next year, now that [`elm/files` and `elm/bytes` have been released](https://elm-lang.org/blog/working-with-files).
+
+TODO: check with someone about possible reasons for localStorage
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/test-tools.vega-lite.min.json" >}}
 
-Almost 50/50 "I don't use this at all" vs "I use the thing you would expect".
-
+Almost 50 / 50 "I don't use this at all" vs "I use the thing you would expect".
 This tells me that the split of testing is roughly "50% of people don't test their Elm applications".
 
-That might have been a more useful question, in retrospect.
+A useful quetsion, but in retrospect it could have been simpler: "do you test your Elm projects"?
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/test-targets.vega-lite.min.json" >}}
 
+This is more enlightening: people write tests mostly when faced with complex functions whose behavior the compiler can't check.
+This is when I write tests too, especially to avoid logical errors or changing values in incompatible ways.
+I've personally found fuzz/property testing extremely valuable here.
+[*PropEr Testing* by Fred Hebert](http://propertesting.com/toc.html) ([now a book](http://propertesting.com/)) really helped me get my mind around property testing in general—I'd recommend you read it if you're interested in upping your property testing game.
+
 {{< vegaLite schema="/static/state-of-elm/2018/charts/attraction-tagged.vega-lite.min.json" >}}
+
+We've got a big peak at the top here for functional programming—it's something a lot of people want to try out, which I'm happy about!
+Similar thing going on for types; I'm glad people are exploring these areas for themselves.
+I've found them really rewarding!
+
+The third and fourth responses ("No Runtime Exceptions" and "Not JavaScript") are more in line with what I expected from this question.
+These are things that are really painful in languages (like JavaScript) for which Elm is a commonly-listed alternative.
+People want to find solutions to their pains, and if we can help them with that we can grow the Elm community!
+
+(n.b. there's a looooong tail here, which I've cut off by only including items which occurred in 1% or more of responses.)
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/pain-tagged.vega-lite.min.json" >}}
 
+A note about these questions: getting this data is difficult and time-consuming since I have to distill nearly 1,200 plain text inputs into a smallish number of tags for presentation.
+That means that there are some tags that completely change year-over-year depending on what people type in, and that may not always be accurate.
+I've tried to minimize errors wherever possible, but it's still a completely human-driven process.
+That said, I find them particularly valuable as a pulse on how people are feeling year-over-year, so they'll probably always be in the survey!
+
+This year slightly more people had trouble with JSON Decoders than they did with the learning curve.
+This flips the #1 and #2 spots year-over-year.
+
+People also had notably less trouble with interop this year, but more problems with documentation.
+
+I find it encouraging that respondents are having much more problems with scaling this year.
+To me, that means they've grown their Elm codebases in such a way that they're having to think in the bigger picture instead of "hmm, what does `Maybe a` mean?"
+
+We *did* see a big drop in people explicitly requesting type classes (or other forms of interfaces), but the total number of requests for type system features remains unchanged.
+
 {{< vegaLite schema="/static/state-of-elm/2018/charts/like-tagged.vega-lite.min.json" >}}
+
+More of the usual culprits for this question!
+
+People like the error messages and types, of course, but we saw a big jump in people saying things like "If It Compiles, It Works" year over year.
+We also saw a big jump in "Refactoring", which I think supports my point above about people having more trouble scaling their Elm apps since they're now having to do that as they've grown more advanced.
+
+Another big change was the drop in "Not JavaScript" (47 responses to 18—nearly a 70% decrease!)
+I hope that long-term Elm is seen as something good in it's own right, not just a refuge for people who have had a bad experience with JavaScript, so this kind of drop encourages me.
+
+There were a lot of responses saying things like "Elm makes me a better programmer" and "Elm has improved the way I think about my work."
+In addition to "Makes Me A Better Programmer", I tagged those as "Confidence" which roughly doubled in response this year.
+Those were really nice to tag!
 
 {{< vegaLiteRender >}}
