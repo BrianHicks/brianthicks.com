@@ -87,7 +87,7 @@ TODO: fix this graph to show the city name in the tooltip instead of the coordin
 {{< vegaLite schema="/static/state-of-elm/2018/charts/nearest-city-country.vega-lite.min.json" >}}
 
 Here's the same data organized by country.
-When viewed in this way, the United States dominates the list, but all told European countries had 433 respondents, or about the same as the US.
+When viewed in this way, the United States dominates the list, but all told EU countries plus the UK had 433 respondents, or about the same as the US.
 
 ## *Where* do you use Elm?
 
