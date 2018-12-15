@@ -18,10 +18,17 @@ TODO: why this took so long?
 
 This was a multiple-choice answer, so the numbers don't add up to the total—mostly because people use Elm both at work and in side projects.
 
-Anyway, TODO% of respondents are using Elm in some way!
+When you consider these together, about 80% of peple (953) respondents are using Elm in some capacity.
+Of those, 459 (48%) are using Elm at work, which is cool.
+It'll be fun to see at how this changes year-over-year—I hope these numbers increase!
 
-31.26% are using Elm at work, which is cool.
-It'll be helpful to look at this year-over-year next year.
+<!-- TODO: move this paragraph to somewhere in the header. -->
+One particular note here: I've told various people that I get respondents who don't use Elm, and who don't want to.
+I don't know why they take the survey!
+But nobody really believes me, so I added an option here to quantify that.
+This year, it was 7 respondents.
+I've haven't removed their responses from these questions, since getting an outsider's perspective on our community can be helpful!
+(But I *did* remove several troll responses; those were not useful data.)
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/experience-rating.vega-lite.min.json" >}}
 
@@ -29,14 +36,17 @@ We have roughly the same shape of the distribution this year as last year.
 
 Notably, this year we don't have as many people answering that they didn't have any experience whatsoever.
 
+This question is designed to get at the idea of how confident people are when using Elm.
+I think it may be redesigned next year, since these past two years it has not revealed anything useful (other than people click about the middle of the scale.)
+
 {{< vegaLite schema="/static/state-of-elm/2018/charts/languages.vega-lite.min.json" >}}
 
-The differences here year-over-year are pretty significant.
-That's because last year {survey design reason} and this year it was a blank field.
+The differences here year-over-year are pretty significant, and it has more to do with survey design than respondent differences.
+Last year we asked "What *language* are you 'coming from'?" and this year we asked "What programming *languages*, other than Elm, are you most familiar with?"
+The new language clarified the intent of the question a lot—and we'll use it next year—but it meant that we got a lot more responses!
 
-Top language is JavaScript, surprising... let me check... nobody.
-
-Last year the second language was Haskell, which has grown but fallen down the charts a fair way.
+The upshot of this is that most of these languages can't be compared year-over-year except people's top language which was… let me check… JavaScript.
+Not really surprising, at least to me!
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/watering-holes.vega-lite.min.json" >}}
 
@@ -48,7 +58,7 @@ Some surprising changes this year:
 - The Elm Discourse is both a new category, and came into existence just before this urvey was published.
   (It replaced the elm-discuss mailing list, and has about the same number of respondents.)
 
-- The Elm Weekly newsletter dropped off since it stopped being published—it's back, now, though, and you can sign up at [elmweekly.nl](http://elmweekly.nl/)
+- The Elm Weekly newsletter dropped off since it stopped being published—it's back now, though, and you can sign up at [elmweekly.nl](http://elmweekly.nl/)
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/learning-resources.vega-lite.min.json" >}}
 
