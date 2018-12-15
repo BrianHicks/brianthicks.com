@@ -150,10 +150,10 @@ They provide the framework for trying new languages with small, well-defined pro
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/versions.vega-lite.min.json" >}}
 
-0.19 is out *now*, but it wasn't when this survey came out.
+0.19 is out *now*, but it wasn't when this survey ran.
 That means that we need to be looking at the usage of 0.18 vs 0.17 and prior.
 Happily, usage of old versions fell, and current versions rose.
-I hope to see a similar chart next year with adoption of 0.19!
+I hope to see a similar trend next year with adoption of 0.19!
 
 ## *How* do you use Elm?
 
