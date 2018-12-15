@@ -113,7 +113,7 @@ TODO: these need to be reordered by time
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-work.vega-lite.min.json" >}}
 
-TODO: these imply an ordering, and I should reorder them in the chart.
+TODO: these imply an ordering, and I should reorder them in the chart before coming to conclusions.
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-work-license.vega-lite.min.json" >}}
 
