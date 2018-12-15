@@ -44,7 +44,7 @@ Some surprising changes this year:
 
 - Blog posts tops the list.
   This is a new category this year!
- 
+
 - The Elm Discourse is both a new category, and came into existence just before this urvey was published.
   (It replaced the elm-discuss mailing list, and has about the same number of respondents.)
 
