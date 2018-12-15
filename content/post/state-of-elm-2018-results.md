@@ -106,9 +106,10 @@ I tried as hard as I could to avoid a situation where people answered this, and 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/experience-length.vega-lite.min.json" >}}
 
 Overall, people are using Elm longer over time.
-Makes sense!
+Makes sense, since people who have been using Elm for one year are likely to use it for another, and another, and so on.
+This trend may fall off at some point, but we don't see where yet!
 
-TODO: these need to be reordered
+TODO: these need to be reordered by time
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-work.vega-lite.min.json" >}}
 
