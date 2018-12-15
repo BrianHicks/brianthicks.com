@@ -95,7 +95,8 @@ Overall, these responses are up, so it's not super useful to compare them year-o
 
 For example, I'm not sure why gaming dropped last year, but it sure picked up again this year!
 I was curious what kinds of games people were writing, so I asked!
-... where are the games put them here TODO TODO TODO ...
+The folks in #gamedev on the Elm Slack pointed me to [rofrol/awesome-elm-gamedev](https://github.com/rofrol/awesome-elm-gamedev) as a nice overview, and [rofrol/elm-games](https://github.com/rofrol/elm-games/blob/master/README.md) as a comprehensive list of games in Elm.
+Enjoy!
 
 A note about "Web Development"…
 I tried as hard as I could to avoid a situation where people answered this, and was very careful when tagging to try and figure out exactly what people were doing with Elm.
