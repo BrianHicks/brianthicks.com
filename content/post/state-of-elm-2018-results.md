@@ -82,8 +82,6 @@ There are hotspots in:
 - Oslo
 - Berlin
 
-TODO: fix this graph to show the city name in the tooltip instead of the coordinates
-
 {{< vegaLite schema="/static/state-of-elm/2018/charts/nearest-city-country.vega-lite.min.json" >}}
 
 Here's the same data organized by country.
