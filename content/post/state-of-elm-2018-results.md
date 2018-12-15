@@ -117,8 +117,8 @@ TODO: these imply an ordering, and I should reorder them in the chart before com
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-work-license.vega-lite.min.json" >}}
 
-Sure, mostly work projects are closed source. That totally makes sense from the data.
-I'm interested in nothing that permissive licenses are more popular than share-alike license.
+When work projects are in Elm, they're mostly closed source, which you can see in these responses.
+When work projects *are* open-source, it's interesting to note that permissive licenses (like BSD-3, under which the compiler and most packages are licensed) are more popular than share-alike licenses like the GPL.
 
 TODO: this data needs to be cleaned to correct "viral".
 
