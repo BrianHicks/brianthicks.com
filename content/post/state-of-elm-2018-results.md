@@ -93,9 +93,15 @@ When viewed in this way, the United States dominates the list, but all told EU c
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/domains.vega-lite.min.json" >}}
 
-- no idea why gaming dropped last year
-- overall these responses are up, so it's not super useful to compare them year-over-year
-- I took "web development" off because it was oooobvious and not the intent of the question
+Overall, these responses are up, so it's not super useful to compare them year-over-year, but we do see some interesting stuff coming together.
+
+For example, I'm not sure why gaming dropped last year, but it sure picked up again this year!
+I was curious what kinds of games people were writing, so I asked!
+... where are the games put them here TODO TODO TODO ...
+
+A note about "Web Development"…
+I tried as hard as I could to avoid a situation where people answered this, and was very careful when tagging to try and figure out exactly what people were doing with Elm.
+"Web Development" isn't exactly the most helpful answer!
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/experience-length.vega-lite.min.json" >}}
 
