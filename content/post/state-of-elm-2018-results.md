@@ -119,8 +119,6 @@ TODO: these imply an ordering, and I should reorder them in the chart before com
 When work projects are in Elm, they're mostly closed source, which you can see in these responses.
 When work projects *are* open-source, it's interesting to note that permissive licenses (like BSD-3, under which the compiler and most packages are licensed) are more popular than share-alike licenses like the GPL.
 
-TODO: this data needs to be cleaned to correct "viral".
-
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-work-challenge-tagged.vega-lite.min.json" >}}
 
 The highest response here is "Buy-In".
@@ -137,8 +135,6 @@ TODO: order these in the same way as the work question above.
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-side-license.vega-lite.min.json" >}}
 
 The Elm compiler and most open-source Elm libraries are licensed as BSD-3, which falls under the top category here.
-
-TODO: fix this license name in the data, too
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-side-challenge-tagged.vega-lite.min.json" >}}
 
