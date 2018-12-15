@@ -124,9 +124,10 @@ TODO: this data needs to be cleaned to correct "viral".
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-work-challenge-tagged.vega-lite.min.json" >}}
 
-TODO: can I make the caption here into two lines?
-
-TODO: I'd like to show some examples of people saying "buy-in" here to show what people are having trouble with
+The highest response here is "Buy-In".
+Most of these were things like "my boss wouldn't approve it" but some were "my peers don't like functional languages, or typed languages."
+This leads into the second most answered item: Elm (and languages in the ML family) are unfamiliar, especially to people who mostly come from a C-style language background.
+I think most of the rest of these items stem from these two.
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-side.vega-lite.min.json" >}}
 
