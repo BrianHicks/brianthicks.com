@@ -172,7 +172,8 @@ Both are great options for styling Elm apps in a type-safe way!
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/build-tools.vega-lite.min.json" >}}
 
-Most people use webpack to build their Elm applications… not so surprising.
+Most people use webpack to build their Elm applications.
+Kind of unsurprising, given the support in [elm-webpack-starter](https://github.com/elm-community/elm-webpack-starter) and [elm-webpack-loader](https://github.com/elm-community/elm-webpack-loader).
 
 It *was* surprising to me to see that the second two results are elm-make and elm-reactor.
 I'm curious what this means about how people's applications are delivered and built overall.
