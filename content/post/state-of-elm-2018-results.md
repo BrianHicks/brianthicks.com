@@ -145,8 +145,8 @@ TODO: fix this license name in the data, too
 
 This is pretty self-explanatory: people don't have a lot of time for side projects!
 
-Here's a tip: try challenged like [Advent of Code](https://adventofcode.com/2018) or [Project Euler](https://projecteuler.net/)!
-They provide the framework for trying new languages with small, well-defined challenges.
+For lessening learning cost, here's a tip: try challenges like [Advent of Code](https://adventofcode.com/2018) or [Project Euler](https://projecteuler.net/)!
+They provide the framework for trying new languages with small, well-defined problems.
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/versions.vega-lite.min.json" >}}
 
