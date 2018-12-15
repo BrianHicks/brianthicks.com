@@ -167,10 +167,8 @@ More people have heard of elm-format, and the amount of people who prefer to use
 
 This result—most people using plain CSS or SCSS—tells me that people are integrating Elm into larger existing codebases.
 
-Somewhat unsurprisingly, the first two Elm libraries used are elm-css and style-elements.
+Somewhat unsurprisingly, the first two Elm libraries used are elm-css and ~~style-elements~~ [elm-ui](https://2018.elm-conf.us/schedule/matthew-griffith).
 Both are great options for styling Elm apps in a type-safe way!
-
-TODO: link to Matt's talk on elm-ui.
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/build-tools.vega-lite.min.json" >}}
 
