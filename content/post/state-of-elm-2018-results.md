@@ -184,6 +184,10 @@ VSCode is surprisingly popular!
 We didn't previously have a question like this but I would have expected to see atom at the top, followed by one of Vim or Emacs.
 That *nearly* happened here, but I was really surprised to see Atom a third place!
 
+One editor (which fell of the list as fewer than 1% of people answered it) was [Kakoune](https://kakoune.org/)—I was curious so I wrote part of this post in it.
+It's got some really interesting ideas about selections.
+If you're interested in text editors. maybe check it out!
+
 {{< vegaLite schema="/static/state-of-elm/2018/charts/js-interop.vega-lite.min.json" >}}
 
 Most people use external JavaScript libraries; things like the AWS SDK and D3 were common.
