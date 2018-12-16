@@ -29,7 +29,6 @@ When you consider these together, about 80% of peple (953) respondents are using
 Of those, 459 (48%) are using Elm at work, which is cool.
 It'll be fun to see at how this changes year-over-year—I hope these numbers increase!
 
-<!-- TODO: move this paragraph to somewhere in the header. -->
 One particular note here: I've told various people that I get respondents who don't use Elm, and who don't want to.
 I don't know why they take the survey!
 But nobody really believes me, so I added an option here to quantify that.
