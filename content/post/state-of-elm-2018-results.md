@@ -209,8 +209,6 @@ A useful quetsion, but in retrospect it could have been simpler: "do you test yo
 
 This is more enlightening: people write tests mostly when faced with complex functions whose behavior the compiler can't check.
 This is when I write tests too, especially to avoid logical errors or changing values in incompatible ways.
-I've personally found fuzz/property testing extremely valuable here.
-[*PropEr Testing* by Fred Hebert](http://propertesting.com/toc.html) ([now a book](http://propertesting.com/)) really helped me get my mind around property testing in general—I'd recommend you read it if you're interested in upping your property testing game.
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/attraction-tagged.vega-lite.min.json" >}}
 
