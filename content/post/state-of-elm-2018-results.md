@@ -6,9 +6,16 @@ draft: true
 
 ---
 
-TODO: intro
+The State of Elm survey takes the pulse of the Elm community.
+What companies have Elm in production?
+What are people’s experiences when coming to Elm, and are they learning at decent pace?
+What tools are popular, and which need help?
 
-TODO: why this took so long?
+This year, the survey ran from the end of Janary to the beginning of March, and collected 1,176 responses (about the same as last year.)
+After the survey ended, I scrubbed each field for 17 of the questions to make sure we had good data, reduced five of the questions to tags, and performed the following analysis.
+Thank you for your patience while I did this, and thank you to all the people who checked in and asked if they could help!
+
+Let's get going!
 
 <!--more-->
 
