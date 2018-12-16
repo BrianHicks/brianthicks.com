@@ -198,8 +198,6 @@ Next most common is localStorage, but almost nobody elaborated on *why*.
 "Files" came in third.
 I'm curious to see if that'll hold up next year, now that [`elm/files` and `elm/bytes` have been released](https://elm-lang.org/blog/working-with-files).
 
-TODO: check with someone about possible reasons for localStorage
-
 {{< vegaLite schema="/static/state-of-elm/2018/charts/test-tools.vega-lite.min.json" >}}
 
 Almost 50 / 50 "I don't use this at all" vs "I use the thing you would expect".
