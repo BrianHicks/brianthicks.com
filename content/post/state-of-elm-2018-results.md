@@ -106,13 +106,14 @@ I tried as hard as I could to avoid a situation where people answered this, and 
 
 Overall, people are using Elm longer over time.
 Makes sense, since people who have been using Elm for one year are likely to use it for another, and another, and so on.
-This trend may fall off at some point, but we don't see where yet!
 
-TODO: these need to be reordered by time
+(Note: sorry for the messiness in the chart above; I used vega-lite for these and could not figure out how to get facets to order properly.
+If you're a vega-lite expert and want to help fix this, get in touch.)
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-work.vega-lite.min.json" >}}
 
-TODO: these imply an ordering, and I should reorder them in the chart before coming to conclusions.
+When people use Elm at work, they tend to get it into production.
+Good news!
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-work-license.vega-lite.min.json" >}}
 
@@ -128,9 +129,8 @@ I think most of the rest of these items stem from these two.
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-side.vega-lite.min.json" >}}
 
-It's really nice to see how many people have shipped a side project using Elm!
-
-TODO: order these in the same way as the work question above.
+In contrast with the "how far along is your work project" above, it's much easier to start a side project but much harder to finish it—there are usually no external deadlines or project managers asking for updates.
+It makes sense to em, then, that the rate of projects in development would be higher than before, and we see that here.
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-side-license.vega-lite.min.json" >}}
 
