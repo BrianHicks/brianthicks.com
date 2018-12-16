@@ -19,6 +19,16 @@ Let's get going!
 
 <!--more-->
 
+## Reading This Data
+
+This year, we got 6 more respondents than last year.
+That means that I've left the raw counts in instead of converting to percentages, as you don't introduce much error by comparing them directly.
+If you want to do that yourself: last year, we had 1170 responses.
+This year was 1176.
+
+Except for the map question, all the numbers are available if you hover over the bars.
+(I would have liked to embed them without hovering, but couldn't figure out how to do it for faceted plots in vega-lite.)
+
 ## About You
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/where.vega-lite.min.json" >}}
