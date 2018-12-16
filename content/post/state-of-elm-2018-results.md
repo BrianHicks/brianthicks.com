@@ -255,8 +255,4 @@ There were a lot of responses saying things like "Elm makes me a better programm
 In addition to "Makes Me A Better Programmer", I tagged those as "Confidence" which roughly doubled in response this year.
 Those were really nice to tag!
 
-## Wrapping Up
-
-TODO!
-
 {{< vegaLiteRender >}}
