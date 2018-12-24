@@ -7,13 +7,12 @@ draft: true
 ---
 
 The State of Elm survey takes the pulse of the Elm community.
+What experiences do newcomers have, and are they learning at decent pace?
 What companies have Elm in production?
-What are people’s experiences when coming to Elm, and are they learning at decent pace?
-What tools are popular, and which need help?
 
 This year, the survey ran from the end of Janary to the beginning of March, and collected 1,176 responses (about the same as last year.)
-After the survey ended, I scrubbed each field for 17 of the questions to make sure we had good data, reduced five of the questions to tags, and performed the following analysis.
-Thank you for your patience while I did this, and thank you to all the people who checked in and asked if they could help!
+After the survey ended, I scrubbed each field for 17 of the questions to make sure we had good data, reduced five of the questions to tags, and performed the analysis below.
+I know it's been a long wait; thank you for your patience while I did this, and to all the people who checked in and asked if they could help!
 
 Let's get going!
 
@@ -21,10 +20,9 @@ Let's get going!
 
 ## Reading This Data
 
-This year, we got 6 more respondents than last year.
+This year, we got 6 more responses than last year.
 That means that I've left the raw counts in instead of converting to percentages, as you don't introduce much error by comparing them directly.
-If you want to do that yourself: last year, we had 1170 responses.
-This year was 1176.
+If you want to do that yourself: last year we had 1,170 responses, this year was 1,176.
 
 Except for the map question, all the numbers are available if you hover over the bars.
 (I would have liked to embed them without hovering, but couldn't figure out how to do it for faceted plots in vega-lite.)
@@ -39,29 +37,21 @@ When you consider these together, about 80% of peple (953) respondents are using
 Of those, 459 (48%) are using Elm at work, which is cool.
 It'll be fun to see at how this changes year-over-year—I hope these numbers increase!
 
-One particular note here: I've told various people that I get respondents who don't use Elm, and who don't want to.
-I don't know why they take the survey!
-But nobody really believes me, so I added an option here to quantify that.
-This year, it was 7 respondents.
-I've haven't removed their responses from these questions, since getting an outsider's perspective on our community can be helpful!
-(But I *did* remove several troll responses; those were not useful data.)
-
 {{< vegaLite schema="/static/state-of-elm/2018/charts/experience-rating.vega-lite.min.json" >}}
 
-We have roughly the same shape of the distribution this year as last year.
-
-Notably, this year we don't have as many people answering that they didn't have any experience whatsoever.
+This year we don't have as many people answering that they didn't have any experience whatsoever.
+Other than that, we have roughly the same shape of the distribution this year as last year.
 
 This question is designed to get at the idea of how confident people are when using Elm.
 I think it may be redesigned next year, since these past two years it has not revealed anything useful (other than people click about the middle of the scale.)
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/languages.vega-lite.min.json" >}}
 
-The differences here year-over-year are pretty significant, and it has more to do with survey design than respondent differences.
-Last year we asked "What *language* are you 'coming from'?" and this year we asked "What programming *languages*, other than Elm, are you most familiar with?"
+The differences here year-over-year are pretty significant, but it has more to do with survey design than respondent differences.
+Last year we asked "What *language* are you 'coming from'?" where this year we asked "What programming *languages*, other than Elm, are you most familiar with?"
 The new language clarified the intent of the question a lot—and we'll use it next year—but it meant that we got a lot more responses!
 
-The upshot of this is that most of these languages can't be compared year-over-year except people's top language which was… let me check… JavaScript.
+The upshot of this is that most of these languages can't be compared year-over-year except people's top language: JavaScript.
 Not really surprising, at least to me!
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/watering-holes.vega-lite.min.json" >}}
@@ -71,10 +61,11 @@ Some surprising changes this year:
 - Blog posts tops the list.
   This is a new category this year!
 
-- The Elm Discourse is both a new category, and came into existence just before this urvey was published.
+- The Elm Discourse is both a new category, and came into existence just before this survey was published.
   (It replaced the elm-discuss mailing list, and has about the same number of respondents.)
 
-- The Elm Weekly newsletter dropped off since it stopped being published—it's back now, though, and you can sign up at [elmweekly.nl](http://elmweekly.nl/)
+- The Elm Weekly newsletter dropped off since it stopped being published in 2016.
+  It's back now, though, and you can sign up at [elmweekly.nl](http://elmweekly.nl/).
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/learning-resources.vega-lite.min.json" >}}
 
@@ -85,7 +76,7 @@ Below that, we have some interactive resources (the Elm Slack, StackOverflow, an
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/usergroup.vega-lite.min.json" >}}
 
-We don't have data for this year-over-year—we will repeat this next year so we do—but we do see that about 40% of respondents have an Elm user group near them!
+About 40% of respondents have an Elm user group near them!
 Fantastic!
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/nearest-city.vega-lite.min.json" >}}
@@ -107,9 +98,7 @@ When viewed in this way, the United States dominates the list, but all told EU c
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/domains.vega-lite.min.json" >}}
 
-Overall, these responses are up, so it's not super useful to compare them year-over-year, but we do see some interesting stuff coming together.
-
-For example, I'm not sure why gaming dropped last year, but it sure picked up again this year!
+I'm not sure why gaming dropped last year, but it sure picked up again this year!
 I was curious what kinds of games people were writing, so I asked!
 The folks in #gamedev on the Elm Slack pointed me to [rofrol/awesome-elm-gamedev](https://github.com/rofrol/awesome-elm-gamedev) as a nice overview, and [rofrol/elm-games](https://github.com/rofrol/elm-games/blob/master/README.md) as a comprehensive list of games in Elm.
 Enjoy!
@@ -117,6 +106,7 @@ Enjoy!
 A note about "Web Development"…
 I tried as hard as I could to avoid a situation where people answered this, and was very careful when tagging to try and figure out exactly what people were doing with Elm.
 "Web Development" isn't exactly the most helpful answer!
+As a result, this category dropped way off this year.
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/experience-length.vega-lite.min.json" >}}
 
@@ -129,7 +119,7 @@ If you're a vega-lite expert and want to help fix this, get in touch.)
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-work.vega-lite.min.json" >}}
 
 When people use Elm at work, they tend to get it into production.
-Good news!
+Hooray!
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/progress-work-license.vega-lite.min.json" >}}
 
@@ -183,7 +173,7 @@ Both are great options for styling Elm apps in a type-safe way!
 
 {{< vegaLite schema="/static/state-of-elm/2018/charts/build-tools.vega-lite.min.json" >}}
 
-Most people use webpack to build their Elm applications.
+Most people use Webpack to build their Elm applications.
 Kind of unsurprising, given the support in [elm-webpack-starter](https://github.com/elm-community/elm-webpack-starter) and [elm-webpack-loader](https://github.com/elm-community/elm-webpack-loader).
 
 It *was* surprising to me to see that the second two results are elm-make and elm-reactor.
@@ -192,7 +182,7 @@ I'm curious what this means about how people's applications are delivered and bu
 {{< vegaLite schema="/static/state-of-elm/2018/charts/editors.vega-lite.min.json" >}}
 
 VSCode is surprisingly popular!
-We didn't previously have a question like this but I would have expected to see atom at the top, followed by one of Vim or Emacs.
+We didn't previously have a question like this but I would have expected to see Atom at the top, followed by one of Vim or Emacs.
 That *nearly* happened here, but I was really surprised to see Atom a third place!
 
 One editor (which fell of the list as fewer than 1% of people answered it) was [Kakoune](https://kakoune.org/)—I was curious so I wrote part of this post in it.
@@ -203,7 +193,7 @@ If you're interested in text editors. maybe check it out!
 
 Most people use external JavaScript libraries; things like the AWS SDK and D3 were common.
 
-Next most common is localStorage, but almost nobody elaborated on *why*.
+Next most common is localStorage.
 
 "Files" came in third.
 I'm curious to see if that'll hold up next year, now that [`elm/files` and `elm/bytes` have been released](https://elm-lang.org/blog/working-with-files).
