@@ -18,3 +18,4 @@ And some popular posts:
 - State of Elm Results
   - [2017]({{< ref "post/state-of-elm-2017-results.md" >}})
   - [2016]({{< ref "post/state-of-elm-2016-results.md" >}})
+  - [2018]({{< ref "post/state-of-elm-2018-results.md" >}})
