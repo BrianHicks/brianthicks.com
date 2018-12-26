@@ -1,8 +1,7 @@
 ---
 title: State of Elm 2018 Results
-date: "2018-11-27T06:11:25-06:00"
+date: "2018-12-26T04:05:34-05:00"
 tags: ["elm"]
-draft: true
 
 ---
 
