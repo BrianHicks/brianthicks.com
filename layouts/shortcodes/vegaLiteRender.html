@@ -1,0 +1,23 @@
+<script src="/scripts/vega-lite/vega.js"></script>
+<script src="/scripts/vega-lite/vega-lite.js"></script>
+<script src="/scripts/vega-lite/vega-embed.js"></script>
+<script>
+(function() {
+  var figures = document.getElementsByClassName('vega-lite');
+  for (var i = 0; i < figures.length; i++) {
+      var figure = figures[i];
+      var schema = JSON.parse(figure.getAttribute('data-schema'));
+      vegaEmbed(figure, schema, {
+          defaultStyle: true,
+          actions: false,
+          runAsync: true,
+          renderer: 'svg'
+      }).then(function(result) {
+          var svg = result.view.container().children[0];
+          svg.setAttribute("width", "90%");
+          svg.setAttribute("style", "margin: 0 auto;");
+          svg.removeAttribute("height");
+      });
+  }
+})();
+</script>
