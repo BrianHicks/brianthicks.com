@@ -62,7 +62,7 @@ And you see those roles in the sample playbook? You can add your own by adding
 "role=your_role" in whatever metadata the hosts on your cloud provider support.
 `terraform.py` will parse them and provide you with those groups automatically.
 
-[![excited rabbit GIF](http://media.giphy.com/media/q5iwtmYTOjs7S/giphy.gif)](http://giphy.com/gifs/excited-bunny-squee-q5iwtmYTOjs7S)
+[![excited rabbit GIF](https://media.giphy.com/media/q5iwtmYTOjs7S/giphy.gif)](https://giphy.com/gifs/excited-bunny-squee-q5iwtmYTOjs7S)
 
 So go read the
 [terraform.py README](https://github.com/ciscocloud/terraform.py), see
